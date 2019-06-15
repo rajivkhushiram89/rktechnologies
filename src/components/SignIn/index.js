@@ -8,6 +8,7 @@ import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
+import "../../index.css"
 
 const SignInAdditional = styled.div`
   display: flex;
@@ -71,6 +72,7 @@ class SignInForm extends Component {
       email === '';
 
     return (
+      <div id="resizeMaxwidt">
       <Form onSubmit={this.onSubmit}>
         <Input
           value={email}
@@ -90,6 +92,7 @@ class SignInForm extends Component {
 
         { error && <p>{error.message}</p> }
       </Form>
+      </div>
     );
   }
 }

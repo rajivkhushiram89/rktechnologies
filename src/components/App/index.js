@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../index.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
 
@@ -13,7 +14,7 @@ import withAuthentication from '../Session/withAuthentication';
 import { firebase, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 
-import './index.css';
+import '../../index.css';
 import Dashboard from '../Dashboard';
 
 

@@ -310,7 +310,7 @@ const FrontPage = () => (
               <Header inverted as='h4' content='Projects' />
               <List link inverted>
                 <List.Item as='a'><a target="_blank" href="https://rajivkhushiram-reviews-project.firebaseapp.com/">Reviews-App</a></List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
+                <List.Item as='a'>Python</List.Item>
                 <List.Item as='a'>How To Access</List.Item>
                 <List.Item as='a'>Favorite X-Men</List.Item>
               </List>
