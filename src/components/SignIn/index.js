@@ -90,6 +90,9 @@ class SignInForm extends Component {
         <Button disabled={isInvalid} type="submit">
           Sign In
         </Button>
+        <Button disabled={isInvalid} type="submit">
+          Sign In with Facebook
+        </Button>
 
         { error && <p>{error.message}</p> }
       </Form>
