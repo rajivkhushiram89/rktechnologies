@@ -72,7 +72,8 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <div id="resizeMaxwidt">
+      <center>
+      <div  align="center" id="resizeMaxwidt">
       <Form onSubmit={this.onSubmit}>
         <Input
           value={email}
@@ -93,6 +94,7 @@ class SignInForm extends Component {
         { error && <p>{error.message}</p> }
       </Form>
       </div>
+      </center>
     );
   }
 }
