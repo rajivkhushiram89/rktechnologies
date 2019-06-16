@@ -1,42 +1,33 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Input, Button } from 'semantic-ui-react';
-import styled from 'styled-components';
+import { Input, Button, Transition, Image, Divider, Grid } from 'semantic-ui-react';
 
 import Form from '../Form';
-import { SignUpLink } from '../SignUp';
-import { PasswordForgetLink } from '../PasswordForget';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
 import "../../index.css"
 
-const SignInAdditional = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+const transitions = ['jiggle', 'flash', 'shake', 'pulse', 'tada', 'bounce', 'glow']
+
+
 
 const SignInPage = ({ history }) =>
   <div>
     <SignInForm history={history} />
-    <SignInAdditional>
-      <PasswordForgetLink />
-    {/*<SignUpLink /> */} 
-    </SignInAdditional>
+
   </div>
 
 const INITIAL_STATE = {
   email: '',
   password: '',
   error: null,
+  animation: transitions[2],
+   duration: 1300, visible: true
 };
 
 class SignInForm extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { ...INITIAL_STATE };
-  }
+    state = { ...INITIAL_STATE };
+  
 
   onSubmit = (event) => {
     const {
@@ -60,6 +51,10 @@ class SignInForm extends Component {
     event.preventDefault();
   }
 
+  handleChange = (e, { name, value }) => this.setState({ [name]: value })
+  toggleVisibility = () => this.setState(prevState => ({ visible: !prevState.visible }))
+
+
   render() {
     const {
       email,
@@ -70,9 +65,9 @@ class SignInForm extends Component {
     const isInvalid =
       password === '' ||
       email === '';
-
+      
     return (
-      <center>
+ 
       <div  align="center" id="resizeMaxwidt">
       <Form onSubmit={this.onSubmit}>
         <Input
@@ -90,20 +85,23 @@ class SignInForm extends Component {
         <Button disabled={isInvalid} type="submit">
           Sign In
         </Button>
+        <br></br>
         <Button disabled={isInvalid} type="submit">
           Sign In with Facebook
+        </Button>
+        <Button disabled={isInvalid} type="submit">
+          Sign In with Google
         </Button>
 
         { error && <p>{error.message}</p> }
       </Form>
       </div>
-      </center>
     );
   }
 }
 
 export default withRouter(SignInPage);
 
-export {
+export  {
   SignInForm,
 };

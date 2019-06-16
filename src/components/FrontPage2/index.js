@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import TransitionExampleDuration from '../Readings/TransitionExampleDuration'
+import styled from "styled-components";
 import {
   Button,
   Container,
@@ -17,6 +19,10 @@ import {
 } from 'semantic-ui-react'
 import Navigation from '../Navigation';
 
+
+import './index.css';
+
+
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
 // For more advanced usage please check Responsive docs under the "Usage" section.
@@ -26,15 +32,72 @@ const getWidth = () => {
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
+
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+  
+
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+const Section = styled.div`
+  margin: 40px 60px 0px 60px;
+`;
+const Nav = styled.div``;
+const ActivityList = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 80px;
+`;
+const Activity = styled.div`
+  p {
+    position: absolute;
+    font-size: 26px;
+  }
+  svg {
+    transition: transform 2s;
+    position: absolute;
+  }
+  svg:hover {
+    transform: scale(1.5);
+  }
+`;
+
+const Main = styled.div`
+  margin-top: 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+const MainText = styled.div`
+  /* text-align: center; */
+  h1 {
+    text-align: center;
+    font-size: 46px;
+  }
+`;
+const MainImage = styled.div``;
+const Info = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+`;
+const Date = styled.div``;
+const Add = styled.div``;
 const HomepageHeading = ({ mobile }) => (
   <Container text>
+    <Section>
+      <Nav>
+      </Nav>
+      <ActivityList>
+      </ActivityList>
+    </Section>
     <Header
       as='h1'
-      content='Imagine-a-Company'
+      content='A Full Stack Developer'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -45,7 +108,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='Project Showcase'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -53,8 +116,9 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
-      Get Started
+    
+    <Button onClick={handleClick} primary size='huge'>
+      Click to Start
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -69,7 +133,7 @@ HomepageHeading.propTypes = {
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-  state = {}
+  state = { visible: true}
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
@@ -79,6 +143,7 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
+      
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility
           once={false}
@@ -91,6 +156,7 @@ class DesktopContainer extends Component {
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
           >
+              
             <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
@@ -98,20 +164,35 @@ class DesktopContainer extends Component {
               secondary={!fixed}
               size='large'
             >
+
+            
               <Container>
-                <Navigation/>
-                
+              <Navigation/>
+               {/*  <Menu.Item as='a' active>
+                  Home
+                </Menu.Item>
+                <Menu.Item as='a'>Work</Menu.Item>
+                <Menu.Item as='a'>Company</Menu.Item>
+                <Menu.Item as='a'>Careers</Menu.Item>
+                <Menu.Item position='right'>
+                  <Button as='a' inverted={!fixed}>
+                    Log in
+                  </Button>
+                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                    Sign Up
+                  </Button>
+                </Menu.Item>*/} 
               </Container>
             </Menu>
-            <HomepageHeading />
+           <HomepageHeading /> 
           </Segment>
         </Visibility>
-
-        {children}
+           {children} 
       </Responsive>
     )
   }
 }
+
 
 DesktopContainer.propTypes = {
   children: PropTypes.node,
@@ -142,7 +223,7 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-           <Navigation/>
+      <Navigation/>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -157,14 +238,7 @@ class MobileContainer extends Component {
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name='sidebar' />
                 </Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted>
-                    Log in
-                  </Button>
-                  <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>
+               <Navigation/>
               </Menu>
             </Container>
             <HomepageHeading mobile />
@@ -192,14 +266,15 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const HomepageLayout = () => (
+const FrontPage2 = () => (
+
   <ResponsiveContainer>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies achieve the software framework suited for their nee 
+              We Help Companies and Companions
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               We can give your company superpowers to do things that they never thought possible.
@@ -264,7 +339,6 @@ const HomepageLayout = () => (
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
-         
         </Divider>
         <Header as='h3' style={{ fontSize: '2em' }}>
           Did We Tell You About Our Bananas?
@@ -279,6 +353,7 @@ const HomepageLayout = () => (
         </Button>
       </Container>
     </Segment>
+    <div id = 'wawa'> </div>
     <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
         <Grid divided inverted stackable>
@@ -293,10 +368,10 @@ const HomepageLayout = () => (
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
+              <Header inverted as='h4' content='Projects' />
               <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
+                <List.Item as='a'></List.Item>
+                <List.Item as='a'>Python</List.Item>
                 <List.Item as='a'>How To Access</List.Item>
                 <List.Item as='a'>Favorite X-Men</List.Item>
               </List>
@@ -315,4 +390,6 @@ const HomepageLayout = () => (
     </Segment>
   </ResponsiveContainer>
 )
-export default HomepageLayout
+export default FrontPage2
+
+

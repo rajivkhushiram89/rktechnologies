@@ -1,4 +1,5 @@
 export const FRONTPAGE = '/';
+export const FRONTPAGE2 = '/';
 export const READING_LIST = '/reading-list';
 export const SIGN_UP = '/signup';
 export const SIGN_IN = '/signin';

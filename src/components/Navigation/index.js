@@ -7,20 +7,10 @@ import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
 
 import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
-  Visibility,
+  Menu
 } from 'semantic-ui-react'
+
+
 
 
 const Navigation = (props) =>
@@ -38,11 +28,14 @@ const Navigation = (props) =>
 const NavigationAuth = () =>
 <React.Fragment>
     <Menu.Item>
-      <Link to={routes.FRONTPAGE}> <i aria-hidden="true" class="users disabled icon"></i>Home</Link>
+      <Link to={routes.FRONTPAGE2}> <i aria-hidden="true" className="users disabled icon"></i>Home</Link>
     </Menu.Item>
     <Menu.Item>
-      <Link to={routes.ACCOUNT}>Account</Link>
+      <Link to={routes.ACCOUNT}>About me</Link>
     </Menu.Item>
+
+
+    
 
 
     <Menu.Item position="right">
@@ -53,7 +46,7 @@ const NavigationAuth = () =>
 const NavigationNonAuth = () =>
   <React.Fragment>
     <Menu.Item>
-      <Link to={routes.FRONTPAGE}><i aria-hidden="true" class="users disabled icon"></i>Home</Link>
+      <Link to={routes.FRONTPAGE}><i aria-hidden="true" className="users disabled icon"></i>Home</Link>
     </Menu.Item>
 
     <Menu.Item position="right">

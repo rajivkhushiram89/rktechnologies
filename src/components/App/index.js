@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import Navigation from '../Navigation';
 import FrontPage from '../FrontPage';
+import FrontPage2 from '../FrontPage2';
+
 import ReadingsPage from '../Readings';
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
@@ -13,27 +15,20 @@ import AccountPage from '../Account';
 import withAuthentication from '../Session/withAuthentication';
 import { firebase, db } from '../../firebase';
 import * as routes from '../../constants/routes';
+import { Container} from "semantic-ui-react";
+
 
 import '../../index.css';
 import Dashboard from '../Dashboard';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
- 
-    };
-
-
-  }
 
   componentDidMount() {
 
     firebase.auth.onAuthStateChanged(authUser => {
       if (authUser) {
-
         this.setState({  });
       }
     });
@@ -45,11 +40,10 @@ class App extends Component {
       <Router>
         
          <React.Fragment>
-
           <Route
-            exact path={routes.FRONTPAGE}
+            exact path={routes.FRONTPAGE2}
             component={() =>
-              <FrontPage
+              <FrontPage2
                 { ...this.state }
               />
             }

@@ -3,7 +3,7 @@ import { db } from './firebase';
 // User API
 
 export const doCreateUser = (id, username, email) =>
-  db.ref(`users/${id}`)
+  db.ref(`portfolio_users/${id}`)
     .set({
       username,
       email,
@@ -12,13 +12,13 @@ export const doCreateUser = (id, username, email) =>
 // Readings API
 
 export const doCreateReading = (authUser, story) =>
-  db.ref(`users/${authUser.uid}/readings/${story.objectID}`)
+  db.ref(`portfolio_users/${authUser.uid}/readings/${story.objectID}`)
     .set(story);
 
 export const doRemoveReading = (authUser, story) =>
-  db.ref(`users/${authUser.uid}/readings/${story.objectID}`)
+  db.ref(`portfolio_users/${authUser.uid}/readings/${story.objectID}`)
     .remove();
 
 export const onGetReadings = (authUser, fn) =>
-  db.ref(`users/${authUser.uid}/readings`)
+  db.ref(`portfolio_users/${authUser.uid}/readings`)
     .on('value', fn);
