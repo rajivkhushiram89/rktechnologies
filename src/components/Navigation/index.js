@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Segment, Button} from 'semantic-ui-react';
 
 
 import AuthUserContext from '../Session/AuthUserContext';
@@ -28,10 +29,21 @@ const Navigation = (props) =>
 const NavigationAuth = () =>
 <React.Fragment>
     <Menu.Item>
-      <Link to={routes.FRONTPAGE2}> <i aria-hidden="true" className="users disabled icon"></i>Home</Link>
+      <Link to={routes.FRONTPAGE2}> 
+      <Segment inverted>
+      <Button inverted color='blue' 
+    ><i className="home icon"></i>
+        Home
+      </Button>
+  </Segment>
+      </Link>
     </Menu.Item>
     <Menu.Item>
-      <Link to={routes.ACCOUNT}>About me</Link>
+      <Link to={routes.ACCOUNT}> 
+      <Segment inverted> <Button inverted color='blue' 
+    ><i className="user circle outline icon"></i>
+        About me
+      </Button></Segment></Link>
     </Menu.Item>
 
 
@@ -46,11 +58,23 @@ const NavigationAuth = () =>
 const NavigationNonAuth = () =>
   <React.Fragment>
     <Menu.Item>
-      <Link to={routes.FRONTPAGE}><i aria-hidden="true" className="users disabled icon"></i>Home</Link>
+      <Link to={routes.FRONTPAGE}> <Button inverted color='blue'
+      aria-hidden="true" 
+    ><i className="home icon"></i>
+        Home
+      </Button></Link>
     </Menu.Item>
 
     <Menu.Item position="right">
-      <Link to={routes.SIGN_IN}>Sign In</Link>
+      <Link to={routes.SIGN_IN}> 
+      <div>
+<Segment inverted>
+      <Button inverted color='blue' 
+    ><i class="sign-in icon"></i>
+        Sign-In
+      </Button>
+  </Segment>
+  </div></Link>
     </Menu.Item>
     </React.Fragment>
 

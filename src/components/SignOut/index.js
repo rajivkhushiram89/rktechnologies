@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
+import { Button , Segment} from 'semantic-ui-react';
 
 import { auth } from '../../firebase';
 
@@ -12,12 +12,14 @@ const divStyle = {
 };
 
 const SignOutButton = () =>
- <Button style={divStyle} id="signouthover"
-    basic
-    onClick={auth.doSignOut}
-  >
-    Sign Out
-  </Button>
+<div>
+<Segment inverted>
+      <Button inverted color='white' id="signouthover"
+    onClick={auth.doSignOut}>
+        Log-out
+      </Button>
+  </Segment>
+  </div>
 
 
 export default SignOutButton;

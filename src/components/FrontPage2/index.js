@@ -114,10 +114,20 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
      <br />
-    <Button onClick={handleClick} primary size='huge'>
-      Click to Start
-      <Icon name='right arrow' />
-    </Button>
+
+     <div>
+<Segment inverted>
+      <Button
+       inverted color='blue' 
+      onClick={handleClick}
+   
+    >
+        Sign-In
+        <Icon name='right arrow' />
+      </Button>
+  </Segment>
+  </div>
+
     </div>}/>
   </Container>
 )
@@ -155,7 +165,7 @@ class DesktopContainer extends Component {
             vertical
           >
               
-            <Menu
+            <Menu style={{ background: '#1b1c1d'}}
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
               pointing={!fixed}
@@ -164,7 +174,7 @@ class DesktopContainer extends Component {
             >
 
             
-              <Container>
+              <Container >
               <Navigation/>
                {/*  <Menu.Item as='a' active>
                   Home

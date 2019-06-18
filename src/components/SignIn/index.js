@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Input, Button, Transition, Image, Divider, Grid, Form, Header, Message, Segment } from 'semantic-ui-react';
+import { Input, Button, Transition, Image, Container, Grid, Form, Header, Message, Segment } from 'semantic-ui-react';
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
+import { Link } from 'react-router-dom';
 
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
@@ -67,60 +68,66 @@ class SignInForm extends Component {
       email === '';
       
     return (
-      <div style={{ background: 'black' }} >
-      <TransitionExampleDuration show='3500' children={<center> <div align="center" id="resizeMaxwidt">
+      <div style={{ background: '#1b1c1d' }} >
+       
+      <TransitionExampleDuration show='2000' children={ <center> <div align="center" id="resizeMaxwidt">
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
       <Header as='h2' color='#2185d0' textAlign='center'>
         <Image color='blue' src='https://react.semantic-ui.com/logo.png' /> <h1  style={{ color: 'white' }}>Log-in to your account</h1>
       </Header>
-      <Form size='large'>
+      <Form size='large' onSubmit={this.onSubmit}>
         <Segment stacked>
-          <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+
+         
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' value={email} onChange={event => this.setState({ email: event.target.value })} type="text" />
+          
+          
+           {/*  value={password}
+          onChange={event => this.setState({ password: event.target.value })}
+          type="password"
+          placeholder="Password"*/}
           <Form.Input
             fluid
             icon='lock'
-            iconPosition='left'
-            placeholder='Password'
-            type='password'
+            value={password}
+            onChange={event => this.setState({ password: event.target.value })}
+            type="password"
+            placeholder="Password"
           />
 
-          <Button color='blue' fluid size='large'>
-            Login
-          </Button>
+
+<div>
+<Button   color='teal' disabled={isInvalid} type="submit">
+          Sign In
+        </Button>
+        </div>
+        <div> <br>
+        </br>        
+<Button   color='blue' >
+          Sign In with Facebook
+        </Button></div>
+        <div><br>
+        </br>
+<Button   color='orange'>
+          Sign with Instagram
+        </Button></div>>
+
+
+
         </Segment>
-      </Form>
+
+        { error &&   <Button inverted color='red' 
+    ><i className="stop circle icon"></i>
+        <p>{error.message}</p>
+      </Button> }
+      
+      </Form>  
       <Message>
-        New to us? <a href='#'>Sign Up</a>
+       <div> New to us? </div><Link to={routes.SIGN_UP}><br></br><Button  inverted content='Secondary' secondary > Register</Button></Link>
       </Message>
     </Grid.Column>
   </Grid>
-      <Form onSubmit={this.onSubmit}>
-        <Input
-          value={email}
-          onChange={event => this.setState({ email: event.target.value })}
-          type="text"
-          placeholder="Email Address"
-        />
-        <Input
-          value={password}
-          onChange={event => this.setState({ password: event.target.value })}
-          type="password"
-          placeholder="Password"
-        />
-        <Button disabled={isInvalid} type="submit">
-          Sign In
-        </Button>
-        <br></br>
-        <Button disabled={isInvalid} type="submit">
-          Sign In with Facebook
-        </Button>
-        <Button disabled={isInvalid} type="submit">
-          Sign In with Google
-        </Button>
-
-        { error && <p>{error.message}</p> }
-      </Form>
       </div></center>}/></div>
     );
   }
