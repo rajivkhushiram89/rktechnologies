@@ -92,15 +92,10 @@ const Add = styled.div``;
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-    <Section>
-      <Nav>
-      </Nav>
-      <ActivityList>
-      </ActivityList>
-    </Section>
-    <TransitionExampleDuration children={<div><Header
+
+    <TransitionExampleDuration show="1500" children={<div><Header
   as='h1'
-  content='Welcome Fellow Software Developers'
+  content='Cutting through'
   inverted
   style={{
     fontSize: mobile ? '2em' : '4em',

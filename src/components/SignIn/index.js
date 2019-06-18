@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Input, Button, Transition, Image, Divider, Grid } from 'semantic-ui-react';
+import { Input, Button, Transition, Image, Divider, Grid, Form, Header, Message, Segment } from 'semantic-ui-react';
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
 
-
-import Form from '../Form';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
 import "../../index.css"
@@ -44,7 +42,7 @@ class SignInForm extends Component {
     auth.doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
-        history.push(routes.FRONTPAGE);
+        history.push(routes.FRONTPAGE2);
       })
       .catch(error => {
         this.setState(() => ({ error }));
@@ -56,7 +54,7 @@ class SignInForm extends Component {
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
   toggleVisibility = () => this.setState(prevState => ({ visible: !prevState.visible }))
 
-
+ 
   render() {
     const {
       email,
@@ -70,7 +68,33 @@ class SignInForm extends Component {
       
     return (
  
-      <TransitionExampleDuration children={<div  align="center" id="resizeMaxwidt">
+      <TransitionExampleDuration show='3500' children={<center><div  align="center" id="resizeMaxwidt">
+      <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+    <Grid.Column style={{ maxWidth: 450 }}>
+      <Header as='h2' color='teal' textAlign='center'>
+        <Image src='https://react.semantic-ui.com/logo.png' /> Log-in to your account
+      </Header>
+      <Form size='large'>
+        <Segment stacked>
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+          <Form.Input
+            fluid
+            icon='lock'
+            iconPosition='left'
+            placeholder='Password'
+            type='password'
+          />
+
+          <Button color='teal' fluid size='large'>
+            Login
+          </Button>
+        </Segment>
+      </Form>
+      <Message>
+        New to us? <a href='#'>Sign Up</a>
+      </Message>
+    </Grid.Column>
+  </Grid>
       <Form onSubmit={this.onSubmit}>
         <Input
           value={email}
@@ -97,7 +121,7 @@ class SignInForm extends Component {
 
         { error && <p>{error.message}</p> }
       </Form>
-      </div>}/>
+      </div></center>}/>
     );
   }
 }

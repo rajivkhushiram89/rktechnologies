@@ -73,12 +73,11 @@ function LoadingScreen ({
               src={logoSrc}
               rounded={logoRounded} />}
 
-          {loading && spinnerColor &&
-             <LoaderExampleInlineCentered></LoaderExampleInlineCentered>}
+
 
           {text &&
           <div>
-            <br></br>
+           
             <LabelExampleBasic/>
               </div>}
 
@@ -87,7 +86,7 @@ function LoadingScreen ({
       <LoadableData loading={loading}>
         {children}
       </LoadableData>
-    </div>
+      </div>
   )
 }
 
