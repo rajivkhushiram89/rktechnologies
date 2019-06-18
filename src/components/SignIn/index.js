@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Input, Button, Transition, Image, Divider, Grid } from 'semantic-ui-react';
+import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
+
 
 import Form from '../Form';
 import { auth } from '../../firebase';
@@ -68,7 +70,7 @@ class SignInForm extends Component {
       
     return (
  
-      <div  align="center" id="resizeMaxwidt">
+      <TransitionExampleDuration children={<div  align="center" id="resizeMaxwidt">
       <Form onSubmit={this.onSubmit}>
         <Input
           value={email}
@@ -95,7 +97,7 @@ class SignInForm extends Component {
 
         { error && <p>{error.message}</p> }
       </Form>
-      </div>
+      </div>}/>
     );
   }
 }

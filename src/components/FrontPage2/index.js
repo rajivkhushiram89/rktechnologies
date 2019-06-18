@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import TransitionExampleDuration from '../Readings/TransitionExampleDuration'
+import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
 import styled from "styled-components";
 import {
   Button,
@@ -87,6 +87,9 @@ const Info = styled.div`
 `;
 const Date = styled.div``;
 const Add = styled.div``;
+
+
+
 const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Section>
@@ -95,32 +98,33 @@ const HomepageHeading = ({ mobile }) => (
       <ActivityList>
       </ActivityList>
     </Section>
-    <Header
-      as='h1'
-      content='A Full Stack Developer'
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-      }}
-    />
-    <Header
+    <TransitionExampleDuration children={<div><Header
+  as='h1'
+  content='Welcome Fellow Software Developers'
+  inverted
+  style={{
+    fontSize: mobile ? '2em' : '4em',
+    fontWeight: 'normal',
+    marginBottom: 1,
+    marginTop: mobile ? '1.5em' : '2em',
+  }}
+/><Header
       as='h2'
       content='Project Showcase'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
         fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
+        marginBottom: 2,
+        marginTop: mobile ? '0.5em' : '1.0em',
       }}
     />
-    
+     <br />
     <Button onClick={handleClick} primary size='huge'>
       Click to Start
       <Icon name='right arrow' />
     </Button>
+    </div>}/>
   </Container>
 )
 

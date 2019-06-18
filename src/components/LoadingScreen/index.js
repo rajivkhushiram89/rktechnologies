@@ -62,7 +62,7 @@ function LoadingScreen ({
   textStyle
 }) {
   return (
-    <backWhite >
+    <div>
       <ScreenWrapper
         bgColor={bgColor}
         loading={loading}
@@ -87,7 +87,7 @@ function LoadingScreen ({
       <LoadableData loading={loading}>
         {children}
       </LoadableData>
-    </backWhite>
+    </div>
   )
 }
 

@@ -26,7 +26,7 @@ class Demo extends React.Component {
       setTimeout(() =>
           this.setState({
               loading: false
-          }), 6500)
+          }), 2500)
     }
   
     render () {
@@ -42,12 +42,12 @@ class Demo extends React.Component {
           logoSrc='https://cdn.dribbble.com/users/891352/screenshots/3310131/bobotov_loader_002.gif'
           text='Loading...'
         >
-        <App></App>
+          <App/>
         </LoadingScreen>
         </div>
       )
     }
   }
-ReactDOM.render(<Demo></Demo>, document.getElementById('root'));
+ReactDOM.render(<Demo />, document.getElementById('root'));
 
 registerServiceWorker();
