@@ -15,7 +15,7 @@ export class TransitionExampleDuration extends Component {
     return (
         <div>
 
-          <Transition duration={ show } visible={visible}>
+          <Transition duration={ show || hide } visible={visible}>
             {this.props.children}
           </Transition>
       

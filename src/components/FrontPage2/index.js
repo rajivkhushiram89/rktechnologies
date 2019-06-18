@@ -33,12 +33,8 @@ const getWidth = () => {
 }
 
 
-  function handleClick(e) {
-    e.preventDefault();
-    console.log('The link was clicked.');
-  }
-  
-
+ 
+ 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
@@ -88,50 +84,70 @@ const Info = styled.div`
 const Date = styled.div``;
 const Add = styled.div``;
 
+class HomepageHeading extends React.Component {
+  constructor (props ) {
+    super(props)
+      this.state = { 
+        loading : false,
+        stage : 0
+    }
+  }
+
+  handleClick=(e) => { 
+
+    
+    this.setState({
+      stage: this.state.stage + 1
+  })
+  } 
+  render () {
+    const { mobile} = this.props;
+    return (
+      <div><Container text>
+      <TransitionExampleDuration show='4500' children={<div>
+        <Header
+    as='h1'
+    content='Cutting through'
+    inverted
+    style={{
+      fontSize: mobile ? '2em' : '4em',
+      fontWeight: 'normal',
+      marginBottom: 1,
+      marginTop: mobile ? '1.5em' : '2em',
+    }}
+  /><Header
+        as='h2'
+        content='Project Showcase'
+        inverted
+        style={{
+          fontSize: mobile ? '1.5em' : '1.7em',
+          fontWeight: 'normal',
+          marginBottom: 2,
+          marginTop: mobile ? '0.5em' : '1.0em',
+        }}
+      />
+       <br />
+  
+       <div>
+  <Segment inverted>
+        <Button
+         inverted color='blue' 
+        onClick={this.handleClick}
+     
+      >
+          <h3 style = {{ color:"white"}}>Start Showcase <Icon name='right arrow' /></h3>    
+          
+        </Button>
+    </Segment>
+    </div>
+  
+      </div>}/>
+    </Container></div>
+    );
+  }
+}
 
 
-const HomepageHeading = ({ mobile }) => (
-  <Container text>
-    <TransitionExampleDuration show='4500' children={<div>
-      <Header
-  as='h1'
-  content='Cutting through'
-  inverted
-  style={{
-    fontSize: mobile ? '2em' : '4em',
-    fontWeight: 'normal',
-    marginBottom: 1,
-    marginTop: mobile ? '1.5em' : '2em',
-  }}
-/><Header
-      as='h2'
-      content='Project Showcase'
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginBottom: 2,
-        marginTop: mobile ? '0.5em' : '1.0em',
-      }}
-    />
-     <br />
-
-     <div>
-<Segment inverted>
-      <Button
-       inverted color='blue' 
-      onClick={handleClick}
-   
-    >
-        <h3 style = {{ color:"white"}}>Start Showcase <Icon name='right arrow' /></h3>    
-        
-      </Button>
-  </Segment>
-  </div>
-
-    </div>}/>
-  </Container>
-)
 
 HomepageHeading.propTypes = {
   mobile: PropTypes.bool,

@@ -73,7 +73,7 @@ class SignInForm extends Component {
       <TransitionExampleDuration show='2000' children={ <center> <div align="center" id="resizeMaxwidt">
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='blue' textAlign='center'>
+      <Header as='h2' color='grey' textAlign='center'>
         <Image color='blue' src='https://react.semantic-ui.com/logo.png' />
       Log-in to your account
       </Header>
