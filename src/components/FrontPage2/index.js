@@ -18,7 +18,7 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 import Navigation from '../Navigation';
-
+import VideoBackground from '../VIdeoBackground/index'
 
 import './index.css';
 
@@ -92,7 +92,8 @@ const Add = styled.div``;
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-    <TransitionExampleDuration show="1500" children={<div><Header
+    <TransitionExampleDuration show='4500' children={<div>
+      <Header
   as='h1'
   content='Cutting through'
   inverted
@@ -158,10 +159,11 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
+
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 700, padding: '1em 0em', background: '#1b1c1d' }}
             vertical
           >
               
@@ -277,7 +279,7 @@ ResponsiveContainer.propTypes = {
 const FrontPage2 = () => (
 
   <ResponsiveContainer>
-    
+      
   </ResponsiveContainer>
 )
 export default FrontPage2

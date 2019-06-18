@@ -73,8 +73,9 @@ class SignInForm extends Component {
       <TransitionExampleDuration show='2000' children={ <center> <div align="center" id="resizeMaxwidt">
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='#2185d0' textAlign='center'>
-        <Image color='blue' src='https://react.semantic-ui.com/logo.png' /> <h1  style={{ color: 'white' }}>Log-in to your account</h1>
+      <Header as='h2' color='blue' textAlign='center'>
+        <Image color='blue' src='https://react.semantic-ui.com/logo.png' />
+      Log-in to your account
       </Header>
       <Form size='large' onSubmit={this.onSubmit}>
         <Segment stacked>
@@ -124,7 +125,7 @@ class SignInForm extends Component {
       
       </Form>  
       <Message>
-       <div> New to us? </div><Link to={routes.SIGN_UP}><br></br><Button  inverted content='Secondary' secondary > Register</Button></Link>
+       <div> New to us? </div><Link to={routes.SIGN_UP}><br></br><Button  inverted  secondary > Register</Button></Link>
       </Message>
     </Grid.Column>
   </Grid>

@@ -4,18 +4,19 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "faker": "latest",
     "firebase": "^4.12.1",
+    "lodash": "latest",
+    "prop-types": "latest",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
+    "react-particles-js": "^2.6.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "^2.1.8",
+    "react-spinkit": "^3.0.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.86.0",
-    "styled-components": "^3.2.5",
-    "react-spinkit": "^3.0.0",
-    "prop-types": "latest",
-    "faker": "latest",
-    "lodash": "latest"
+    "styled-components": "^3.2.5"
   },
   "scripts": {
     "start": "react-scripts start",

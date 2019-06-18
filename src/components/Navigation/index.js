@@ -64,7 +64,7 @@ const NavigationAuth = () =>
 const NavigationNonAuth = () =>
   <React.Fragment>
     <Menu.Item>
-      <Link to={routes.FRONTPAGE}> <Button inverted color='blue'
+      <Link to={routes.FRONTPAGE}> <Button size='huge' inverted color='blue'
       aria-hidden="true" 
     ><i className="home icon"></i>
         Home
@@ -74,12 +74,10 @@ const NavigationNonAuth = () =>
     <Menu.Item position="right">
       <Link to={routes.SIGN_IN}> 
       <div>
-<Segment inverted>
-      <Button inverted color='white' 
-    ><i class="sign-in icon"></i>
+      <Button inverted size='huge'  
+    ><i className="sign-in icon"></i>
         Sign-In
       </Button>
-  </Segment>
   </div></Link>
     </Menu.Item>
     </React.Fragment>

@@ -28,7 +28,7 @@ const LoadingComponents = styled.div`
 const LoaderExampleInlineCentered = () => <Loader active inline='centered' />
 const LabelExampleBasic = () => (
   <Label>
-    <Icon name='Loading'/>Loading...  
+   Loading...  
   </Label>
 )
 
