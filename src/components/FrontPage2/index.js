@@ -92,7 +92,6 @@ const Add = styled.div``;
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-
     <TransitionExampleDuration show="1500" children={<div><Header
   as='h1'
   content='Cutting through'

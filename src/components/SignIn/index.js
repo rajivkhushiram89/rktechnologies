@@ -67,12 +67,12 @@ class SignInForm extends Component {
       email === '';
       
     return (
- 
-      <TransitionExampleDuration show='3500' children={<center><div  align="center" id="resizeMaxwidt">
+      <div style={{ background: 'black' }} >
+      <TransitionExampleDuration show='3500' children={<center> <div align="center" id="resizeMaxwidt">
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='teal' textAlign='center'>
-        <Image src='https://react.semantic-ui.com/logo.png' /> Log-in to your account
+      <Header as='h2' color='#2185d0' textAlign='center'>
+        <Image color='blue' src='https://react.semantic-ui.com/logo.png' /> <h1  style={{ color: 'white' }}>Log-in to your account</h1>
       </Header>
       <Form size='large'>
         <Segment stacked>
@@ -85,7 +85,7 @@ class SignInForm extends Component {
             type='password'
           />
 
-          <Button color='teal' fluid size='large'>
+          <Button color='blue' fluid size='large'>
             Login
           </Button>
         </Segment>
@@ -121,7 +121,7 @@ class SignInForm extends Component {
 
         { error && <p>{error.message}</p> }
       </Form>
-      </div></center>}/>
+      </div></center>}/></div>
     );
   }
 }
