@@ -45,6 +45,12 @@ const NavigationAuth = () =>
         About me
       </Button></Segment></Link>
     </Menu.Item>
+    <Menu.Item> 
+      <Segment inverted> <Button inverted color='blue' 
+    ><i className="user circle outline icon"></i>
+        Projects
+      </Button></Segment>
+    </Menu.Item>
 
 
     
@@ -69,7 +75,7 @@ const NavigationNonAuth = () =>
       <Link to={routes.SIGN_IN}> 
       <div>
 <Segment inverted>
-      <Button inverted color='blue' 
+      <Button inverted color='white' 
     ><i class="sign-in icon"></i>
         Sign-In
       </Button>
