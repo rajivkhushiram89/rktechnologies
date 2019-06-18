@@ -18,7 +18,6 @@ import * as routes from '../../constants/routes';
 import { Container} from "semantic-ui-react";
 
 
-import '../../index.css';
 import Dashboard from '../Dashboard';
 
 

@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import App from '../src/components/App';
 import LoadingScreen from './components/LoadingScreen/index'
 import registerServiceWorker from './registerServiceWorker';
-
-import './index.css';
 import 'semantic-ui-css/semantic.min.css';
+import './index.css'
 
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
@@ -33,7 +32,7 @@ class Demo extends React.Component {
       const { loading } = this.state
   
       return (
-          <div id="preloading">
+       
         <LoadingScreen
           loading={loading}
           bgColor='#f1f1f1'
@@ -44,7 +43,7 @@ class Demo extends React.Component {
         >
           <App/>
         </LoadingScreen>
-        </div>
+
       )
     }
   }
