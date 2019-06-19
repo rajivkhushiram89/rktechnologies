@@ -11,15 +11,16 @@ const divStyle = {
   color: 'red',
 };
 
-const SignOutButton = () =>
+const SignOutButton = () =>(
 <div>
 <Segment inverted>
-      <Button inverted id="signouthover"
+      <Button inverted color='red' id="signouthover"
     onClick={auth.doSignOut}>
         Log-out
       </Button>
   </Segment>
-  </div>
+  </div>)
+
 
 
 export default SignOutButton;

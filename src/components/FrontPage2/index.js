@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
+import * as routes from '../../constants/routes';
 import styled from "styled-components";
 import {
+  Embed,
   Button,
   Container,
   Divider,
@@ -20,7 +22,7 @@ import {
 import Navigation from '../Navigation';
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
- 
+import { Link as Link2 } from 'react-router-dom';
  
 import './index.css';
 
@@ -96,43 +98,17 @@ class HomepageHeading extends React.Component {
   }
 
   handleClick=(e) => { 
-
-    
     this.setState({
       stage: this.state.stage + 1
   })
-  } 
+  }
+   
   render () {
     const { mobile} = this.props;
     return (
       <div><Container text>
       <TransitionExampleDuration show='3500' children={<div>
-        <Button
-    as='h1'
-    content='Severless Solutions'
-    inverted
-    basic
-    style={{
-      fontSize: mobile ? '2em' : '4em',
-      fontWeight: 'normal',
-      marginBottom: 1,
-      marginTop: mobile ? '1.5em' : '2em',
-    }}
-  />  
-   <Header
-        as='h2'
-        content='Project Showcase'
-        inverted
-        style={{
-          fontSize: mobile ? '1.5em' : '1.7em',
-          fontWeight: 'normal',
-          marginBottom: 2,
-          marginTop: mobile ? '0.5em' : '1.0em',
-        }}
-      />
-       <br />
-  
-       <div>
+         <div>
   <Segment inverted>
   <Link
     activeclass="active"
@@ -141,17 +117,59 @@ class HomepageHeading extends React.Component {
     smooth={true}
     offset={-70}
     duration= {700}
-> <Button
+> <Button className="medium ui button"
          inverted basic color='blue' 
         onClick={this.handleClick}
      
       >
-          <h3 color="blue">Start Showcase <Icon name='right arrow' /></h3>    
-          
+        <div>
+         <h1>Profile Summary</h1> 
+         <i className="caret square down outline icon"></i>
+         </div>
+        </Button></Link>
+    </Segment>
+    </div> 
+    <div>
+  <Segment inverted>
+  <Link
+    activeclass="active"
+    to="sectionProject"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration= {700}
+> <Button className="medium ui button"
+         inverted basic color='blue' 
+        onClick={this.handleClick}
+     
+      >
+        <div>
+         <h1> Projects</h1> 
+         <i className="caret square down outline icon"></i>
+         </div>
         </Button></Link>
     </Segment>
     </div>
-  
+    <div>
+  <Segment inverted>
+  <Link
+    activeclass="active"
+    to="section1"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration= {700}
+> <Button className="medium ui button"
+         inverted basic color='blue' 
+        onClick={this.handleClick}>
+        <div>
+         <h1>Contact</h1> 
+         <i className="caret square down outline icon"></i>
+         </div>
+        </Button></Link>
+    </Segment>
+    </div>
+       <br />
       </div>}/>
     </Container></div>
     );
@@ -190,7 +208,7 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 550, padding: '1em 0em' }}
             vertical
           >
               
@@ -203,8 +221,6 @@ class DesktopContainer extends Component {
               style={{background:'black' }}
 
             >
-
-            
               <Container >
               <Navigation/>
                {/*  <Menu.Item as='a' active>
@@ -269,7 +285,7 @@ class MobileContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 350, padding: '1em 0em', background:'black' }}
+            style={{ minHeight: 150, padding: '2em 0em', background:'#1b1c1d' }}
             vertical
           
           >
@@ -308,35 +324,51 @@ ResponsiveContainer.propTypes = {
 }
 
 const FrontPage2 = () => (
-  <div>
+
   <ResponsiveContainer >
     <Segment  style={{ padding: '8em 0em' }} vertical>
       <Grid id="section1" container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column  width={8}>
-            <br></br>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
+            <Header as='h3' style={{ fontSize: '40px' }}>
+              Rajiv Khushiram
+            </Header>
+            <Header as='h3' style={{ fontSize: '16px' }}>
+              CBD Melbourne / +61 481187062/ rajivkhushiram@hotmail.com
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
+           
             </p>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
+              Summary:
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
-            </p>
+            Open-source enthusiast and an IT graduate of RMIT University seeking a position as a part-time developer. 
+            I am a co-operative and contributive full stack developer with over <strong>3</strong> years experience in the Web Design and Development industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
+            <p style={{ fontSize: '1.33em' }}> 
+            A highly organized and detailed-oriented individual who has a good sense of time management. 
+             </p>
+           
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+          <div className="ui fluid image">
+      <a className="ui left corner label">
+        <i className="heart icon"></i>
+      </a>
+      <center><Image bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' /></center>
+    </div>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'>Check Them Out</Button>
+          <Link
+    activeclass="active"
+    to="sectionProject"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration= {700}
+> <Button size='huge'>View My Projects</Button></Link>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -346,17 +378,17 @@ const FrontPage2 = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
+              "When you dream the code, the code dreams in you"
             </Header>
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+            <p style={{ fontSize: '1.33em' }}>TechLead</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
+              "Code from anywhere...being in the zone"
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
+              <Image avatar src='https://semantic-ui.com/examples/assets/images/avatar/nan.jpg' />
+              <b>code</b> Self expression
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -364,17 +396,29 @@ const FrontPage2 = () => (
     </Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Breaking The Grid, Grabs Your Attention
+        <br id="sectionProject"/>
+        <Header  as='h3' style={{ fontSize: '2em' }}>
+          Mobile Web App "Reviews-App" (Reactjs-Redux-Firebase)
         </Header>
+        <Project1Video />
         <p style={{ fontSize: '1.33em' }}>
-          Instead of focusing on content creation and hard work, we have learned how to master the
-          art of doing nothing by providing massive amounts of whitespace and generic content that
-          can seem massive, monolithic and worth your attention.
+          Car dealerships in Australia struggle to build their brand and gain customer trust, and struggle even more to reach past customers for things like servicing.
+         My team and I helped in providing a system that generates reviews from current customers to help drive trust in future customers, 
+         as well as allow them to keep in touch with past customers. </p>
+         <ol>
+  <li>The system offers way to firstly send a text SMS  with the review link to the registered customer on car purchase. </li>
+  <li>Optionally the agent can snap a photo of the customer and send the picture by SMS to the latter.</li>
+  <li> A photo gallery containing all images taken for various products of a business</li>
+</ol> 
+        
+
+
+        <p>
         </p>
-        <Button as='a' size='large'>
-          Read More
-        </Button>
+        <Link2 to={routes.PROJECTREVIEWS}> 
+        <Button size='large'>
+          Go to Site ( Mobile-Only)
+        </Button></Link2>
         <Divider
           as='h4'
           className='header'
@@ -382,8 +426,8 @@ const FrontPage2 = () => (
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
         </Divider>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Did We Tell You About Our Bananas?
+        <Header as='h3' style={{  fontSize: '2em' }}>
+          Software Developement
         </Header>
         <p style={{ fontSize: '1.33em' }}>
           Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
@@ -431,8 +475,15 @@ const FrontPage2 = () => (
       </Container>
     </Segment>
   </ResponsiveContainer>
-  </div>
+
 )
+
+const Project1Video = () => (
+  <Embed id='x4BJbGYPbVA' placeholder='/images/image-16by9.png' source='youtube' />
+)
+
 export default FrontPage2
 
+
+ 
 

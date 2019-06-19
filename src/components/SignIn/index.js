@@ -105,17 +105,13 @@ class SignInForm extends Component {
         </div>
         <div> <br>
         </br>        
-<Button   color='blue' >
-          Sign In with Facebook
+<Button   className='ui facebook button' >
+<i aria-hidden="true" className="facebook icon"></i> with Facebook
         </Button></div>
         <div><br>
         </br>
-<Button   color='orange'>
-          Sign with Instagram
-        </Button></div>>
-
-
-
+<Button    className="ui instagram button"><i aria-hidden="true" class="instagram icon"></i> with Instagram
+        </Button></div>
         </Segment>
 
         { error &&   <Button inverted color='red' 

@@ -1,22 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
-import { Segment, Button} from 'semantic-ui-react';
-
-
+import { Menu, Segment, Button} from 'semantic-ui-react';
 import AuthUserContext from '../Session/AuthUserContext';
 import SignOutButton from '../SignOut';
 import * as routes from '../../constants/routes';
 
-import {
-  Menu
-} from 'semantic-ui-react'
-
-
-
-
-const Navigation = (props) =>
+const Navigation = (props) => 
   <AuthUserContext.Consumer>
     {authUser => authUser
       ? <NavigationAuth />
@@ -24,12 +13,9 @@ const Navigation = (props) =>
     }
   </AuthUserContext.Consumer>
 
-
-
-  
-
-const NavigationAuth = () =>
-<React.Fragment>
+const NavigationAuth = () => (
+  <React.Fragment>
+    
     <Menu.Item>
       <Link to={routes.FRONTPAGE2}> 
       <Segment inverted>
@@ -42,8 +28,8 @@ const NavigationAuth = () =>
     </Menu.Item>
     <Menu.Item>
       <Link to={routes.ACCOUNT}> 
-      <Segment inverted> <Button inverted color='blue' 
-    ><i className="user circle outline icon"></i>
+      <Segment inverted> <Button inverted color='blue'>
+        <i className="user circle outline icon"></i>
         About me
       </Button></Segment></Link>
     </Menu.Item>
@@ -61,38 +47,30 @@ const NavigationAuth = () =>
       </Button></Link></Segment>
     </Menu.Item>
 
-
-    
-
-
     <Menu.Item position="right">
       <SignOutButton />
-    </Menu.Item>
-  </React.Fragment>
+    </Menu.Item></React.Fragment>)
 
-const NavigationNonAuth = () =>
+
+
+
+const NavigationNonAuth = () =>(
   <React.Fragment>
-    <Menu.Item>
-      <Link to={routes.FRONTPAGE}> <Button size='huge' inverted color='blue'
-      aria-hidden="true" 
-    ><i className="home icon"></i>
-        Home
-      </Button></Link>
+    <Menu.Item >
+    <Link to={routes.FRONTPAGE}>
+      
+      <Button className="fluid ui button" inverted size='big'  
+    >  <i className="home icon"></i>Home
+     </Button>  </Link>
     </Menu.Item>
 
     <Menu.Item position="right">
-      <Link to={routes.SIGN_IN}> 
-      <div>
-      <Button inverted size='huge'  
-    ><i className="sign-in icon"></i>
-        Sign-In
-      </Button>
-  </div></Link>
+    <center><Link to={routes.SIGN_IN}>
+      <div className="item">  
+      <Button inverted size='big'  
+    >  <i className="sign-in icon"></i>Sign-In
+     </Button>  </div></Link></center>
     </Menu.Item>
-    </React.Fragment>
-
-
-
-
+    </React.Fragment>)
 
 export default Navigation;
