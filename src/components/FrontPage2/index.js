@@ -107,10 +107,11 @@ class HomepageHeading extends React.Component {
     return (
       <div><Container text>
       <TransitionExampleDuration show='3500' children={<div>
-        <Header
+        <Button
     as='h1'
     content='Severless Solutions'
     inverted
+    basic
     style={{
       fontSize: mobile ? '2em' : '4em',
       fontWeight: 'normal',
@@ -134,18 +135,18 @@ class HomepageHeading extends React.Component {
        <div>
   <Segment inverted>
   <Link
-    activeClass="active"
+    activeclass="active"
     to="section1"
     spy={true}
     smooth={true}
     offset={-70}
     duration= {700}
 > <Button
-         inverted color='blue' 
+         inverted basic color='blue' 
         onClick={this.handleClick}
      
       >
-          <h3 style = {{ color:"white"}}>Start Showcase <Icon name='right arrow' /></h3>    
+          <h3 color="blue">Start Showcase <Icon name='right arrow' /></h3>    
           
         </Button></Link>
     </Segment>
@@ -199,6 +200,8 @@ class DesktopContainer extends Component {
               pointing={!fixed}
               secondary={!fixed}
               size='large'
+              style={{background:'black' }}
+
             >
 
             
@@ -266,16 +269,18 @@ class MobileContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 350, padding: '1em 0em' }}
+            style={{ minHeight: 350, padding: '1em 0em', background:'black' }}
             vertical
+          
           >
-            <Container>
+            <Container style={{overflow:'auto'}} >
+              <div  style={{float:'left'}}>
               <Menu inverted pointing secondary size='large'>
                 <Menu.Item onClick={this.handleToggle}>
-                  <Icon name='sidebar' />
+                  <Icon name='sidebar' />    
                 </Menu.Item>
-               <Navigation/>
-              </Menu>
+              </Menu></div>
+              <div style={{float:'right', marginRight:'20px'}}> <h1>Rajiv.K</h1></div>
             </Container>
             <HomepageHeading mobile />
           </Segment>
@@ -309,6 +314,7 @@ const FrontPage2 = () => (
       <Grid id="section1" container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column  width={8}>
+            <br></br>
             <Header as='h3' style={{ fontSize: '2em' }}>
               We Help Companies and Companions
             </Header>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+
 import { Segment, Button} from 'semantic-ui-react';
 
 
@@ -46,10 +48,17 @@ const NavigationAuth = () =>
       </Button></Segment></Link>
     </Menu.Item>
     <Menu.Item> 
-      <Segment inverted> <Button inverted color='blue' 
+      <Segment inverted>
+      <Link
+    activeclass="active"
+    to="section1"
+    smooth='true'
+    offset={-70}
+    duration= {700}
+>  <Button inverted color='blue' 
     ><i className="user circle outline icon"></i>
         Projects
-      </Button></Segment>
+      </Button></Link></Segment>
     </Menu.Item>
 
 
