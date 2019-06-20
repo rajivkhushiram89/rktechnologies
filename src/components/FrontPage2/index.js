@@ -322,7 +322,12 @@ const FrontPage2 = () => (
     smooth={true}
     offset={-70}
     duration= {700}
-> <br/> <Button size='huge'>View Projects</Button></Link>
+>  <Button size='huge'>View Projects</Button></Link><br/>
+<Link2 to={routes.PROJECTREVIEWS}> 
+<br></br>
+        <Button size='large'><i className="git icon"></i>
+          Github 
+        </Button></Link2>
           </Grid.Column>
         </Grid.Row></center>
     </div>
@@ -469,57 +474,48 @@ const TableExamplePadded = () => (
 
     <Table.Body>
     <Table.Row>
-        <Table.Cell textAlign='center' warning>Git</Table.Cell>
-        <Table.Cell selectable>
+        <Table.Cell textAlign='center' positive>Git</Table.Cell>
+        <Table.Cell  textAlign='center' positive  >
         <ProgressExampleIndicating  color={'green'} percent='75' />
         </Table.Cell>
       </Table.Row>
     <Table.Row>
         <Table.Cell textAlign='center' warning>Java</Table.Cell>
-        <Table.Cell selectable>
-        <ProgressExampleIndicating  color={'yellow'} percent='65' />
+        <Table.Cell textAlign='center'  width={10}  positive>
+        <ProgressExampleIndicating   color={'yellow'} percent='65' />
         </Table.Cell>
       </Table.Row>
       <Table.Row>
-        <Table.Cell textAlign='center'  positive>CSS</Table.Cell>
-        <Table.Cell selectable>
+        <Table.Cell textAlign='center'  warning>HTML/CSS/JS</Table.Cell>
+        <Table.Cell textAlign='center'  width={10}  positive>
         <ProgressExampleIndicating  color={'yellow'} percent='60' />
         </Table.Cell>
       </Table.Row>
-      <Table.Row>
-        <Table.Cell textAlign='center' warning>HTML</Table.Cell>
-        <Table.Cell selectable>
-        <ProgressExampleIndicating color={'green'}  percent='90' />
-        </Table.Cell>
-      </Table.Row>
+      
       <Table.Row>
         <Table.Cell textAlign='center'  positive>React</Table.Cell>
-        <Table.Cell selectable>
+        <Table.Cell textAlign='center'  width={10}  positive>
         <ProgressExampleIndicating color={'green'}  percent='75' />
         </Table.Cell>
         </Table.Row>
 
-      <Table.Row warning>
-        <Table.Cell textAlign='center' warning>Javascript</Table.Cell>
-        <Table.Cell selectable warning>
-        <ProgressExampleIndicating color={'yellow'}  percent='67' />
-        </Table.Cell>
-      </Table.Row>
       <Table.Row>
-        <Table.Cell textAlign='center' positive>Node.js</Table.Cell>
-        <Table.Cell selectable positive>
+        <Table.Cell textAlign='center' warning>Node.js</Table.Cell>
+        <Table.Cell textAlign='center'  width={10}  positive>
         <ProgressExampleIndicating color={'yellow'}  percent='40' />
         </Table.Cell>
       </Table.Row>
+
       <Table.Row>
-        <Table.Cell textAlign='center' positive>Liferay</Table.Cell>
-        <Table.Cell selectable positive>
-        <ProgressExampleIndicating color={'yellow'} percent='60' />
+        <Table.Cell textAlign='center' warning>Liferay</Table.Cell>
+        <Table.Cell  textAlign='center'  width={10}  positive>
+        <ProgressExampleIndicating  color={'yellow'} percent='60' />
         </Table.Cell>
       </Table.Row>
+      
       <Table.Row>
-        <Table.Cell textAlign='center' positive>Dev Ops</Table.Cell>
-        <Table.Cell selectable positive>
+        <Table.Cell  textAlign='center' positive>Dev Ops</Table.Cell>
+        <Table.Cell  textAlign='center' positive   width={10}>
         <ProgressExampleIndicating color={'yellow'} percent='52' />
         </Table.Cell>
       </Table.Row>
@@ -532,7 +528,7 @@ export default FrontPage2
 
 const ProgressExampleIndicating = (props) => (
 <div>
-   <Progress progress color={props.color} percent={props.percent} >
+   <Progress active progress size='large' color={props.color} percent={props.percent} >
     
   </Progress></div>
 

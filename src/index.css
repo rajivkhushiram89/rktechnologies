@@ -150,5 +150,7 @@ body {
     transform: translateY(calc(-50% - 15px));
   }
 }
-
+.ui.progress {
+  margin: 0 0 0 0 !important;
+}
 
