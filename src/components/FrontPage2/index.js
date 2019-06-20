@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
 import * as routes from '../../constants/routes';
+
+
 import styled from "styled-components";
 import {
   Embed,
@@ -17,7 +19,7 @@ import {
   Responsive,
   Segment,
   Sidebar,
-  Visibility,
+  Visibility,Table, Rating
 } from 'semantic-ui-react'
 import Navigation from '../Navigation';
 import * as Scroll from 'react-scroll';
@@ -97,80 +99,13 @@ class HomepageHeading extends React.Component {
     }
   }
 
-  handleClick=(e) => { 
-    this.setState({
-      stage: this.state.stage + 1
-  })
-  }
+  
    
   render () {
     const { mobile} = this.props;
     return (
       <div><Container text>
-      <TransitionExampleDuration show='3500' children={<div>
-         <div>
-  <Segment inverted>
-  <Link
-    activeclass="active"
-    to="section1"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration= {700}
-> <Button className="medium ui button"
-         inverted basic color='blue' 
-        onClick={this.handleClick}
-     
-      >
-        <div>
-         <h1>Profile Summary</h1> 
-         <i className="caret square down outline icon"></i>
-         </div>
-        </Button></Link>
-    </Segment>
-    </div> 
-    <div>
-  <Segment inverted>
-  <Link
-    activeclass="active"
-    to="sectionProject"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration= {700}
-> <Button className="medium ui button"
-         inverted basic color='blue' 
-        onClick={this.handleClick}
-     
-      >
-        <div>
-         <h1> Projects</h1> 
-         <i className="caret square down outline icon"></i>
-         </div>
-        </Button></Link>
-    </Segment>
-    </div>
-    <div>
-  <Segment inverted>
-  <Link
-    activeclass="active"
-    to="section1"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration= {700}
-> <Button className="medium ui button"
-         inverted basic color='blue' 
-        onClick={this.handleClick}>
-        <div>
-         <h1>Contact</h1> 
-         <i className="caret square down outline icon"></i>
-         </div>
-        </Button></Link>
-    </Segment>
-    </div>
-       <br />
-      </div>}/>
+      <TransitionExampleDuration show='3500' children={<div></div>}/>
     </Container></div>
     );
   }
@@ -187,7 +122,7 @@ HomepageHeading.propTypes = {
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-  state = { visible: true}
+  state = { visible: true }
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
@@ -326,7 +261,7 @@ ResponsiveContainer.propTypes = {
 const FrontPage2 = () => (
 
   <ResponsiveContainer >
-    <Segment  style={{ padding: '8em 0em' }} vertical>
+    <Segment  style={{ padding: '6em 0em' }} vertical>
       <Grid id="section1" container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column  width={8}>
@@ -346,9 +281,20 @@ const FrontPage2 = () => (
             Open-source enthusiast and an IT graduate of RMIT University seeking a position as a part-time developer. 
             I am a co-operative and contributive full stack developer with over <strong>3</strong> years experience in the Web Design and Development industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
             <p style={{ fontSize: '1.33em' }}> 
-            A highly organized and detailed-oriented individual who has a good sense of time management. 
              </p>
-           
+             <Header as='h3' style={{ fontSize: '1.4em' }}>
+  Software Engineer - <a href="https://binksandassociates.com.au/"> Binks & Associates</a>   --Melboune, 11/17 -1/18
+</Header><p style={{ fontSize: '1.33em' }}>Prototyped a Liferay + Camunda (BPM) based portal as part of Live-Project Melbourne initiative  </p>
+            
+           <p style={{ fontSize: '1.33em' }}> </p>
+           <Header as='h3' style={{ fontSize: '1.4em' }}>
+  Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve</a>   --Mauritius, 07/14 -7/17
+</Header><p style={{ fontSize: '1.33em' }}> Created intranets using Liferay (Java platform) namely a Leave Management System and developed a mobile app useful for PDF-Annotations </p>
+<Header as='h3' style={{ fontSize: '1.4em' }}>
+  IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Tech</a>   --Mauritius, 06/13 -12/13
+</Header>
+<p style={{ fontSize: '1.33em' }}> Assisted in the development and design websites using Java </p>
+
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
           <div className="ui fluid image">
@@ -361,6 +307,7 @@ const FrontPage2 = () => (
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
+          <TableExamplePadded/>
           <Link
     activeclass="active"
     to="sectionProject"
@@ -368,7 +315,7 @@ const FrontPage2 = () => (
     smooth={true}
     offset={-70}
     duration= {700}
-> <Button size='huge'>View My Projects</Button></Link>
+> <br/> <Button size='huge'>View My Projects</Button></Link>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -394,14 +341,14 @@ const FrontPage2 = () => (
         </Grid.Row>
       </Grid>
     </Segment>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    <Segment style={{ padding: '3em 0em' }} vertical>
       <Container text>
         <br id="sectionProject"/>
         <Header  as='h3' style={{ fontSize: '2em' }}>
           Mobile Web App "Reviews-App" (Reactjs-Redux-Firebase)
         </Header>
-        <Project1Video />
-        <p style={{ fontSize: '1.33em' }}>
+        <Project1Video /><br/>
+        <p style={{  fontSize: '1.33em' }}>
           Car dealerships in Australia struggle to build their brand and gain customer trust, and struggle even more to reach past customers for things like servicing.
          My team and I helped in providing a system that generates reviews from current customers to help drive trust in future customers, 
          as well as allow them to keep in touch with past customers. </p>
@@ -440,7 +387,7 @@ const FrontPage2 = () => (
       </Container>
     </Segment>
     <div id = 'wawa'> </div>
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    <Segment inverted vertical style={{ padding: '3em 0em' }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
@@ -481,6 +428,101 @@ const FrontPage2 = () => (
 const Project1Video = () => (
   <Embed id='x4BJbGYPbVA' placeholder='/images/image-16by9.png' source='youtube' />
 )
+const TableExamplePadded = () => (
+  <React.Fragment>
+ 
+  <Table celled padded>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell singleLine textAlign='center'>Skill:</Table.HeaderCell>
+        <Table.HeaderCell>Technologies:</Table.HeaderCell>
+        <Table.HeaderCell>Rating:</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+
+    <Table.Row>
+        <Table.Cell>
+          <Header as='h4' textAlign='center'>
+            Versioning
+          </Header>
+        </Table.Cell>
+        <Table.Cell singleLine>Git</Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={3} maxRating={5} />
+        </Table.Cell>
+  
+     
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' textAlign='center'>
+            Front-End
+          </Header>
+        </Table.Cell>
+        <Table.Cell singleLine>HTML/CSS/JS + REACT JS +JQUERY</Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={3} maxRating={5} />
+        </Table.Cell>
+  
+     
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' textAlign='center'>
+          Back-End
+          </Header>
+        </Table.Cell>
+        <Table.Cell singleLine>Node.js + Python + Java + Liferay + Flask</Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={3} maxRating={5} />
+        </Table.Cell>
+  
+        <Table.Cell>    
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' textAlign='center'>
+            Dev-Ops
+          </Header>
+        </Table.Cell>
+        <Table.Cell singleLine>GCP + AWS + Linux Systems + Bitnami + Firebase</Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={3} maxRating={5} />
+        </Table.Cell>
+       
+     
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' textAlign='center'>
+            Databases
+          </Header>
+        </Table.Cell>
+        <Table.Cell singleLine>MySQL + Postgres + Firestore</Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={3} maxRating={5} />
+        </Table.Cell>
+    
+     
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' textAlign='center'>
+            API's
+          </Header>
+        </Table.Cell>
+        <Table.Cell singleLine>MySQL + Postgres + Firestore</Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={2} maxRating={5} />
+        </Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table></React.Fragment>
+)
+
+
 
 export default FrontPage2
 

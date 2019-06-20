@@ -3,7 +3,7 @@ import { Form, Grid, Image, Transition } from 'semantic-ui-react'
 
 export class TransitionExampleDuration extends Component {
 
-  state ={ hide: 500, show:this.props.show, visible: false }
+  state = { hide: 500, show:this.props.show, visible: false }
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
   toggleVisibility = () => this.setState(prevState => ({ visible: !prevState.visible }))
 

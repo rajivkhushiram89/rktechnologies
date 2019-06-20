@@ -1,11 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Spinner from 'react-spinkit'
 import styled from 'styled-components'
-import { Loader, Icon, Label } from 'semantic-ui-react'
-
+import { Label } from 'semantic-ui-react'
 import Logo from './components/Logo'
-import Text from './components/Text'
 
 const ScreenWrapper = styled.div`
   position: absolute;
@@ -25,16 +22,9 @@ const LoadingComponents = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 `
-const LoaderExampleInlineCentered = () => <Loader active inline='centered' />
 const LabelExampleBasic = () => (
-  <Label>
-   Loading...  
-  </Label>
+  <Label>Loading</Label>
 )
-
-const backWhite =  styled.div`
-background : #fff;
-`
 
 const LoadableData = styled.div`
   display: ${props => props.loading ? 'none' : 'block'};
@@ -72,21 +62,17 @@ function LoadingScreen ({
             <Logo
               src={logoSrc}
               rounded={logoRounded} />}
-
-
-
           {text &&
           <div>
-           
-            <LabelExampleBasic/>
-              </div>}
+            <LabelExampleBasic />
+          </div> }
 
         </LoadingComponents>
       </ScreenWrapper>
       <LoadableData loading={loading}>
         {children}
       </LoadableData>
-      </div>
+    </div>
   )
 }
 
