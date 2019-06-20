@@ -104,9 +104,13 @@ class HomepageHeading extends React.Component {
   render () {
     const { mobile} = this.props;
     return (
-      <div><Container text>
-      <TransitionExampleDuration show='3500' children={<div></div>}/>
-    </Container></div>
+    
+      <TransitionExampleDuration show='3500' children={<div>
+        <Image className="ui fluid image" src='https://www.kanitech.com.hk/wp-content/uploads/2018/08/it-background.jpg' />
+
+
+      </div>}/>
+   
     );
   }
 }
@@ -345,28 +349,26 @@ const FrontPage2 = () => (
       <Container text>
         <br id="sectionProject"/>
         <Header  as='h3' style={{ fontSize: '2em' }}>
-          Mobile Web App "Reviews-App" (Reactjs-Redux-Firebase)
+          <center>Reviews-App (ReactJs-Redux-Firebase)</center>
         </Header>
         <Project1Video /><br/>
         <p style={{  fontSize: '1.33em' }}>
           Car dealerships in Australia struggle to build their brand and gain customer trust, and struggle even more to reach past customers for things like servicing.
          My team and I helped in providing a system that generates reviews from current customers to help drive trust in future customers, 
          as well as allow them to keep in touch with past customers. </p>
-         <ol>
+         <ol style={{ fontSize: '1.33em' }}>
   <li>The system offers way to firstly send a text SMS  with the review link to the registered customer on car purchase. </li>
   <li>Optionally the agent can snap a photo of the customer and send the picture by SMS to the latter.</li>
   <li> Developed a photo gallery containing all images taken for sales agents of a business</li>
   <li> Implementation of Full text Search using Algolia API across Firebase Firestore </li>
-</ol> 
-        
-
-
+</ol>
         <p>
         </p>
+        <div style={{float:'right'}}>
         <Link2 to={routes.PROJECTREVIEWS}> 
-        <Button size='large'>
-          Go to Site ( Mobile-Only)
-        </Button></Link2>
+        <Button size='large'><i className='sign-in icon' />
+          Go to Site ( Mobile-Only) 
+        </Button></Link2></div>
         <Divider
           as='h4'
           className='header'
@@ -386,6 +388,27 @@ const FrontPage2 = () => (
           I'm Still Quite Interested
         </Button>
       </Container>
+    </Segment>
+    <Segment  style={{ padding: '6em 0em' }} vertical>
+      <Grid id="section1" container stackable verticalAlign='middle'>
+        <Grid.Row>
+        <Grid.Column floated='right' width={6}>
+          <div className="ui fluid image">
+      <a className="ui left corner label">
+        <i className="heart icon"></i>
+      </a>
+      <Image bordered rounded size='large' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB0cBBU9pT9of5p74g4S_8NPoh9-roeotoBevT080yvUmgM4Br' />
+    </div>
+          </Grid.Column>
+          <Grid.Column id='sectionContact'  width={8}>
+            <Header as='h3' style={{ fontSize: '40px' }}>
+              Contact
+            </Header>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+        </Grid.Row>
+      </Grid>
     </Segment>
     <div id = 'wawa'> </div>
     <Segment inverted vertical style={{ padding: '3em 0em' }}>
@@ -427,7 +450,7 @@ const FrontPage2 = () => (
 )
 
 const Project1Video = () => (
-  <Embed id='x4BJbGYPbVA' placeholder='/images/image-16by9.png' source='youtube' />
+  <Embed id='x4BJbGYPbVA' placeholder='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmgXA_CAgMrddxU8dl6DSmOfW6rOsfq30JEdLuOGxyF_HGZaDLsw' source='youtube' />
 )
 const TableExamplePadded = () => (
   <React.Fragment>
@@ -448,7 +471,7 @@ const TableExamplePadded = () => (
             Versioning
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>Git</Table.Cell>
+        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Git</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -461,7 +484,7 @@ const TableExamplePadded = () => (
             Front-End
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>HTML/CSS/JS + ReactJS + Redux +Jquery</Table.Cell>
+        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>HTML/CSS/JS + ReactJS + Redux +Jquery</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -474,7 +497,7 @@ const TableExamplePadded = () => (
           Back-End
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>Node.js + Python + Java + Liferay + Flask</Table.Cell>
+        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Node.js + Python + Java + Liferay + Flask</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -488,7 +511,7 @@ const TableExamplePadded = () => (
             Dev-Ops
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>GCP + AWS + Linux Systems + Bitnami + Firebase Hosting & Cloud Functions</Table.Cell>
+        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>GCP + AWS + Linux Systems + Bitnami + Firebase Hosting & Cloud Functions</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -501,7 +524,7 @@ const TableExamplePadded = () => (
             Databases
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>MySQL + Postgres + Firestore, Cloud Storage & Firebase Real Time Database</Table.Cell>
+        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>MySQL + Postgres + Firestore, Cloud Storage & Firebase Real Time Database</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -514,7 +537,7 @@ const TableExamplePadded = () => (
             APIs
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>Algolia, Firebase Auth, Facebook Graph API, Google Calendar API & more </Table.Cell>
+        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Algolia, Firebase Auth, Facebook Graph API, Google Calendar API & more </Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={2} maxRating={5} />
         </Table.Cell>
@@ -525,7 +548,7 @@ const TableExamplePadded = () => (
             Knowledge
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>Design Patters, Agile Methodologies: Scrum, Kanban, Trello, & Internet of Things, Raspberry Pis, Algorithms Analysis </Table.Cell>
+        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Design Patters, Agile Methodologies: Scrum, Kanban, Trello, & Internet of Things, Raspberry Pis, Algorithms Analysis </Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={2} maxRating={5} />
         </Table.Cell>

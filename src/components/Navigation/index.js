@@ -87,7 +87,7 @@ const NavigationNonAuth = () => (
 
     <Menu.Item >
       <Link2 activeclass='active'
-        to='section1'
+        to='sectionContact'
         spy={true}
         smooth='true'
         offset={-70}

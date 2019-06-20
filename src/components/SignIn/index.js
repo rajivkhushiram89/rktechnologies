@@ -110,7 +110,7 @@ class SignInForm extends Component {
         </Button></div>
         <div><br>
         </br>
-<Button    className="ui instagram button"><i aria-hidden="true" class="instagram icon"></i> with Instagram
+<Button    className="ui instagram button"><i aria-hidden="true" className="instagram icon"></i> with Instagram
         </Button></div>
         </Segment>
 
