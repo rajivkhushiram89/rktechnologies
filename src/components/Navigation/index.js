@@ -68,7 +68,7 @@ const NavigationNonAuth = () => (
         smooth='true'
         offset={-70}
         duration={700} >
-        <Button className='fluid ui button' inverted size='big'>
+        <Button basic  className='fluid ui button' inverted size='large'>
           <i className='id badge outline icon' /> Profile Summary
         </Button>  </Link2>
     </Menu.Item>
@@ -80,7 +80,7 @@ const NavigationNonAuth = () => (
         smooth='true'
         offset={-70}
         duration={700}>
-        <Button className='fluid ui button' inverted size='big'>
+        <Button basic className='fluid ui button' inverted size='large'>
           <i className='git icon' />Projects
         </Button>  </Link2>
     </Menu.Item>
@@ -92,14 +92,14 @@ const NavigationNonAuth = () => (
         smooth='true'
         offset={-70}
         duration={700} >
-        <Button className='fluid ui button' inverted size='big'>
+        <Button basic className='fluid ui button' inverted size='large'>
           <i className='phone volume icon' /> Contact
         </Button>  </Link2>
     </Menu.Item>
     <Menu.Item position='right'>
       <center><Link to={routes.SIGN_IN}>
         <div className='item'>
-          <Button inverted size='big'>
+          <Button basic color='blue' inverted size='big'>
             <i className='sign-in icon' /> Sign-In
           </Button>  </div></Link></center>
     </Menu.Item>

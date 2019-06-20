@@ -1,4 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 
+body {
+  font-family: "Raleway";
+}
+
+.band {
+  width: 500px;
+  height: 500px;
+
+  background: url("./band.png") no-repeat;
+}
 
 .ui.secondary.menu {
     background: 0 0;
@@ -8,6 +19,8 @@
     border: none;
     box-shadow: none;
 }
+
+
 
 #disappearNavFront {
 

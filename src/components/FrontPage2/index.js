@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
 import * as routes from '../../constants/routes';
+
 
 
 import styled from "styled-components";
@@ -105,9 +106,12 @@ class HomepageHeading extends React.Component {
     const { mobile} = this.props;
     return (
     
-      <TransitionExampleDuration show='3500' children={<div>
-        <Image className="ui fluid image" src='https://www.kanitech.com.hk/wp-content/uploads/2018/08/it-background.jpg' />
+      <TransitionExampleDuration show='2500' children={<div>
+        
 
+        <Image className="ui fluid image" src='https://www.kanitech.com.hk/wp-content/uploads/2018/08/it-background.jpg'>
+        </Image>
+        
 
       </div>}/>
    
