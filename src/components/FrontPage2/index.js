@@ -278,12 +278,12 @@ const FrontPage2 = () => (
               Summary:
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-            Open-source enthusiast and an IT graduate of RMIT University seeking a position as a part-time developer. 
-            I am a co-operative and contributive full stack developer with over <strong>3</strong> years experience in the Web Design and Development industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
+            An IT postgraduate of RMIT University seeking a position as a part-time developer. 
+            I am a co-operative and contributive full stack developer with over <strong>3 years experience </strong> in the  <strong>web</strong> and  <strong>mobile app</strong> industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
             <p style={{ fontSize: '1.33em' }}> 
              </p>
              <Header as='h3' style={{ fontSize: '1.4em' }}>
-  Software Engineer - <a href="https://binksandassociates.com.au/"> Binks & Associates</a>   --Melboune, 11/17 -1/18
+  Software Consultant - <a href="https://binksandassociates.com.au/"> Binks & Associates</a>   --Melboune, 11/17 -1/18
 </Header><p style={{ fontSize: '1.33em' }}>Prototyped a Liferay + Camunda (BPM) based portal as part of Live-Project Melbourne initiative  </p>
             
            <p style={{ fontSize: '1.33em' }}> </p>
@@ -355,7 +355,8 @@ const FrontPage2 = () => (
          <ol>
   <li>The system offers way to firstly send a text SMS  with the review link to the registered customer on car purchase. </li>
   <li>Optionally the agent can snap a photo of the customer and send the picture by SMS to the latter.</li>
-  <li> A photo gallery containing all images taken for various products of a business</li>
+  <li> Developed a photo gallery containing all images taken for sales agents of a business</li>
+  <li> Implementation of Full text Search using Algolia API across Firebase Firestore </li>
 </ol> 
         
 
@@ -460,7 +461,7 @@ const TableExamplePadded = () => (
             Front-End
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>HTML/CSS/JS + REACT JS +JQUERY</Table.Cell>
+        <Table.Cell singleLine>HTML/CSS/JS + ReactJS + Redux +Jquery</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -487,7 +488,7 @@ const TableExamplePadded = () => (
             Dev-Ops
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>GCP + AWS + Linux Systems + Bitnami + Firebase</Table.Cell>
+        <Table.Cell singleLine>GCP + AWS + Linux Systems + Bitnami + Firebase Hosting & Cloud Functions</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -500,7 +501,7 @@ const TableExamplePadded = () => (
             Databases
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>MySQL + Postgres + Firestore</Table.Cell>
+        <Table.Cell singleLine>MySQL + Postgres + Firestore, Cloud Storage & Firebase Real Time Database</Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={5} />
         </Table.Cell>
@@ -510,10 +511,21 @@ const TableExamplePadded = () => (
       <Table.Row>
         <Table.Cell>
           <Header as='h4' textAlign='center'>
-            API's
+            APIs
           </Header>
         </Table.Cell>
-        <Table.Cell singleLine>MySQL + Postgres + Firestore</Table.Cell>
+        <Table.Cell singleLine>Algolia, Firebase Auth, Facebook Graph API, Google Calendar API & more </Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={2} maxRating={5} />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <Header as='h4' textAlign='center'>
+            Knowledge
+          </Header>
+        </Table.Cell>
+        <Table.Cell singleLine>Design Patters, Agile Methodologies: Scrum, Kanban, Trello, & Internet of Things, Raspberry Pis, Algorithms Analysis </Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={2} maxRating={5} />
         </Table.Cell>

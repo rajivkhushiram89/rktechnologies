@@ -84,6 +84,18 @@ const NavigationNonAuth = () => (
           <i className='git icon' />Projects
         </Button>  </Link2>
     </Menu.Item>
+
+    <Menu.Item >
+      <Link2 activeclass='active'
+        to='section1'
+        spy={true}
+        smooth='true'
+        offset={-70}
+        duration={700} >
+        <Button className='fluid ui button' inverted size='big'>
+          <i className='phone volume icon' /> Contact
+        </Button>  </Link2>
+    </Menu.Item>
     <Menu.Item position='right'>
       <center><Link to={routes.SIGN_IN}>
         <div className='item'>
