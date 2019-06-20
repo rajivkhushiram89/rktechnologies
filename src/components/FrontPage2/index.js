@@ -107,14 +107,14 @@ class HomepageHeading extends React.Component {
     const { mobile} = this.props;
     return (
     
-      <TransitionExampleDuration show='2500' children={<div>
+      <TransitionExampleDuration show='500' children={
         
 
         <Image className="ui fluid image" src='https://www.kanitech.com.hk/wp-content/uploads/2018/08/it-background.jpg'>
         </Image>
         
 
-      </div>}/>
+      }/>
    
     );
   }
@@ -184,6 +184,7 @@ class DesktopContainer extends Component {
               </Container>
             </Menu>
            <HomepageHeading /> 
+           <div></div>
           </Segment>
         </Visibility>
            {children} 
@@ -244,7 +245,6 @@ class MobileContainer extends Component {
             </Container>
             <HomepageHeading mobile />
           </Segment>
-
           {children}
         </Sidebar.Pusher>
       </Responsive>
@@ -257,23 +257,24 @@ MobileContainer.propTypes = {
 }
 
 const ResponsiveContainer = ({ children }) => (
-  <div>
+  <React.Fragment>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
-  </div>
+    </React.Fragment>
 )
 
 ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
+
 const FrontPage2 = () => (
 
-  <ResponsiveContainer >
-    <Segment  style={{ padding: '4em 0em' }} vertical>
+  <ResponsiveContainer  >
+    <Segment id="section1"  style={{ padding: '4em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row >
-          <Grid.Column id='section1'  width={8}>
+          <Grid.Column   width={8}>
             <div >
             <Header   as='h3' style={{ fontSize: '40px' }}>
               Rajiv Khushiram
@@ -311,7 +312,7 @@ const FrontPage2 = () => (
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-      <center><Image bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' />
+      <center><Image avatar bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' />
      <br></br> <Grid.Row>
           <Grid.Column textAlign='center'>
           <TableExamplePadded/>
@@ -359,27 +360,7 @@ const FrontPage2 = () => (
     <Segment style={{ padding: '3em 0em' }} vertical>
       <Container text>
         <br id="sectionProject"/>
-        <Header  as='h3' style={{ fontSize: '2em' }}>
-          <center>Reviews-App (ReactJs-Redux-Firebase)</center>
-        </Header>
-        <Project1Video /><br/>
-        <p style={{  fontSize: '1.33em' }}>
-          Car dealerships in Australia struggle to build their brand and gain customer trust, and struggle even more to reach past customers for things like servicing.
-         My team and I helped in providing a system that generates reviews from current customers to help drive trust in future customers, 
-         as well as allow them to keep in touch with past customers. </p>
-         <ol style={{ fontSize: '1.33em' }}>
-  <li>The system offers way to firstly send a text SMS  with the review link to the registered customer on car purchase. </li>
-  <li>Optionally the agent can snap a photo of the customer and send the picture by SMS to the latter.</li>
-  <li> Developed a photo gallery containing all images taken for sales agents of a business</li>
-  <li> Implementation of Full text Search using Algolia API across Firebase Firestore </li>
-</ol>
-        <p>
-        </p>
-        <div style={{float:'right'}}>
-        <Link2 to={routes.PROJECTREVIEWS}> 
-        <Button size='large'><i className='sign-in icon' />
-          Go to Site ( Mobile-Only) 
-        </Button></Link2></div>
+        {/* pass in variable of projectList*/}
         <Divider
           as='h4'
           className='header'
@@ -401,7 +382,7 @@ const FrontPage2 = () => (
       </Container>
     </Segment>
     <Segment  style={{ padding: '6em 0em' }} vertical>
-      <Grid id="section1" container stackable verticalAlign='middle'>
+      <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
         <Grid.Column floated='right' width={6}>
           <div className="ui fluid image">
@@ -507,9 +488,9 @@ const TableExamplePadded = () => (
       </Table.Row>
 
       <Table.Row>
-        <Table.Cell textAlign='center' warning>Liferay</Table.Cell>
+        <Table.Cell textAlign='center' warning>Python</Table.Cell>
         <Table.Cell  textAlign='center'  width={10}  positive>
-        <ProgressExampleIndicating  color={'yellow'} percent='60' />
+        <ProgressExampleIndicating  color={'yellow'} percent='57' />
         </Table.Cell>
       </Table.Row>
       
