@@ -5,6 +5,17 @@ import LoadingScreen from './components/LoadingScreen/index'
 import registerServiceWorker from './registerServiceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css'
+import { ParallaxProvider } from 'react-scroll-parallax';
+
+class AppContainer extends Component {
+    render() {
+        return (
+            <ParallaxProvider>
+                <App />
+            </ParallaxProvider>
+        );
+    }
+}
 
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
@@ -25,7 +36,7 @@ class Demo extends React.Component {
       setTimeout(() =>
           this.setState({
               loading: false
-          }), 2500)
+          }), 1)
     }
   
     render () {
@@ -40,8 +51,7 @@ class Demo extends React.Component {
           textColor='#676767'
           logoSrc='https://cdn.dribbble.com/users/891352/screenshots/3310131/bobotov_loader_002.gif'
           text='Loading...'
-        >
-          <App/>
+        ><AppContainer />
         </LoadingScreen>
 
       )

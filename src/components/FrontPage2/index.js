@@ -12,6 +12,7 @@ import {
   Container,
   Divider,
   Grid,
+  Progress,
   Header,
   Icon,
   Image,
@@ -269,16 +270,17 @@ ResponsiveContainer.propTypes = {
 const FrontPage2 = () => (
 
   <ResponsiveContainer >
-    <Segment  style={{ padding: '6em 0em' }} vertical>
-      <Grid id="section1" container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column  width={8}>
-            <Header as='h3' style={{ fontSize: '40px' }}>
+    <Segment  style={{ padding: '4em 0em' }} vertical>
+      <Grid container stackable verticalAlign='middle'>
+        <Grid.Row >
+          <Grid.Column id='section1'  width={8}>
+            <div >
+            <Header   as='h3' style={{ fontSize: '40px' }}>
               Rajiv Khushiram
             </Header>
             <Header as='h3' style={{ fontSize: '16px' }}>
               CBD Melbourne / +61 481187062/ rajivkhushiram@hotmail.com
-            </Header>
+            </Header></div>
             <p style={{ fontSize: '1.33em' }}>
            
             </p>
@@ -309,11 +311,8 @@ const FrontPage2 = () => (
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-      <center><Image bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' /></center>
-    </div>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
+      <center><Image bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' />
+     <br></br> <Grid.Row>
           <Grid.Column textAlign='center'>
           <TableExamplePadded/>
           <Link
@@ -323,7 +322,10 @@ const FrontPage2 = () => (
     smooth={true}
     offset={-70}
     duration= {700}
-> <br/> <Button size='huge'>View My Projects</Button></Link>
+> <br/> <Button size='huge'>View Projects</Button></Link>
+          </Grid.Column>
+        </Grid.Row></center>
+    </div>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -457,114 +459,84 @@ const Project1Video = () => (
   <Embed id='x4BJbGYPbVA' placeholder='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmgXA_CAgMrddxU8dl6DSmOfW6rOsfq30JEdLuOGxyF_HGZaDLsw' source='youtube' />
 )
 const TableExamplePadded = () => (
-  <React.Fragment>
- 
-  <Table celled padded>
+<Table celled>
     <Table.Header>
       <Table.Row>
-        <Table.HeaderCell singleLine textAlign='center'>Skill:</Table.HeaderCell>
-        <Table.HeaderCell>Technologies:</Table.HeaderCell>
-        <Table.HeaderCell>Rating:</Table.HeaderCell>
+        <Table.HeaderCell textAlign='center'>Language/Framework/Tools</Table.HeaderCell>
+        <Table.HeaderCell  textAlign='center'  width={10}>Proficiency</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
+
     <Table.Body>
-
     <Table.Row>
-        <Table.Cell>
-          <Header as='h4' textAlign='center'>
-            Versioning
-          </Header>
+        <Table.Cell textAlign='center' warning>Git</Table.Cell>
+        <Table.Cell selectable>
+        <ProgressExampleIndicating  color={'green'} percent='75' />
         </Table.Cell>
-        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Git</Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={5} />
+      </Table.Row>
+    <Table.Row>
+        <Table.Cell textAlign='center' warning>Java</Table.Cell>
+        <Table.Cell selectable>
+        <ProgressExampleIndicating  color={'yellow'} percent='65' />
         </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell textAlign='center'  positive>CSS</Table.Cell>
+        <Table.Cell selectable>
+        <ProgressExampleIndicating  color={'yellow'} percent='60' />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell textAlign='center' warning>HTML</Table.Cell>
+        <Table.Cell selectable>
+        <ProgressExampleIndicating color={'green'}  percent='90' />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell textAlign='center'  positive>React</Table.Cell>
+        <Table.Cell selectable>
+        <ProgressExampleIndicating color={'green'}  percent='75' />
+        </Table.Cell>
+        </Table.Row>
+
+      <Table.Row warning>
+        <Table.Cell textAlign='center' warning>Javascript</Table.Cell>
+        <Table.Cell selectable warning>
+        <ProgressExampleIndicating color={'yellow'}  percent='67' />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell textAlign='center' positive>Node.js</Table.Cell>
+        <Table.Cell selectable positive>
+        <ProgressExampleIndicating color={'yellow'}  percent='40' />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell textAlign='center' positive>Liferay</Table.Cell>
+        <Table.Cell selectable positive>
+        <ProgressExampleIndicating color={'yellow'} percent='60' />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell textAlign='center' positive>Dev Ops</Table.Cell>
+        <Table.Cell selectable positive>
+        <ProgressExampleIndicating color={'yellow'} percent='52' />
+        </Table.Cell>
+      </Table.Row>
   
-     
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>
-          <Header as='h4' textAlign='center'>
-            Front-End
-          </Header>
-        </Table.Cell>
-        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>HTML/CSS/JS + ReactJS + Redux +Jquery</Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={5} />
-        </Table.Cell>
-  
-     
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>
-          <Header as='h4' textAlign='center'>
-          Back-End
-          </Header>
-        </Table.Cell>
-        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Node.js + Python + Java + Liferay + Flask</Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={5} />
-        </Table.Cell>
-  
-        <Table.Cell>    
-        </Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>
-          <Header as='h4' textAlign='center'>
-            Dev-Ops
-          </Header>
-        </Table.Cell>
-        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>GCP + AWS + Linux Systems + Bitnami + Firebase Hosting & Cloud Functions</Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={5} />
-        </Table.Cell>
-       
-     
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>
-          <Header as='h4' textAlign='center'>
-            Databases
-          </Header>
-        </Table.Cell>
-        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>MySQL + Postgres + Firestore, Cloud Storage & Firebase Real Time Database</Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={5} />
-        </Table.Cell>
-    
-     
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>
-          <Header as='h4' textAlign='center'>
-            APIs
-          </Header>
-        </Table.Cell>
-        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Algolia, Firebase Auth, Facebook Graph API, Google Calendar API & more </Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={2} maxRating={5} />
-        </Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>
-          <Header as='h4' textAlign='center'>
-            Knowledge
-          </Header>
-        </Table.Cell>
-        <Table.Cell style={{  fontSize: '1.33em' }} singleLine>Design Patters, Agile Methodologies: Scrum, Kanban, Trello, & Internet of Things, Raspberry Pis, Algorithms Analysis </Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={2} maxRating={5} />
-        </Table.Cell>
-      </Table.Row>
     </Table.Body>
-  </Table></React.Fragment>
+  </Table>
 )
-
-
 
 export default FrontPage2
 
+const ProgressExampleIndicating = (props) => (
+<div>
+   <Progress progress color={props.color} percent={props.percent} >
+    
+  </Progress></div>
+
+)
 
  
 
