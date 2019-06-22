@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
 import * as routes from '../../constants/routes';
-
-
-
+import { Parallax } from 'react-scroll-parallax';
 import styled from "styled-components";
 import {
   Embed,
@@ -39,8 +37,20 @@ const getWidth = () => {
 
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
+ 
 
 
+class ParallaxImage extends Component {
+  render() {
+    return (
+          <div>
+         <Parallax children className="custom-class" y={this.props.y} tagOuter="figure">
+        {this.props.children}
+    </Parallax>
+          </div>
+    )
+  }
+}
  
  
 /* eslint-disable react/no-multi-comp */
@@ -108,10 +118,12 @@ class HomepageHeading extends React.Component {
     return (
     
       <TransitionExampleDuration show='500' children={
-        
+        <React.Fragment>
+      
 
-        <Image className="ui fluid image" src='https://www.kanitech.com.hk/wp-content/uploads/2018/08/it-background.jpg'>
-        </Image>
+<Image style={{maxHeight:'500px'}} className="ui fluid image" src={require('./background-image-for-website-6.jpg')} >
+</Image></React.Fragment>
+        
         
 
       }/>
@@ -152,7 +164,7 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 550, padding: '1em 0em' }}
+            style={{ minHeight: 1, padding: '1em 0em' }}
             vertical
           >
               
@@ -165,7 +177,7 @@ class DesktopContainer extends Component {
               style={{background:'black' }}
 
             >
-              <Container >
+             <Container > 
               <Navigation/>
                {/*  <Menu.Item as='a' active>
                   Home
@@ -181,10 +193,11 @@ class DesktopContainer extends Component {
                     Sign Up
                   </Button>
                 </Menu.Item>*/} 
-              </Container>
+                </Container>
             </Menu>
-           <HomepageHeading /> 
-           <div></div>
+
+           {/* <HomepageHeading /> */}
+         
           </Segment>
         </Visibility>
            {children} 
@@ -294,12 +307,12 @@ const FrontPage2 = () => (
             <p style={{ fontSize: '1.33em' }}> 
              </p>
              <Header as='h3' style={{ fontSize: '1.4em' }}>
-  Software Consultant - <a href="https://binksandassociates.com.au/"> Binks & Associates</a>   --Melboune, 11/17 -1/18
+  Software Consultant - <a href="https://binksandassociates.com.au/"> Binks & Associates Pty Ltd.</a>   --Melboune, 11/17 -1/18
 </Header><p style={{ fontSize: '1.33em' }}>Prototyped a Liferay + Camunda (BPM) based portal as part of Live-Project Melbourne initiative  </p>
             
            <p style={{ fontSize: '1.33em' }}> </p>
            <Header as='h3' style={{ fontSize: '1.4em' }}>
-  Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve</a>   --Mauritius, 07/14 -7/17
+  Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve International Ltd.</a>   --Mauritius, 07/14 -7/17
 </Header><p style={{ fontSize: '1.33em' }}> Created intranets using Liferay (Java platform) namely a Leave Management System and developed a mobile app useful for PDF-Annotations </p>
 <Header as='h3' style={{ fontSize: '1.4em' }}>
   IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Tech</a>   --Mauritius, 06/13 -12/13
@@ -312,7 +325,7 @@ const FrontPage2 = () => (
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-      <center><Image avatar bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' />
+<center><ParallaxImage children={<Image avatar bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' />} />
      <br></br> <Grid.Row>
           <Grid.Column textAlign='center'>
           <TableExamplePadded/>
@@ -324,7 +337,7 @@ const FrontPage2 = () => (
     offset={-70}
     duration= {700}
 >  <Button size='huge'>View Projects</Button></Link><br/>
-<Link2 to={routes.PROJECTREVIEWS}> 
+<Link2 to={routes.REPOSITORY}> 
 <br></br>
         <Button size='large'><i className="git icon"></i>
           Github 
@@ -389,6 +402,7 @@ const FrontPage2 = () => (
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
+      
       <Image bordered rounded size='large' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB0cBBU9pT9of5p74g4S_8NPoh9-roeotoBevT080yvUmgM4Br' />
     </div>
           </Grid.Column>

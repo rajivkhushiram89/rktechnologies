@@ -34,6 +34,10 @@ class App extends Component {
             window.location.href = 'https://rajivkhushiram-reviews-project.web.app/'; return null
           }} />
 
+          <Route path={routes.REPOSITORY} component={() => {
+            window.location.href = 'https://github.com/Rajiv-Khushiram?tab=repositories'; return null
+          }} />
+
           <Route
             path={routes.READING_LIST}
             component={() =>
