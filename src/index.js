@@ -1,62 +1,51 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
-import App from '../src/components/App';
+import ReactDOM from 'react-dom'
+import App from '../src/components/App'
 import LoadingScreen from './components/LoadingScreen/index'
-import registerServiceWorker from './registerServiceWorker';
-import 'semantic-ui-css/semantic.min.css';
-import './index.css'
-import { ParallaxProvider } from 'react-scroll-parallax';
+import registerServiceWorker from './registerServiceWorker'
+import 'semantic-ui-css/semantic.min.css'
+import './index.scss'
 
-class AppContainer extends Component {
-    render() {
-        return (
-            <ParallaxProvider>
-                <App />
-            </ParallaxProvider>
-        );
-    }
-}
-
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
-document.head.appendChild(styleLink);
+const styleLink = document.createElement('link')
+styleLink.rel = 'stylesheet'
+styleLink.href = 'https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css'
+document.head.appendChild(styleLink)
 
 class Demo extends React.Component {
-    constructor (props) {
-      super(props)
-  
-      this.state = {
-        loading: true
-      }
-    }
-  
-    componentDidMount () {
-      // fake promise
-      setTimeout(() =>
-          this.setState({
-              loading: false
-          }), 1)
-    }
-  
-    render () {
-      const { loading } = this.state
-  
-      return (
-       
-        <LoadingScreen
-          loading={loading}
-          bgColor='#f1f1f1'
-          spinnerColor='#9ee5f8'
-          textColor='#676767'
-          logoSrc='https://cdn.dribbble.com/users/891352/screenshots/3310131/bobotov_loader_002.gif'
-          text='Loading...'
-        ><AppContainer />
-        </LoadingScreen>
+  constructor (props) {
+    super(props)
 
-      )
+    this.state = {
+      loading: true
     }
   }
-ReactDOM.render(<Demo />, document.getElementById('root'));
 
-registerServiceWorker();
+  componentDidMount () {
+    // fake promise
+    setTimeout(() =>
+      this.setState({
+        loading: false
+      }), 2000)
+  }
+
+  render () {
+    const { loading } = this.state
+
+    return (
+
+      <App />
+      /* <LoadingScreen </LoadingScreen>
+        loading={loading}
+        bgColor='#f1f1f1'
+        spinnerColor='#9ee5f8'
+        textColor='#676767'
+        logoSrc='https://cdn.dribbble.com/users/891352/screenshots/3310131/bobotov_loader_002.gif'
+        text='Loading...'
+      >     </LoadingScreen> */
+
+    )
+  }
+}
+ReactDOM.render(<Demo />, document.getElementById('root'))
+
+registerServiceWorker()

@@ -6,6 +6,7 @@ import { Menu, Segment, Button } from 'semantic-ui-react'
 import AuthUserContext from '../Session/AuthUserContext'
 import SignOutButton from '../SignOut'
 import * as routes from '../../constants/routes'
+import './index.scss'
 
 const Navigation = (props) =>
   <AuthUserContext.Consumer>
@@ -102,6 +103,13 @@ const NavigationNonAuth = () => (
           <Button basic color='blue' inverted size='big'>
             <i className='sign-in icon' /> Sign-In
           </Button>  </div></Link></center>
+    </Menu.Item>
+    <Menu.Item position='right'>
+      <center>
+        <div className='item'>
+          <Button basic color='blue' inverted size='big'>
+            <i className='sign-in icon' /> Sign-In
+          </Button>  </div></center>
     </Menu.Item>
   </React.Fragment>)
 

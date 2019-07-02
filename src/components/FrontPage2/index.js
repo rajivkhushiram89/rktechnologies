@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
 import * as routes from '../../constants/routes';
-import { Parallax } from 'react-scroll-parallax';
 import styled from "styled-components";
+import Particles from 'react-particles-js'
 import {
   Embed,
   Button,
@@ -19,8 +19,10 @@ import {
   Responsive,
   Segment,
   Sidebar,
+  Dropdown,
   Visibility,Table, Rating
 } from 'semantic-ui-react'
+import FrontPage4 from '../FrontPage4'
 import Navigation from '../Navigation';
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
@@ -40,17 +42,6 @@ const getWidth = () => {
  
 
 
-class ParallaxImage extends Component {
-  render() {
-    return (
-          <div>
-         <Parallax children className="custom-class" y={this.props.y} tagOuter="figure">
-        {this.props.children}
-    </Parallax>
-          </div>
-    )
-  }
-}
  
  
 /* eslint-disable react/no-multi-comp */
@@ -102,35 +93,11 @@ const Info = styled.div`
 const Date = styled.div``;
 const Add = styled.div``;
 
-class HomepageHeading extends React.Component {
-  constructor (props ) {
-    super(props)
-      this.state = { 
-        loading : false,
-        stage : 0
-    }
-  }
-
-  
-   
-  render () {
-    const { mobile} = this.props;
-    return (
-    
-      <TransitionExampleDuration show='500' children={
-        <React.Fragment>
-      
-
-<Image style={{maxHeight:'500px'}} className="ui fluid image" src={require('./background-image-for-website-6.jpg')} >
-</Image></React.Fragment>
-        
-        
-
-      }/>
-   
-    );
-  }
-}
+const HomepageHeading = ({ mobile }) => (
+  <Container >
+    <FrontPage4 />
+  </Container>
+)
 
 
 
@@ -151,6 +118,7 @@ class DesktopContainer extends Component {
   render() {
     const { children } = this.props
     const { fixed } = this.state
+    const { activeItem } = this.state
 
     return (
       
@@ -160,47 +128,17 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
-
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 1, padding: '1em 0em' }}
-            vertical
-          >
-              
-            <Menu
-              fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size='large'
-              style={{background:'black' }}
-
-            >
-             <Container > 
-              <Navigation/>
-               {/*  <Menu.Item as='a' active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>*/} 
-                </Container>
-            </Menu>
-
-           {/* <HomepageHeading /> */}
          
-          </Segment>
+            
+          <FrontPage4 />
+          <div class="text-overlay">
+      <h1>Rajiv Khushiram</h1>
+      </div>
+       
+
         </Visibility>
-           {children} 
+
+        {children}
       </Responsive>
     )
   }
@@ -228,38 +166,13 @@ class MobileContainer extends Component {
         getWidth={getWidth}
         maxWidth={Responsive.onlyMobile.maxWidth}
       >
-        <Sidebar
-          as={Menu}
-          animation='push'
-          inverted
-          onHide={this.handleSidebarHide}
-          vertical
-          visible={sidebarOpened}
-        >
-      <Navigation/>
-        </Sidebar>
-
-        <Sidebar.Pusher dimmed={sidebarOpened}>
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 150, padding: '2em 0em', background:'#1b1c1d' }}
-            vertical
-          
-          >
-            <Container style={{overflow:'auto'}} >
-              <div  style={{float:'left'}}>
-              <Menu inverted pointing secondary size='large'>
-                <Menu.Item onClick={this.handleToggle}>
-                  <Icon name='sidebar' />    
-                </Menu.Item>
-              </Menu></div>
-              <div style={{float:'right', marginRight:'20px'}}> <h1>Rajiv.K</h1></div>
-            </Container>
-            <HomepageHeading mobile />
-          </Segment>
+        
+        <FrontPage4 />
+          <div class="text-overlay">
+      <h1>Boom shakala!</h1>
+      </div>
+       
           {children}
-        </Sidebar.Pusher>
       </Responsive>
     )
   }
@@ -307,17 +220,18 @@ const FrontPage2 = () => (
             <p style={{ fontSize: '1.33em' }}> 
              </p>
              <Header as='h3' style={{ fontSize: '1.4em' }}>
-  Software Consultant - <a href="https://binksandassociates.com.au/"> Binks & Associates Pty Ltd.</a>   --Melboune, 11/17 -1/18
-</Header><p style={{ fontSize: '1.33em' }}>Prototyped a Liferay + Camunda (BPM) based portal as part of Live-Project Melbourne initiative  </p>
+  Software Consultant - <a href="https://binksandassociates.com.au/"> Binks & Associates Pty Ltd. (Live Melbourne Projects)</a>   --Melboune, 11/17 -12/18
+</Header><p style={{ fontSize: '1.33em' }}>Designed and implemented a PoC for a web portal system using a Java based Portal. The portal was developed using Liferay and integrates a BPM system to process tenant complaints for an owners corporation.  </p>
             
            <p style={{ fontSize: '1.33em' }}> </p>
            <Header as='h3' style={{ fontSize: '1.4em' }}>
   Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve International Ltd.</a>   --Mauritius, 07/14 -7/17
-</Header><p style={{ fontSize: '1.33em' }}> Created intranets using Liferay (Java platform) namely a Leave Management System and developed a mobile app useful for PDF-Annotations </p>
+</Header><p style={{ fontSize: '1.33em' }}> Deployed features of a Leave Management System such as Email Notification and Outlook Calendar API calls combined with front end design. 
+Supported the development of an IOS app capable of supporting PDF-Annotations. </p>
 <Header as='h3' style={{ fontSize: '1.4em' }}>
   IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Tech</a>   --Mauritius, 06/13 -12/13
 </Header>
-<p style={{ fontSize: '1.33em' }}> Assisted in the development and design websites using Java </p>
+<p style={{ fontSize: '1.33em' }}> Contributed in the design of IT infrastructure from cabling to software in office buildings. </p>
 
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
@@ -325,7 +239,7 @@ const FrontPage2 = () => (
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-<center><ParallaxImage children={<Image avatar bordered rounded size='large' src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&_nc_ht=scontent-syd2-1.xx&oh=1cd1e56d7e7ccada1830445556d17e4f&oe=5D94AA46' />} />
+<center>
      <br></br> <Grid.Row>
           <Grid.Column textAlign='center'>
           <TableExamplePadded/>

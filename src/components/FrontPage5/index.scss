@@ -1,0 +1,19 @@
+
+#torma {
+ }
+
+
+.ui.visible.scale.down.sidebar~.pusher {
+  transform: scale(0.99) !important; 
+}
+.pushable { 
+  background-color: white;
+}
+
+.ui.left.sidebar, .ui.right.sidebar {
+  width: 100% !important;
+}
+
+.header {
+  background-color: transparent;
+}

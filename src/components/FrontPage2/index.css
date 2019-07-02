@@ -1,27 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-
-body {
-  font-family: "Raleway";
+body { 
+    background:blue;
 }
 
-.band {
-  width: 500px;
-  height: 500px;
-
-  background: url("./band.png") no-repeat;
+.text-overlay
+{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.ui.secondary.menu {
-    background: 0 0;
-    margin-left: -.35714286em;
-    margin-right: -.35714286em;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-}
-
-
-
-#disappearNavFront {
-
+.text-overlay h1
+{
+  font-size: 4.2rem;
+  white-space: nowrap;
+  color: white;
 }

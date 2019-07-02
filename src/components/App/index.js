@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../index.css'
+import '../../index.scss'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import FrontPage2 from '../FrontPage2'
 
@@ -11,6 +11,10 @@ import AccountPage from '../Account'
 import withAuthentication from '../Session/withAuthentication'
 import { firebase } from '../../firebase'
 import * as routes from '../../constants/routes'
+import FrontPage3 from '../FrontPage3'
+import FrontPage4 from '../FrontPage4' // responsive template
+import FrontPage5 from '../FrontPage5'
+
 
 class App extends Component {
   componentDidMount () {
@@ -25,7 +29,7 @@ class App extends Component {
           <Route
             exact path={routes.FRONTPAGE2}
             component={() =>
-              <FrontPage2
+              <FrontPage5
                 {...this.state}
               />
             }
