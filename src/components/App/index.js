@@ -14,6 +14,7 @@ import * as routes from '../../constants/routes'
 import FrontPage3 from '../FrontPage3'
 import FrontPage4 from '../FrontPage4' // responsive template
 import FrontPage5 from '../FrontPage5'
+import FrontPage6 from '../FrontPage6'
 
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
           <Route
             exact path={routes.FRONTPAGE2}
             component={() =>
-              <FrontPage5
+              <FrontPage6
                 {...this.state}
               />
             }

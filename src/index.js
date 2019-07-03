@@ -33,7 +33,7 @@ class Demo extends React.Component {
 
     return (
 
-      <App />
+      <React.Fragment></React.Fragment>
       /* <LoadingScreen </LoadingScreen>
         loading={loading}
         bgColor='#f1f1f1'
@@ -46,6 +46,6 @@ class Demo extends React.Component {
     )
   }
 }
-ReactDOM.render(<Demo />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 
 registerServiceWorker()
