@@ -24,7 +24,9 @@ import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } 
 import { Link as Link2 } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 import './index.scss'
+import "pure-react-carousel/dist/react-carousel.es.css";
 import { NavBarr } from './NavBar'
+import ImageCarousel from '../ImageCarousel'
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -53,13 +55,15 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
   <br></br>
+
+  <br></br>
   <Link
                 activeclass="active"
                 to="section1"
                 spy={true}
                 smooth={true}
                 duration= {700}
-            ><Button primary size='huge'>
+            ><Button inverted size='huge'>
       Summary
       <Icon name='right arrow' />
     </Button></Link>
@@ -113,7 +117,7 @@ class DesktopContainer extends Component {
                 spy={true}
                 smooth={true}
                 duration= {700}
-            >Home</Link>
+            ><i aria-hidden="true" class="rendact big icon"></i></Link>
               </Menu.Item>
               
                <Menu.Item><Link
@@ -371,12 +375,14 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <Container text>
         <br id="sectionProject"/>
         {/* pass in variable of projectList*/}
+
         <Divider
           as='h4'
           className='header'
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
+
         </Divider>
         <Header as='h3' style={{  fontSize: '2em' }}>
           Software Developement
@@ -520,4 +526,6 @@ const TableExamplePadded = () => (
         </Progress></div>
       
       )
+
+
   export default FrontPage6

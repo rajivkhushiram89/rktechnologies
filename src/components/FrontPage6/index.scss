@@ -39,10 +39,23 @@
 
 .ui.large.menu {
   font-size: 1.07142857rem;
-  background-color: #1b1c1d!important;
+  background-color: transparent !important;
 }
 .ui.menu .item>a:not(.ui), .ui.menu .item>p:only-child, .ui.menu .text.item>* {
 
   color: white;
 }
 
+#HOME { 
+
+  min-height: 700px;
+  padding: 1em 0em;
+  background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg);
+}
+
+.ui[class*="top fixed"].menu {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: black!important;
+}
