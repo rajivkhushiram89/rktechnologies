@@ -298,12 +298,12 @@ const FrontPage6 = () => (
             </Header>
             <p style={{ fontSize: '1.33em' }}>
             An IT postgraduate of RMIT University seeking a position as a part-time developer. 
-            I am a co-operative and contributive full stack developer with over <strong>3 years experience </strong> in the  <strong>web</strong> and  <strong>mobile app</strong> industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
+            I am a full stack developer with over <strong>3 years experience </strong> in the  IT industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
             <p style={{ fontSize: '1.33em' }}> 
              </p>
              <Header as='h3' style={{ fontSize: '1.4em' }}>
-  Software Consultant - <a href="https://binksandassociates.com.au/"> Binks & Associates Pty Ltd. (Live Melbourne Projects)</a>   --Melboune, 11/17 -12/18
-</Header><p style={{ fontSize: '1.33em' }}>Designed and implemented a PoC for a web portal system using a Java based Portal. The portal was developed using Liferay and integrates a BPM system to process tenant complaints for an owners corporation.  </p>
+  Software Consultant - <a href="https://binksandassociates.com.au/contact-us/"> Binks & Associates Pty Ltd. (Live Melbourne Projects)</a>   --Melboune, 11/17 -12/18
+</Header><p style={{ fontSize: '1.33em' }}>Contributed to the design and implementation of a web app to so that an tenants and landowners can relay information their Owners Corporation.</p>
             
            <p style={{ fontSize: '1.33em' }}> </p>
            <Header as='h3' style={{ fontSize: '1.4em' }}>
