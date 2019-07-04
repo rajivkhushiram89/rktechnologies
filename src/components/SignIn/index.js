@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
-
+import './index.css'
 
 const transitions = ['jiggle', 'flash', 'shake', 'pulse', 'tada', 'bounce', 'glow']
 

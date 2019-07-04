@@ -43,7 +43,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Imagine-a-Company'
+      content="Hi, I'm Rajiv, a Full-Stack Developer"
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -52,11 +52,17 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '3.0em' : '3em',
       }}
     />
-  
-    <Button primary size='huge'>
-      Get Started
+  <br></br>
+  <Link
+                activeclass="active"
+                to="section1"
+                spy={true}
+                smooth={true}
+                duration= {700}
+            ><Button primary size='huge'>
+      Summary
       <Icon name='right arrow' />
-    </Button>
+    </Button></Link>
   </Container>
 )
 
@@ -130,9 +136,9 @@ class DesktopContainer extends Component {
               <Menu.Item>
                   <Input icon="search" placeholder="Search..." />
                 </Menu.Item>
-              <Menu.Item><Button inverted={!fixed}>
-              <Link2 to={routes.SIGN_IN}>   Log in</Link2>
-                </Button></Menu.Item>
+              <Menu.Item><Link2 to={routes.SIGN_IN}> <Button inverted={!fixed}>
+              
+              Sign-In </Button></Link2></Menu.Item>
 
              {/*    <Menu.Item><Button inverted={!fixed}>
               <Link2 to={routes.SIGN_UP}>  Register</Link2>
@@ -204,31 +210,33 @@ class MobileContainer extends Component {
           >
            <Menu secondary className={this.state.menuClass}>
           
-           <Menu.Item > <Link
+           <Link
                 activeclass="active"
                 to="HOME"
                 spy={true}
                 smooth={true}
                 duration= {700}
-            >Home</Link>
-              </Menu.Item>
+            > <Menu.Item > Home
+              </Menu.Item></Link>
 
 
-              <Menu.Item><Link
+              <Link
                 activeclass="active"
                 to="sectionProject"
                 spy={true}
                 smooth={true}
                 duration= {700}
-            >Work</Link></Menu.Item>
+            > <Menu.Item>Work</Menu.Item></Link>
 
-<Menu.Item><Link
+              <Link
                 activeclass="active"
                 to="contact"
                 spy={true}
                 smooth={true}
                 duration= {700}
-            >Contact</Link></Menu.Item>
+            >
+              <Menu.Item>Contact</Menu.Item>
+            </Link>
               
               <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                 <Menu.Item>
@@ -237,6 +245,7 @@ class MobileContainer extends Component {
               </Responsive>
               <Menu.Menu position="right">
               <Link2 to={routes.SIGN_IN}><Menu.Item>Log in</Menu.Item></Link2>
+              
               {/*<Link2 to={routes.SIGN_UP}><Menu.Item>Sign Up</Menu.Item></Link2>*/} 
               
               </Menu.Menu>
