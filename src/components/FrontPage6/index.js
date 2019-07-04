@@ -7,6 +7,7 @@ import {
   Container,
   Divider,
   Grid,
+  Input,
   Progress,
   Header,
   Icon,
@@ -48,7 +49,7 @@ const HomepageHeading = ({ mobile }) => (
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
         marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
+        marginTop: mobile ? '3.0em' : '3em',
       }}
     />
   
@@ -85,6 +86,7 @@ class DesktopContainer extends Component {
         onBottomPassedReverse={this.hideFixedMenu}
       >
         <Segment
+          id="HOME"
           inverted
           textAlign='center'
           style={{ minHeight: 700, padding: '1em 0em' }}
@@ -98,20 +100,36 @@ class DesktopContainer extends Component {
             size='large'
           >
             <Container>
-              <Menu.Item as='a' active>
-                Home
+            <Menu.Item>
+            <Link
+                activeclass="active"
+                to="HOME"
+                spy={true}
+                smooth={true}
+                duration= {700}
+            >Home</Link>
               </Menu.Item>
-              <Menu.Item as='a'>Work</Menu.Item>
-              <Menu.Item as='a'>Company</Menu.Item>
-              <Menu.Item as='a'>Careers</Menu.Item>
-              <Menu.Item position='right'>
-                <Button as='a' inverted={!fixed}>
-                  Log in
-                </Button>
-                <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                  Sign Up
-                </Button>
-              </Menu.Item>
+              
+               <Menu.Item><Link
+                activeclass="active"
+                to="sectionProject"
+                spy={true}
+                smooth={true}
+                duration= {700}
+            >Portfolio</Link></Menu.Item>
+             
+              <Menu.Menu position='right'>
+              <Menu.Item>
+                  <Input icon="search" placeholder="Search..." />
+                </Menu.Item>
+              <Menu.Item><Button inverted={!fixed}>
+              <Link2 to={routes.SIGN_IN}>   Log in</Link2>
+                </Button></Menu.Item>
+
+             {/*    <Menu.Item><Button inverted={!fixed}>
+              <Link2 to={routes.SIGN_UP}>  Register</Link2>
+                </Button></Menu.Item>*/} 
+              </Menu.Menu>
             </Container>
           </Menu>
           <HomepageHeading />
@@ -164,6 +182,7 @@ class MobileContainer extends Component {
     >
      <Segment
           inverted
+          id="HOME"
           textAlign='center'
           style={{ minHeight: 350, padding: '1em 0em' }}
           vertical
@@ -176,18 +195,36 @@ class MobileContainer extends Component {
             onBottomPassed={this.handleUpdate}
           >
            <Menu secondary className={this.state.menuClass}>
-              <Menu.Item as='a' active>
-                Home
+          
+           <Menu.Item > <Link
+                activeclass="active"
+                to="HOME"
+                spy={true}
+                smooth={true}
+                duration= {700}
+            >Home</Link>
               </Menu.Item>
-              <Menu.Item as='a'>Work</Menu.Item>
+
+
+              <Menu.Item><Link
+                activeclass="active"
+                to="sectionProject"
+                spy={true}
+                smooth={true}
+                duration= {700}
+            >Work</Link></Menu.Item>
               
               <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                 <Menu.Item>
                 <Menu.Item as='a'>Company</Menu.Item>
                 </Menu.Item>
               </Responsive>
-              <Menu.Item as='a'>Log in</Menu.Item>
-              <Menu.Item as='a'>Sign Up</Menu.Item>
+              <Menu.Menu position="right">
+              <Link2 to={routes.SIGN_IN}><Menu.Item>Log in</Menu.Item></Link2>
+              {/*<Link2 to={routes.SIGN_UP}><Menu.Item>Sign Up</Menu.Item></Link2>*/} 
+              
+              </Menu.Menu>
+             
             </Menu>
             </Visibility>
         </Container>
