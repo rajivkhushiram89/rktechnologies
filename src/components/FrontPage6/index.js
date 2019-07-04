@@ -117,6 +117,14 @@ class DesktopContainer extends Component {
                 smooth={true}
                 duration= {700}
             >Portfolio</Link></Menu.Item>
+
+            <Menu.Item><Link
+                            activeclass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration= {700}
+                        >Contact</Link></Menu.Item>
              
               <Menu.Menu position='right'>
               <Menu.Item>
@@ -213,6 +221,14 @@ class MobileContainer extends Component {
                 smooth={true}
                 duration= {700}
             >Work</Link></Menu.Item>
+
+<Menu.Item><Link
+                activeclass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration= {700}
+            >Contact</Link></Menu.Item>
               
               <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                 <Menu.Item>
@@ -366,7 +382,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         </Button>
       </Container>
     </Segment>
-    <Segment  style={{ padding: '6em 0em' }} vertical>
+    <Segment id="contact"  style={{ padding: '6em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
         <Grid.Column floated='right' width={6}>
@@ -431,7 +447,7 @@ const TableExamplePadded = () => (
   <Table celled>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell textAlign='center'>Language/Framework/Tools</Table.HeaderCell>
+          <Table.HeaderCell textAlign='center'>Tools</Table.HeaderCell>
           <Table.HeaderCell  textAlign='center'  width={10}>Proficiency</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
