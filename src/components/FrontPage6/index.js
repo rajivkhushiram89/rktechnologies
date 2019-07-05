@@ -4,6 +4,7 @@ import Hello from '../FrontPage7';
 import $ from 'jquery'; 
 import ReactParticles from 'react-particles-js';
 import particlesConfig from './particles-config.js';
+import logo from './wawarev.png'; 
 import {
   Label,
   Embed,
@@ -386,7 +387,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
 </Grid.Row>
 </Grid>
     </Segment>
-    <Particles>
+   
     <Segment id='PORJECTS' style={{ padding: '3em 0em' }} vertical>
       <Container id="bigup"  style={{ width: '80%!important'}} text>
         <br id="sectionProject"/>
@@ -420,7 +421,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         padding: 10,
       },
     }}
-    placeholder='/images/image-16by9.png'
+    placeholder={logo}
     source='youtube'
   />
     <Card.Content>
@@ -583,7 +584,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
           I'm Still Quite Interested
         </Button>
       </Container>
-    </Segment></Particles>
+    </Segment>
     <Segment style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>

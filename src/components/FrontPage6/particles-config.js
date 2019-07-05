@@ -6,7 +6,7 @@ export default {
         value: 60,
         density: {
           enable: false,
-          value_area: 800
+          value_area: 500
         }
       },
       color: {
