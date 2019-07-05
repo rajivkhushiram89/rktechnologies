@@ -316,7 +316,6 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-      
       <Image bordered rounded size='large' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB0cBBU9pT9of5p74g4S_8NPoh9-roeotoBevT080yvUmgM4Br' />
     </div>
           </Grid.Column>

@@ -53,9 +53,56 @@
   background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg);
 }
 
+#PORJECTS { 
+  background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg);
+
+}
+
+#contact {
+
+  background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg);
+
+
+}
+
+#bigup .ui.header {
+  border: none;
+  margin: calc(2rem - .14285714em) 0 1rem;
+  padding: 0 0;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-weight: 700;
+  line-height: 1.28571429em;
+  text-transform: none;
+  color: white;
+}
+
 .ui[class*="top fixed"].menu {
   border-top: none;
   border-left: none;
   border-right: none;
   background-color: black!important;
+}
+
+#bigup {
+  max-width: 1200px!important;
+ 
+}
+
+#container{
+  
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  //border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide{
+  display: block;
+  position: absolute;
+  height: 200px !important;
+  width: 200px !important;
+  background: red; 
 }

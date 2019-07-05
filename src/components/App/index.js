@@ -43,6 +43,14 @@ class App extends Component {
             window.location.href = 'https://github.com/Rajiv-Khushiram?tab=repositories'; return null
           }} />
 
+          <Route path={routes.LINKEDIN} component={() => {
+            window.location.href = 'https://www.linkedin.com/in/rajiv-khushiram-14805793/'; return null
+          }} />
+
+          <Route path={routes.INSTAGRAM} component={() => {
+            window.location.href = 'https://www.instagram.com/rajivck/'; return null
+          }} />
+
           <Route
             path={routes.READING_LIST}
             component={() =>
