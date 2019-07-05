@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Hello from '../FrontPage7';
-import { TweenMax, TweenLite } from "gsap/TweenMax"
 import $ from 'jquery'; 
+import ReactParticles from 'react-particles-js';
+import particlesConfig from './particles-config.js';
 import {
   Label,
   Embed,
@@ -118,6 +119,7 @@ class DesktopContainer extends Component {
         onBottomPassed={this.showFixedMenu}
         onBottomPassedReverse={this.hideFixedMenu}
       >
+        <Particles>
         <Segment
           id="HOME"
           inverted
@@ -178,7 +180,7 @@ class DesktopContainer extends Component {
           </Menu>
           
           <HomepageHeading />
-        </Segment>
+        </Segment></Particles>
       </Visibility>
 
       {children}
@@ -384,7 +386,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
 </Grid.Row>
 </Grid>
     </Segment>
-    
+    <Particles>
     <Segment id='PORJECTS' style={{ padding: '3em 0em' }} vertical>
       <Container id="bigup"  style={{ width: '80%!important'}} text>
         <br id="sectionProject"/>
@@ -408,7 +410,19 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
 
    {/*-----------Projects----------------------*/}
    <Card fluid>
-    <Image src={require('./wawarev.png')}  wrapped ui={false} />
+   <Embed
+    autoplay={false}
+    color='white'
+    hd={false}
+    id='x4BJbGYPbVA'
+    iframe={{
+      style: {
+        padding: 10,
+      },
+    }}
+    placeholder='/images/image-16by9.png'
+    source='youtube'
+  />
     <Card.Content>
       <Card.Header> <h2>Stack:  <Label  size='massive'  image>
       Sketch
@@ -452,7 +466,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
           2. OO Design Patterns: Avengers End Game
         </Header>
   <Card fluid>
-    <Image src={require('./wawarev.png')}  wrapped ui={false} />
+    <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg'  wrapped ui={false} />
     <Card.Content>
       <Card.Header><h2>Stack: <Label size='massive' image>
       
@@ -569,7 +583,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
           I'm Still Quite Interested
         </Button>
       </Container>
-    </Segment>
+    </Segment></Particles>
     <Segment style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
@@ -662,6 +676,24 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
   </ResponsiveContainer>
 )
 
+function Particles({ children }) {
+  return (
+    <div style={{ position: 'relative' }}>
+      <ReactParticles
+        params={particlesConfig}
+        style={{
+          position: 'absolute',
+          zIndex: 1,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          top: 0
+        }}
+      />
+      {children && <div style={{ position: 'relative' }}>{children}</div>}
+    </div>
+  );
+}
 
 const TableExamplePadded = () => (
   <Table celled>
