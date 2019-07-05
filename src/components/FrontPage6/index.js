@@ -4,6 +4,8 @@ import Hello from '../FrontPage7';
 import $ from 'jquery'; 
 import ReactParticles from 'react-particles-js';
 import particlesConfig from './particles-config.js';
+import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
+
 import logo from './wawarev.png'; 
 import {
   Label,
@@ -345,7 +347,7 @@ const FrontPage6 = () => (
 </Header><p style={{ fontSize: '1.33em' }}> Deployed features of a Leave Management System such as Email Notification and Outlook Calendar API calls combined with front end design. 
 Supported the development of an IOS app capable of supporting PDF-Annotations. </p>
 <Header as='h3' style={{ fontSize: '1.4em' }}>
-  IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Tech</a>   --Mauritius, 06/13 -12/13
+  IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Technologies</a>   --Mauritius, 06/13 -12/13
 </Header>
 <p style={{ fontSize: '1.33em' }}> Contributed in the design of IT infrastructure from cabling to software in office buildings. </p>
 <center><Link
@@ -508,9 +510,9 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
   <br></br>
   <br></br>
 
-  <Header as='h3' style={{  fontSize: '1.5em' }}>
+  <TransitionExampleDuration show='2000' children={<Header as='h3' style={{  fontSize: '1.5em' }}>
           3. IOT :Medical Appointment System (Web)
-        </Header>
+        </Header>}/>
   <Card fluid>
     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
     <Card.Content>
