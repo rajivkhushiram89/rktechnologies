@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import Hello from '../FrontPage7';
-import $ from 'jquery'; 
+
 import ReactParticles from 'react-particles-js';
 import particlesConfig from './particles-config.js';
 import { TransitionExampleDuration} from '../Readings/TransitionExampleDuration'
+import { Link  } from 'react-scroll'
+import { Link as Link2 } from 'react-router-dom';
+import * as routes from '../../constants/routes';
+import './index.scss'
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 import logo from './wawarev.png'; 
 import {
@@ -24,17 +28,11 @@ import {
   Menu,
   Responsive,
   Segment,
-  Sidebar,
-  Dropdown,
-  Visibility,Table, Rating,Transition
+
+  Visibility,Table
 } from "semantic-ui-react";
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import { Link as Link2 } from 'react-router-dom';
-import * as routes from '../../constants/routes';
-import './index.scss'
-import "pure-react-carousel/dist/react-carousel.es.css";
-import { NavBarr } from './NavBar'
-import ImageCarousel from '../ImageCarousel'
+
+
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -229,7 +227,7 @@ class MobileContainer extends Component {
       <Responsive
       getWidth={getWidth}
       maxWidth={Responsive.onlyMobile.maxWidth}
-    >
+    ><Particles>
      <Segment
           inverted
           id="HOME"
@@ -291,7 +289,7 @@ class MobileContainer extends Component {
         </Container>
         <HomepageHeading mobile />
       </Segment>
-      {children}
+      {children}</Particles>
     </Responsive>
     
     )
@@ -405,14 +403,14 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         </Divider>
        <center> <Header as='h3' style={{  fontSize: '3em' }}>
        <Button size='massive' disabled inverted> Projects</Button>
-        </Header> 
+        </Header> </center>
         <Header as='h3' style={{  fontSize: '1.6em' }}>
         1. PostGrad Project: Reviews App
-        </Header></center>
+        </Header>
        
 
    {/*-----------Projects----------------------*/}
-   <Card fluid>
+   <Card fluid style={{ padding: '3em  3em  3em 3em'}}>
    <Embed
     autoplay={false}
     color='white'
@@ -443,7 +441,9 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         <span className='date'> <strong>Role:</strong> Project Manager</span>
       </Card.Meta>
       <Card.Description>
-      <p style={{ fontSize: '1.33em' }}> The web app developed captures customer picture when picking up their purchased product as well as customer details. Once the record is saved, a reviews URL link and photo download URL link are sent to the customer through a messaging service. With the information acquired from the customers and their purchased products, a company can then be able to send targeted messages to specific customers. The motive of the reviews from the current customers is to help drive trust in prospective customers, as well as allow them to keep in touch with past customers if given permission.</p> 
+      <p style={{ fontSize: '1.33em' }}>
+        
+         The web app developed captures customer picture when picking up their purchased product as well as customer details. Once the record is saved, a reviews URL link and photo download URL link are sent to the customer through a messaging service. With the information acquired from the customers and their purchased products, a company can then be able to send targeted messages to specific customers. The motive of the reviews from the current customers is to help drive trust in prospective customers, as well as allow them to keep in touch with past customers if given permission.</p> 
       </Card.Description>
       <Card.Description>
         <br></br>
@@ -468,7 +468,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
   <Header as='h3' style={{  fontSize: '1.5em' }}>
           2. OO Design Patterns: Avengers End Game
         </Header>
-  <Card fluid>
+  <Card fluid style={{ padding: '2em  3em  2em 3em'}}>>
     <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg'  wrapped ui={false} />
     <Card.Content>
       <Card.Header><h2>Stack: <Label size='massive' image>
@@ -513,7 +513,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
   <TransitionExampleDuration show='2000' children={<Header as='h3' style={{  fontSize: '1.5em' }}>
           3. IOT :Medical Appointment System (Web)
         </Header>}/>
-  <Card fluid>
+  <Card fluid style={{ padding: '2em  3em  2em 3em'}}>>
     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
     <Card.Content>
     <Card.Header><h2>Stack: 
@@ -550,7 +550,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
   <Header as='h3' style={{  fontSize: '1.5em' }}>
           4. Analysis of Algorithms
         </Header>
-  <Card fluid>
+  <Card fluid style={{ padding: '2em  3em  2em 3em'}}>>
     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
     <Card.Content>
       <Card.Header></Card.Header>
@@ -616,7 +616,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-      <Card style={{ maxHeight: '400px'}} fluid>
+      <Card style={{ maxHeight: '400px', padding: '2em  3em  2em 3em'}} fluid>
     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
     </Card>
     </div>
@@ -645,29 +645,29 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
+              <Header inverted as='h4' content='Website Stack:' />
               <List link inverted>
-                <List.Item as='a'>Sitemap</List.Item>
-                <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
+                <List.Item as='a'>Twilio</List.Item>
+                <List.Item as='a'>REACT</List.Item>
+                <List.Item as='a'>FIREBASE</List.Item>
+                <List.Item as='a'>GCP</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
               <Header inverted as='h4' content='Projects' />
               <List link inverted>
-                <List.Item as='a'></List.Item>
-                <List.Item as='a'>Python</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
+                <List.Item as='a'>Design Patterns</List.Item>
+                <List.Item as='a'>SERVERLESS</List.Item>
+                <List.Item as='a'>CI/CD</List.Item>
+                <List.Item as='a'>Prototyping</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
-                Footer Header
+                Built With Semantic UI
               </Header>
               <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
+                 Coldwar Themed Look & Feel made with Particle.JS -- 
               </p>
             </Grid.Column>
           </Grid.Row>

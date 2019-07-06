@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { List, Loader } from 'semantic-ui-react';
-import axios from 'axios';
 import styled from 'styled-components';
 
 const CommentsBlock = styled.div`
@@ -23,21 +22,7 @@ class Comments extends Component {
     }
   }
 
-  componentDidMount() {
-    const { objectID } = this.props.story;
-
-    this.setState({ storyLoading: true });
-
-    axios(`http://hn.algolia.com/api/v1/items/${objectID}`)
-      .then(result => this.setState({
-        story: result.data,
-        storyLoading: false
-      }))
-      .catch(error => this.setState({
-        storyError: error,
-        storyLoading: false,
-      }));
-  }
+  
 
   render() {
     const {

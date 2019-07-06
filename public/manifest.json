@@ -3,8 +3,8 @@
   "name": "Rajiv Portfolio",
   "icons": [
     {
-      "src": "favicon.ico.png",
-      "sizes": "192x192",
+      "src": "favicon.ico",
+      "size": "192x192",
       "type": "image/png"
     }
   ],
