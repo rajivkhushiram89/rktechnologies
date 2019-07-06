@@ -594,7 +594,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
             <Header as='h3' style={{ color:'white',fontSize: '2em' }}>
               "When you dream the code, the code dreams in you"
             </Header>
-            <p style={{ color:'white', fontSize: '1.33em' }}>TechLead</p>
+            <p style={{ color:'white', fontSize: '1.33em' }}> <Image avatar src='https://semantic-ui.com/examples/assets/images/avatar/nan.jpg' />TechLead</p>
           </Grid.Column>
           <Grid.Column style={{  paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ color:'white', fontSize: '2em' }}>
