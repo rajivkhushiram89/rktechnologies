@@ -330,6 +330,7 @@ const FrontPage6 = () => (
           Summary :
         </Label>
             <p style={{ fontSize: '1.33em' }}> 
+            <br></br>
             I am a full stack developer with over <strong>3 years experience </strong> in the  IT industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
             <p style={{ fontSize: '1.33em' }}> 
              </p>
@@ -368,7 +369,9 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
           <Grid.Column textAlign='center'>
          
           <img src={fotorajiv} className="ui large avatar bordered rounded image"></img>
-          
+          <div style={{width:'55%'}}><Label as='a' color='green' size='large' ribbon='right'>
+          Skills
+        </Label></div>
           <TableExamplePadded/>
          
 
@@ -404,13 +407,19 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         </Divider>
        <center> <Header as='h3' style={{  fontSize: '3em' }}>
        <Button size='massive' disabled inverted> Projects</Button>
-        </Header> </center><Header as='h3' style={{fontSize: '1.6em',  margin:'auto', padding: '0em  3em  0.3em 3em', margin:'auto' }}>
-        1. PostGrad Project: Reviews App
-        </Header>
+        </Header> </center>
+       
+        
+        
         
        
 
    {/*-----------Projects----------------------*/}
+   <React.Fragment>
+     <div style={{padding: '2em  2em  2em 2em'}}>
+   <Label as='a'  disabled   size='huge' color='brown' ribbon>
+      Reviews App Project
+     </Label></div>
    <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
    
    <Embed style={{ maxHeight:'200px !important'}}
@@ -456,6 +465,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       </a>
     </Card.Content>
   </Card>
+  </React.Fragment>
   <br></br>
   <br></br>
 
@@ -463,9 +473,11 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
   <br></br>
   <br></br>
 
-  <Header as='h3' style={{  fontSize: '1.5em' }}>
-          2. OO Design Patterns: Avengers End Game
-        </Header>
+        <React.Fragment>
+     <div style={{padding: '2em  2em  2em 2em'}}>
+   <Label as='a'  disabled   size='huge' color='brown' ribbon>
+   Avengers End Game: Study of OO Design Patterns:   
+     </Label></div>      
   <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
     <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg'  wrapped ui={false} />
     <Card.Content>
@@ -500,7 +512,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         10 Views
       </a>
     </Card.Content>
-  </Card>
+  </Card></React.Fragment>
   <br></br>
   <br></br>
 
@@ -574,17 +586,18 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
    {/*-----------Projects----------------------*/}
       </Container>
     </Segment>
-    <Segment style={{ padding: '0em' }} vertical>
+    <Particles>
+    <Segment id='dreamthecode' style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+            <Header as='h3' style={{ color:'white',fontSize: '2em' }}>
               "When you dream the code, the code dreams in you"
             </Header>
-            <p style={{ fontSize: '1.33em' }}>TechLead</p>
+            <p style={{ color:'white', fontSize: '1.33em' }}>TechLead</p>
           </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+          <Grid.Column style={{  paddingBottom: '5em', paddingTop: '5em' }}>
+            <Header as='h3' style={{ color:'white', fontSize: '2em' }}>
               "Code from anywhere...being in the zone"
             </Header>
             <p style={{ fontSize: '1.33em' }}>
@@ -594,7 +607,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+    </Segment></Particles>
     <Segment id="contact"  style={{ padding: '6em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
@@ -627,40 +640,41 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
       </Grid>
     </Segment>
     <div id = 'wawa'> </div>
+    <Particles>
     <Segment inverted vertical style={{ padding: '3em 0em' }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted as='h4' content='Website Stack:' />
+              <Header inverted as='h4' content='Interests:' />
               <List link inverted>
-                <List.Item as='a'>Twilio</List.Item>
-                <List.Item as='a'>REACT</List.Item>
-                <List.Item as='a'>FIREBASE</List.Item>
-                <List.Item as='a'>GCP</List.Item>
+                <List.Item as='a'>JS animation Libraries</List.Item>
+                <List.Item as='a'>Front End Transitions</List.Item>
+                <List.Item as='a'>Design Patterns</List.Item>
+                <List.Item as='a'>The Future</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
-              <Header inverted as='h4' content='Projects' />
+              <Header inverted as='h4' content='Perks' />
               <List link inverted>
-                <List.Item as='a'>Design Patterns</List.Item>
-                <List.Item as='a'>SERVERLESS</List.Item>
-                <List.Item as='a'>CI/CD</List.Item>
-                <List.Item as='a'>Prototyping</List.Item>
+                <List.Item as='a'>Critical Thinker</List.Item>
+                <List.Item as='a'>Musician</List.Item>
+                <List.Item as='a'>Football Player</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
-                Built With Semantic UI
+                Built With REACTJS, Semantic UI & FIREBASE
               </Header>
               <p>
-                 Coldwar Themed Look & Feel made with Particle.JS -- 
+                3rd Party dependencies: Particle JS 
               </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Container>
     </Segment>
+    </Particles>
    
     
   </ResponsiveContainer>
