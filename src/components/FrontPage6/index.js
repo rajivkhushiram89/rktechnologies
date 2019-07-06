@@ -616,22 +616,22 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-      <Card style={{ maxHeight: '400px', padding: '2em  3em  2em 3em'}} fluid>
+      <Card style={{ background:'black', maxHeight: '400px', padding: '2em  3em  2em 3em'}} fluid>
     <Image src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&amp;_nc_ht=scontent-syd2-1.xx&amp;oh=1cd1e56d7e7ccada1830445556d17e4f&amp;oe=5D94AA46' wrapped ui={false} />
     </Card>
     </div>
           </Grid.Column>
           <Grid.Column id='sectionContact'  width={8}>
-          <center> <Header as='h3' style={{ color:'white', fontSize: '40px', textAlign:'center' }}>
+          <center> <Header as='h3' style={{ color:'black', fontSize: '40px', textAlign:'center' }}>
               Contact
-            </Header><Card style={{background:'transparent' ,padding: '2em  3em  2em 3em'}}>
+            </Header>
            
             <div style={{textAlign:'center'}}>
             <Link2 to={routes.REPOSITORY}> <Button size='massive'   icon='github' /> </Link2>
             <Link2 to={routes.LINKEDIN}>   <Button  size='massive'   color='linkedin' icon='linkedin' /> </Link2>
             <Link2 to={routes.INSTAGRAM}>   <Button  size='massive'   color='instagram' icon='instagram' /></Link2>
         
-            </div></Card></center>
+            </div></center>
            
           </Grid.Column>
         </Grid.Row>
