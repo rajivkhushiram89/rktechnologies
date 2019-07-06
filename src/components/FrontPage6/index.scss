@@ -1,4 +1,7 @@
-
+.ui.card {
+  min-width:357px;
+  
+}
 .ui.visible.push.sidebar {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
@@ -54,6 +57,7 @@
 }
 
 #PORJECTS { 
+  
   background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg);
   z-index:3;
 }

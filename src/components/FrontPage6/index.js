@@ -340,7 +340,7 @@ const FrontPage6 = () => (
              <Header as='h3' style={{ fontSize: '1.4em' }}>
   1. Software Consultant - <a href="https://binksandassociates.com.au/contact-us/"> Binks & Associates Pty Ltd. (Live Melbourne Projects)</a>   --Melboune, 10/17 -12/17
 </Header><p style={{ fontSize: '1.33em' }}>Prototyped a web app so that an tenants and property-owners of  an owners corporation can respond effectively to queries with a property</p>
-            
+
            <p style={{ fontSize: '1.33em' }}> </p>
            <Header as='h3' style={{ fontSize: '1.4em' }}>
   2. Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve International Ltd.</a>   --Mauritius, 07/14 -7/17
