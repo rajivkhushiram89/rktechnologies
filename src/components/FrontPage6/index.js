@@ -9,7 +9,7 @@ import { Link as Link2 } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 import './index.scss'
 import "pure-react-carousel/dist/react-carousel.es.css";
-
+import fotorajiv from './avatarajiv.jpg'
 import logo from './wawarev.png'; 
 import {
   Label,
@@ -367,7 +367,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
      <br></br> <Grid.Row>
           <Grid.Column textAlign='center'>
          
-          <img src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&amp;_nc_ht=scontent-syd2-1.xx&amp;oh=1cd1e56d7e7ccada1830445556d17e4f&amp;oe=5D94AA46" className="ui large avatar bordered rounded image"></img>
+          <img src={fotorajiv} className="ui large avatar bordered rounded image"></img>
           
           <TableExamplePadded/>
          
@@ -604,7 +604,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
         <i className="heart icon"></i>
       </a>
       <Card style={{ maxHeight: '400px', padding: '2em  3em  2em 3em'}} fluid>
-    <Image src='' wrapped ui={false} />
+    <Image src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&amp;_nc_ht=scontent-syd2-1.xx&amp;oh=1cd1e56d7e7ccada1830445556d17e4f&amp;oe=5D94AA46' wrapped ui={false} />
     </Card>
     </div>
           </Grid.Column>
