@@ -120,20 +120,19 @@ class DesktopContainer extends Component {
         onBottomPassed={this.showFixedMenu}
         onBottomPassedReverse={this.hideFixedMenu}
       >
-        <Particles>
+        
         <Segment
           id="HOME"
           inverted
           textAlign='center'
-          style={{ minHeight: 700, padding: '1em 0em' }}
+          style={{ minHeight: 700, padding: '0.5em 0em' }}
           vertical
         >
-          <Menu
+          <Menu 
             fixed={fixed ? 'top' : null}
             inverted={!fixed}
             pointing={!fixed}
             secondary={!fixed}
-            size='large'
           >
             <Container>
             <Menu.Item>
@@ -180,8 +179,8 @@ class DesktopContainer extends Component {
             </Container>
           </Menu>
           
-          <HomepageHeading />
-        </Segment></Particles>
+          <Particles><HomepageHeading /></Particles>
+        </Segment>
       </Visibility>
 
       {children}
@@ -227,7 +226,7 @@ class MobileContainer extends Component {
       <Responsive
       getWidth={getWidth}
       maxWidth={Responsive.onlyMobile.maxWidth}
-    ><Particles>
+    >
      <Segment
           inverted
           id="HOME"
@@ -242,7 +241,7 @@ class MobileContainer extends Component {
             onBottomPassedReverse={this.handleUpdate}
             onBottomPassed={this.handleUpdate}
           >
-           <Menu secondary className={this.state.menuClass}>
+           <Menu style={{ zIndex:'3' }} secondary className={this.state.menuClass}>
           
            <Link
                 activeclass="active"
@@ -287,9 +286,9 @@ class MobileContainer extends Component {
             </Menu>
             </Visibility>
         </Container>
-        <HomepageHeading mobile />
+        <Particles><HomepageHeading mobile /></Particles>
       </Segment>
-      {children}</Particles>
+      {children}
     </Responsive>
     
     )
@@ -327,25 +326,27 @@ const FrontPage6 = () => (
             <p style={{ fontSize: '1.33em' }}>
            
             </p>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              Summary:
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-            An IT postgraduate of RMIT University seeking a position as a part-time developer. 
+            <Label as='a'  disabled   size='huge' color='orange' ribbon>
+          Summary :
+        </Label>
+            <p style={{ fontSize: '1.33em' }}> 
             I am a full stack developer with over <strong>3 years experience </strong> in the  IT industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
             <p style={{ fontSize: '1.33em' }}> 
              </p>
+             <Label as='a' disabled   size='large' color='blue' ribbon>
+          Experience:
+        </Label>
              <Header as='h3' style={{ fontSize: '1.4em' }}>
-  Software Consultant - <a href="https://binksandassociates.com.au/contact-us/"> Binks & Associates Pty Ltd. (Live Melbourne Projects)</a>   --Melboune, 11/17 -12/18
-</Header><p style={{ fontSize: '1.33em' }}>Contributed to the design and implementation of a web app to so that an tenants and landowners can relay information their Owners Corporation.</p>
+  1. Software Consultant - <a href="https://binksandassociates.com.au/contact-us/"> Binks & Associates Pty Ltd. (Live Melbourne Projects)</a>   --Melboune, 10/17 -12/17
+</Header><p style={{ fontSize: '1.33em' }}>Prototyped a web app so that an tenants and property-owners of  an owners corporation can respond effectively to queries with a property</p>
             
            <p style={{ fontSize: '1.33em' }}> </p>
            <Header as='h3' style={{ fontSize: '1.4em' }}>
-  Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve International Ltd.</a>   --Mauritius, 07/14 -7/17
+  2. Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve International Ltd.</a>   --Mauritius, 07/14 -7/17
 </Header><p style={{ fontSize: '1.33em' }}> Deployed features of a Leave Management System such as Email Notification and Outlook Calendar API calls combined with front end design. 
 Supported the development of an IOS app capable of supporting PDF-Annotations. </p>
 <Header as='h3' style={{ fontSize: '1.4em' }}>
-  IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Technologies</a>   --Mauritius, 06/13 -12/13
+  3. IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Technologies</a>   --Mauritius, 06/13 -12/13
 </Header>
 <p style={{ fontSize: '1.33em' }}> Contributed in the design of IT infrastructure from cabling to software in office buildings. </p>
 <center><Link
@@ -355,7 +356,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
     smooth={true}
     offset={-70}
     duration= {700}
->  <Button  color="grey" size='huge'>View Projects</Button></Link></center><br/>
+>  <Button inverted color="orange" size='large'>View Projects</Button></Link></center><br/>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
           <div className="ui fluid image">
@@ -388,8 +389,8 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
 </Grid>
     </Segment>
    
-    <Segment id='PORJECTS' style={{ padding: '3em 0em' }} vertical>
-      <Container id="bigup"  style={{ width: '80%!important'}} text>
+    <Segment id='PORJECTS' style={{ padding: '1.5em 0em' }} vertical>
+      <Container id="bigup"  style={{ width: '600px!important'}} text>
         <br id="sectionProject"/>
         {/* pass in variable of projectList*/}
 
@@ -403,15 +404,16 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         </Divider>
        <center> <Header as='h3' style={{  fontSize: '3em' }}>
        <Button size='massive' disabled inverted> Projects</Button>
-        </Header> </center>
-        <Header as='h3' style={{  fontSize: '1.6em' }}>
+        </Header> </center><Header as='h3' style={{fontSize: '1.6em',  margin:'auto', padding: '0em  3em  0.3em 3em', margin:'auto' }}>
         1. PostGrad Project: Reviews App
         </Header>
+        
        
 
    {/*-----------Projects----------------------*/}
-   <Card fluid style={{ padding: '3em  3em  3em 3em'}}>
-   <Embed
+   <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
+   
+   <Embed style={{ maxHeight:'200px !important'}}
     autoplay={false}
     color='white'
     hd={false}
@@ -419,31 +421,27 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
     iframe={{
       style: {
         padding: 10,
+
       },
     }}
     placeholder={logo}
     source='youtube'
   />
     <Card.Content>
-      <Card.Header> <h2>Stack:  <Label  size='massive'  image>
-      Sketch
-    </Label><Label  size='massive' image>
-      Redux
-    </Label><Label size='massive' image>
-      React
-    </Label><Label size='massive' image>
-      Firebase
-    </Label>
-    <Label size='massive' image>
-      Semantic UI
-    </Label></h2> </Card.Header>
+      <Card.Header>  </Card.Header>
       <Card.Meta>
         <span className='date'> <strong>Role:</strong> Project Manager</span>
       </Card.Meta>
       <Card.Description>
+      <List.Item as='a'>
+      <Icon name='right triangle' /> <strong>Key Learnings:</strong>  React-Redux-Firebase, Severless architecture, Agile methodologies, Firebase API, CI/CD (Cloud build), Slack, Trello
+      <List.Content>
+      </List.Content>
+    </List.Item><br></br>
       <p style={{ fontSize: '1.33em' }}>
-        
-         The web app developed captures customer picture when picking up their purchased product as well as customer details. Once the record is saved, a reviews URL link and photo download URL link are sent to the customer through a messaging service. With the information acquired from the customers and their purchased products, a company can then be able to send targeted messages to specific customers. The motive of the reviews from the current customers is to help drive trust in prospective customers, as well as allow them to keep in touch with past customers if given permission.</p> 
+          
+         The web app developed captures customer picture when picking up their purchased product as well as customer details.<br></br>
+          Once the record is saved, a reviews URL link and photo download URL link are sent to the customer</p>
       </Card.Description>
       <Card.Description>
         <br></br>
@@ -468,7 +466,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
   <Header as='h3' style={{  fontSize: '1.5em' }}>
           2. OO Design Patterns: Avengers End Game
         </Header>
-  <Card fluid style={{ padding: '2em  3em  2em 3em'}}>>
+  <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
     <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg'  wrapped ui={false} />
     <Card.Content>
       <Card.Header><h2>Stack: <Label size='massive' image>
@@ -510,10 +508,10 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
   <br></br>
   <br></br>
 
-  <TransitionExampleDuration show='2000' children={<Header as='h3' style={{  fontSize: '1.5em' }}>
+  {/*   <TransitionExampleDuration show='2000' children={<Header as='h3' style={{  fontSize: '1.5em' }}>
           3. IOT :Medical Appointment System (Web)
         </Header>}/>
-  <Card fluid style={{ padding: '2em  3em  2em 3em'}}>>
+  <Card fluid style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
     <Card.Content>
     <Card.Header><h2>Stack: 
@@ -550,7 +548,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
   <Header as='h3' style={{  fontSize: '1.5em' }}>
           4. Analysis of Algorithms
         </Header>
-  <Card fluid style={{ padding: '2em  3em  2em 3em'}}>>
+  <Card fluid style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
     <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
     <Card.Content>
       <Card.Header></Card.Header>
@@ -567,24 +565,13 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
         22 Friends
       </a>
     </Card.Content>
-  </Card>
+  </Card>*/}
 
   
 
   
   
    {/*-----------Projects----------------------*/}
-
-
-
-                <p style={{ fontSize: '1.33em' }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-          it's really true. It took years of gene splicing and combinatory DNA research, but our
-          bananas can really dance.
-        </p>
-        <Button as='a' size='large'>
-          I'm Still Quite Interested
-        </Button>
       </Container>
     </Segment>
     <Segment style={{ padding: '0em' }} vertical>
@@ -617,15 +604,15 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
         <i className="heart icon"></i>
       </a>
       <Card style={{ maxHeight: '400px', padding: '2em  3em  2em 3em'}} fluid>
-    <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
+    <Image src='' wrapped ui={false} />
     </Card>
     </div>
           </Grid.Column>
           <Grid.Column id='sectionContact'  width={8}>
-          <center><Card>
-            <Header as='h3' style={{ fontSize: '40px', textAlign:'center' }}>
+          <center> <Header as='h3' style={{ color:'white', fontSize: '40px', textAlign:'center' }}>
               Contact
-            </Header>
+            </Header><Card style={{background:'transparent' ,padding: '2em  3em  2em 3em'}}>
+           
             <div style={{textAlign:'center'}}>
             <Link2 to={routes.REPOSITORY}> <Button size='massive'   icon='github' /> </Link2>
             <Link2 to={routes.LINKEDIN}>   <Button  size='massive'   color='linkedin' icon='linkedin' /> </Link2>
