@@ -339,12 +339,14 @@ const FrontPage6 = () => (
         </Label>
              <Header as='h3' style={{ fontSize: '1.4em' }}>
   1. Software Consultant - <a href="https://binksandassociates.com.au/contact-us/"> Binks & Associates Pty Ltd. (Live Melbourne Projects)</a>   --Melboune, 10/17 -12/17
-</Header><p style={{ fontSize: '1.33em' }}>Prototyped a web app so that an tenants and property-owners of  an owners corporation can respond effectively to queries with a property</p>
+</Header><p style={{ fontSize: '1.33em' }}>Prototyped a web application leveraging Liferay’s development platform. Integration of BPM software to portal.</p>
 
            <p style={{ fontSize: '1.33em' }}> </p>
            <Header as='h3' style={{ fontSize: '1.4em' }}>
   2. Software Engineer - <a href="http://www.lealgroup.com/information_technology.aspx#cis">Cisolve International Ltd.</a>   --Mauritius, 07/14 -7/17
-</Header><p style={{ fontSize: '1.33em' }}> Deployed features of a Leave Management System such as Email Notification and Outlook Calendar API calls combined with front end design. 
+</Header><p style={{ fontSize: '1.33em' }}> Designed email notification and REST calls features of a Leave Management System. . <br></br>
+Contributed to POC
+
 Supported the development of an IOS app capable of supporting PDF-Annotations. </p>
 <Header as='h3' style={{ fontSize: '1.4em' }}>
   3. IT Trainee - <a href="https://www.hmtechnologies.mu/">Harel Mallac Technologies</a>   --Mauritius, 06/13 -12/13
@@ -361,7 +363,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
           <div className="ui fluid image">
-      <a className="ui left corner label">
+      <a className="ui left corner label">      
         <i className="heart icon"></i>
       </a>
 <center>
@@ -622,9 +624,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
     </div>
           </Grid.Column>
           <Grid.Column id='sectionContact'  width={8}>
-          <center> <Header as='h3' style={{ color:'black', fontSize: '40px', textAlign:'center' }}>
-              Contact
-            </Header>
+          <center>
            
             <div style={{textAlign:'center'}}>
             <Link2 to={routes.REPOSITORY}> <Button size='massive'   icon='github' /> </Link2>
