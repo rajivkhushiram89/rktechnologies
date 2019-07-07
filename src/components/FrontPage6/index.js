@@ -167,9 +167,11 @@ class DesktopContainer extends Component {
                 </Menu.Item>
               <Menu.Item>
               <Link2 to={routes.REPOSITORY}> 
-<br></br>
-        <Button color='orange' inverted size='large'><i className="git icon"></i>
+        <Button color='orange' inverted><i className="git icon"></i>
          Github Repo 
+        </Button></Link2><Link2 to={routes.LINKEDIN}> 
+        <Button color='blue' inverted><i className="linkedin icon"> </i>
+        LinkedIn
         </Button></Link2></Menu.Item>
 
              {/*    <Menu.Item><Button inverted={!fixed}>
@@ -331,7 +333,7 @@ const FrontPage6 = () => (
         </Label>
             <p style={{ fontSize: '1.33em' }}> 
             <br></br>
-            I am a full stack developer with over <strong>3 years experience </strong> in the  IT industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye. </p>
+            I am a full stack developer with over <strong>3 years experience </strong> in the  IT industry. My passion for coding and design comes from a desire to build things that are meaningful, functional and pleasing to the eye.  </p>
             <p style={{ fontSize: '1.33em' }}> 
              </p>
              <Label as='a' disabled   size='large' color='blue' ribbon>
