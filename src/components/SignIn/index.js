@@ -121,7 +121,7 @@ class SignInForm extends Component {
       
       </Form>  
       <Message>
-       <div> New to us? </div><Link to={routes.SIGN_UP}><br></br><Button  inverted  secondary > Register</Button></Link>
+      {/**  <div> New to us? </div><Link to={routes.SIGN_UP}><br></br><Button  inverted  secondary > Register</Button></Link>*/}
       </Message>
     </Grid.Column>
   </Grid>
