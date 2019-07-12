@@ -452,9 +452,9 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       </List.Content>
     </List.Item><br></br>
       <p style={{ fontSize: '1.33em' }}>
-          
-         The web app developed captures customer picture when picking up their purchased product as well as customer details.<br></br>
-          Once the record is saved, a reviews URL link and photo download URL link are sent to the customer</p>
+          This web app allows sales agents to engage customers into reviewing a product.
+          It does so by sending a text message to the customer by SMS containing the link for submitting reviews.
+        </p>
       </Card.Description>
       <Card.Description>
         <br></br>
