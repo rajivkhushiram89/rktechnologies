@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 
 import ReactParticles from 'react-particles-js';
 import particlesConfig from './particles-config.js';
@@ -99,12 +99,26 @@ HomepageHeading.propTypes = {
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-  state = { navVisible: true }
+  state = { navVisible: true,
+    calculations: {
+      direction: 'none',
+      topPassed: false,
+      bottomPassed: false,
+      pixelsPassed: 0,
+      percentagePassed: 0,
+      topVisible: false,
+      bottomVisible: false,
+      fits: false,
+      passing: false,
+      onScreen: false,
+      offScreen: false   },
+    }
 
+  contextRef = createRef()
+  handleUpdate = (e, { calculations }) => this.setState({ calculations })
+  
+  
   toggleVisibility = () => this.setState(prevState => ({ navVisible: !prevState.navVisible }))
-
-
-
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
 
@@ -112,6 +126,7 @@ class DesktopContainer extends Component {
     const { children } = this.props
     const { fixed } = this.state
     const { navVisible } = this.state
+  
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
@@ -279,9 +294,10 @@ class MobileContainer extends Component {
                 </Menu.Item>
               </Responsive>
               <Menu.Menu position="right">
-              <Link2 to={routes.SIGN_IN}><Menu.Item>Log in</Menu.Item></Link2>
               
-              {/*<Link2 to={routes.SIGN_UP}><Menu.Item>Sign Up</Menu.Item></Link2>*/} 
+              
+              {/*<Link2 to={routes.SIGN_IN}><Menu.Item>Log in</Menu.Item></Link2>
+            <Link2 to={routes.SIGN_UP}><Menu.Item>Sign Up</Menu.Item></Link2>*/} 
               
               </Menu.Menu>
              
@@ -480,7 +496,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         <React.Fragment>
      <div style={{padding: '2em  2em  2em 2em'}}>
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
-   Avengers End Game: Study of OO Design Patterns:   
+   OO Design Patterns:   
      </Label></div>      
   <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
     <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg'  wrapped ui={false} />
@@ -620,7 +636,7 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
       <a className="ui left corner label">
         <i className="heart icon"></i>
       </a>
-      <Card style={{ background:'black', maxHeight: '400px', padding: '2em  3em  2em 3em'}} fluid>
+      <Card style={{ backgroundImage:'https://rudolfsen.com/wp-content/uploads/2019/03/banner-2.jpg', maxHeight: '400px', padding: '2em  3em  2em 3em'}} fluid>
     <Image src='https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-1/p240x240/24862479_2071266543092952_7064062963233407011_n.jpg?_nc_cat=111&amp;_nc_ht=scontent-syd2-1.xx&amp;oh=1cd1e56d7e7ccada1830445556d17e4f&amp;oe=5D94AA46' wrapped ui={false} />
     </Card>
     </div>
