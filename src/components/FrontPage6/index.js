@@ -10,7 +10,9 @@ import * as routes from '../../constants/routes';
 import './index.scss'
 import "pure-react-carousel/dist/react-carousel.es.css";
 import fotorajiv from './avatarajiv.jpg'
-import logo from './wawarev.png'; 
+import reviewslogo from './wawarev.png'; 
+import logo from './igrouplogo.jpg'
+
 import {
   Label,
   Embed,
@@ -402,15 +404,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         </Grid.Row>
       </Grid>
     </Segment>
-    <Segment>
-    <Grid container stackable verticalAlign='middle'>
-        <Grid.Row >
-          <Grid.Column   width={8}>
-    
-</Grid.Column>
-</Grid.Row>
-</Grid>
-    </Segment>
+
    
     <Segment id='PORJECTS' style={{ padding: '1.5em 0em' }} vertical>
       <Container id="bigup"  style={{ width: '600px!important'}} text>
@@ -429,12 +423,67 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
        <Button size='massive' disabled inverted> Projects</Button>
         </Header> </center>
        
-        
-        
-        
-       
 
    {/*-----------Projects----------------------*/}
+   <React.Fragment>
+     <div style={{padding: '2em  2em  2em 2em'}}>
+   <Label as='a'  disabled   size='huge' color='brown' ribbon>
+      iGroup-Assignment
+     </Label></div>
+   <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
+   
+   <Embed style={{ maxHeight:'200px !important'}}
+    autoplay={false}
+    color='white'
+    hd={false}
+    id='yk4_1qgG16I'
+    iframe={{
+      style: {
+        padding: 10,
+
+      },
+    }}
+    placeholder={logo}
+    source='youtube'
+  />
+    <Card.Content>
+      <Card.Header>  </Card.Header>
+      <Card.Meta>
+        <span className='date'> <strong>Role:</strong>Developer</span>
+      </Card.Meta>
+      <Card.Description>
+      <List.Item as='a'>
+      <Icon name='right triangle' /> <strong>Key Learnings:</strong> NodeJS + ReactJS + MongoDb + FirebaseHosting +Semantic UI 
+      <List.Content>
+      </List.Content>
+    </List.Item><br></br>
+      <p style={{ fontSize: '1.33em' }}>
+      This project addresses student Group/Team formation for assignments at all educational level. The purpose is to ensure that groups formed are relevant to their skill sets in order to maximise team learning opportunities among team members. This is achieved in 3 simple steps:
+
+1. Teachers/Lecturers define the set of skills required to complete the assignments, team formation date and releases it to the students .
+2 The students rate themselves for the required skill/s and submit their ratings.
+3 Students notified of group team members on fteam formation date.
+        </p>
+      </Card.Description>
+      <Card.Description>
+    <hr/>
+        <h3>Demo: <a href="https://reactrkfirebasegcp.firebaseapp.com/">https://reactrkfirebasegcp.firebaseapp.com/</a> </h3>
+        <h3>Github:  <a href="https://github.com/Rajiv-Khushiram/reactrk">https://github.com/Rajiv-Khushiram/reactrk</a> </h3>
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='eye' />
+        13 Views
+      </a>
+    </Card.Content>
+  </Card>
+  </React.Fragment>
+  <br></br>
+  <br></br>
+
+  <hr></hr>
+  <br></br>
    <React.Fragment>
      <div style={{padding: '2em  2em  2em 2em'}}>
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
@@ -453,7 +502,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
 
       },
     }}
-    placeholder={logo}
+    placeholder={reviewslogo}
     source='youtube'
   />
     <Card.Content>
@@ -473,7 +522,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         </p>
       </Card.Description>
       <Card.Description>
-        <br></br>
+      <hr/>
         <h3>Demo: <a href="https://rajivkhushiram-reviews-project.firebaseapp.com">https://rajivkhushiram-reviews-project.firebaseapp.com</a> </h3>
         <h3>Github:  <a href="https://github.com/Rajiv-Khushiram/Reviews-App-For-Business">https://github.com/Rajiv-Khushiram/Reviews-App-For-Business</a> </h3>
       </Card.Description>
@@ -522,7 +571,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       Created and made use of <strong>creational, structural</strong> and <strong>behavioral patterns</strong></p>
       </Card.Description>
       <Card.Description>
-        <br></br>
+      <hr/>
         <h3>Github:  <a href="https://github.com/Rajiv-Khushiram/Avengers_End_Game">https://github.com/Rajiv-Khushiram/Avengers_End_Game</a> </h3>
       </Card.Description>
     </Card.Content>
