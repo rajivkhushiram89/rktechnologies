@@ -460,16 +460,21 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <p style={{ fontSize: '1.33em' }}>
       This project addresses student Group/Team formation for assignments at all educational level. The purpose is to ensure that groups formed are relevant to their skill sets in order to maximise team learning opportunities among team members. This is achieved in 3 simple steps:
 
-1. Teachers/Lecturers define the set of skills required to complete the assignments, team formation date and releases it to the students .
-2 The students rate themselves for the required skill/s and submit their ratings.
-3 Students notified of group team members on fteam formation date.
+1. Teachers/Lecturers define the set of skills required to complete the assignments, team formation date and releases it to the students .<br/>
+2 The students rate themselves for the required skill/s and submit their ratings.<br/>
+3 Backend processes Students are notified of group team members.
         </p>
       </Card.Description>
       <Card.Description>
     <hr/>
-        <h3>Demo: <a href="https://reactrkfirebasegcp.firebaseapp.com/">https://reactrkfirebasegcp.firebaseapp.com/</a> </h3>
+    <div>
         <h3>Github:  <a href="https://github.com/Rajiv-Khushiram/reactrk">https://github.com/Rajiv-Khushiram/reactrk</a> </h3>
-      </Card.Description>
+    </div>
+    <div>
+    <a href="https://reactrkfirebasegcp.firebaseapp.com"> <h3>Demo >> </h3></a> 
+
+    </div>
+        </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
