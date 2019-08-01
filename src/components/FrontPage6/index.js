@@ -446,7 +446,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
     placeholder={logo}
     source='youtube'
   /></div>
-    <Card.Content>
+    <Card.Content style={{maxWidth:'800px', margin:'auto'}}>
       <Card.Header>  </Card.Header>
       <Card.Meta>
         <span className='date'> <strong>Role:</strong>Developer</span>
@@ -512,7 +512,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
     placeholder={reviewslogo}
     source='youtube'
   /></div>
-    <Card.Content>
+    <Card.Content style={{maxWidth:'800px', margin:'auto'}}>
       <Card.Header>  </Card.Header>
       <Card.Meta>
         <span className='date'> <strong>Role:</strong> Project Manager</span>
@@ -557,24 +557,16 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
      </Label></div>      
   <Card style={{ margin:'auto', width:'80%', maxWidth:'1800px'}}>
               <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg' wrapped ui={false} />
-    <Card.Content>
-      <Card.Header><h2>Stack: <Label size='massive' image>
-      
-      Java
-     
-    </Label><Label size='massive' image>
-      
-    Design Patterns
-     
-    </Label><Label size='massive' image>
-      
-      Swing
-     
-    </Label></h2></Card.Header>
+    <Card.Content style={{maxWidth:'800px', margin:'auto'}}>
+  
       <Card.Meta>
         <span className='date'> <strong>Role:</strong> Developer</span>
       </Card.Meta>
       <Card.Description>
+      <List.Item as='a'>
+      <Icon name='right triangle' /> <strong>Key Learnings:</strong> JAVA, GoF Patterns, Design Patterns, Swing, Trello <br></br>
+      </List.Item>
+      <br></br>
       <u><strong>Pitch:</strong></u>
       <p style={{ textIndent:'20px', fontSize: '1.33em' }}>   This game provides a playfield of 10x10 honey comb grid whereby each grid unit represents a location on the board. Each player assumes control of the pieces that have been assigned to. On each turn the player can choose between which of his pieces is to be moved and which pieces ability is to be casted. The aim of the player is to take down the enemy team using coordinated movement and ability casting among the pieces in the team. 
       Created and made use of <strong>creational, structural</strong> and <strong>behavioral patterns</strong></p>
