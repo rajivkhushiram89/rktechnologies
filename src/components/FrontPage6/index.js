@@ -430,9 +430,9 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment
      </Label></div>
-   <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
-   
-   <Embed style={{ maxHeight:'200px !important'}}
+   <Card style={{ margin:'auto', width:'80%', maxWidth:'1800px'}}>
+   <div style={{ padding: '2em  2em  2em 2em'}}>
+   <Embed style={{  maxHeight:'200px !important'}}
     autoplay={false}
     color='white'
     hd={false}
@@ -445,7 +445,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
     }}
     placeholder={logo}
     source='youtube'
-  />
+  /></div>
     <Card.Content>
       <Card.Header>  </Card.Header>
       <Card.Meta>
@@ -457,12 +457,14 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <List.Content>
       </List.Content>
     </List.Item><br></br>
-      <p style={{ fontSize: '1.33em' }}>
-      This project addresses student Group/Team formation for assignments at all educational level. The purpose is to ensure that groups formed are relevant to their skill sets in order to maximise team learning opportunities among team members. This is achieved in 3 simple steps:
+  <strong>Pitch:</strong>
+      <p style={{ textIndent:'20px', fontSize: '1.33em' }}>
 
+      This project addresses student Group/Team formation for assignments at all educational level. The purpose is to ensure that groups formed are relevant to their skill sets in order to maximise team learning opportunities among team members. This is achieved in 3 simple steps:
+<br/>
 1. Teachers/Lecturers define the set of skills required to complete the assignments, team formation date and releases it to the students .<br/>
-2 The students rate themselves for the required skill/s and submit their ratings.<br/>
-3 Backend processes Students are notified of group team members.
+2. The students rate themselves for the required skill/s and submit their ratings.<br/>
+3. Backend processes Students are notified of group team members.
         </p>
       </Card.Description>
       <Card.Description>
@@ -494,8 +496,8 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
       Reviews App Project
      </Label></div>
-   <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
-   
+   <Card style={{margin:'auto', width:'90%', maxWidth:'1800px'}}>
+   <div style={{ padding: '2em  2em  2em 2em'}}>
    <Embed style={{ maxHeight:'200px !important'}}
     autoplay={false}
     color='white'
@@ -509,7 +511,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
     }}
     placeholder={reviewslogo}
     source='youtube'
-  />
+  /></div>
     <Card.Content>
       <Card.Header>  </Card.Header>
       <Card.Meta>
@@ -521,7 +523,8 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <List.Content>
       </List.Content>
     </List.Item><br></br>
-      <p style={{ fontSize: '1.33em' }}>
+    <strong>Pitch:</strong>
+      <p style={{textIndent:'20px', fontSize: '1.33em' }}>
           This web app allows sales agents to engage customers into reviewing a product.
           It does so by sending a text message to the customer by SMS containing the link for submitting reviews.
         </p>
@@ -552,8 +555,8 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
    OO Design Patterns:   
      </Label></div>      
-  <Card style={{ padding: '2em  2em  2em 2em', margin:'auto', width:'80%', maxWidth:'1800px'}}>
-    <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg'  wrapped ui={false} />
+  <Card style={{ margin:'auto', width:'80%', maxWidth:'1800px'}}>
+              <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg' wrapped ui={false} />
     <Card.Content>
       <Card.Header><h2>Stack: <Label size='massive' image>
       
@@ -572,7 +575,8 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         <span className='date'> <strong>Role:</strong> Developer</span>
       </Card.Meta>
       <Card.Description>
-      <p style={{ fontSize: '1.33em' }}>   This game provides a playfield of 10x10 honey comb grid whereby each grid unit represents a location on the board. Each player assumes control of the pieces that have been assigned to. On each turn the player can choose between which of his pieces is to be moved and which pieces ability is to be casted. The aim of the player is to take down the enemy team using coordinated movement and ability casting among the pieces in the team. 
+      <strong>Pitch:</strong>
+      <p style={{ textIndent:'20px', fontSize: '1.33em' }}>   This game provides a playfield of 10x10 honey comb grid whereby each grid unit represents a location on the board. Each player assumes control of the pieces that have been assigned to. On each turn the player can choose between which of his pieces is to be moved and which pieces ability is to be casted. The aim of the player is to take down the enemy team using coordinated movement and ability casting among the pieces in the team. 
       Created and made use of <strong>creational, structural</strong> and <strong>behavioral patterns</strong></p>
       </Card.Description>
       <Card.Description>
