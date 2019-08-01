@@ -415,7 +415,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
           as='h4'
           className='header'
           horizontal
-          style={{ margin: '0.5em 0em', textTransform: 'uppercase' }}
+          style={{ margin: '0.0em 0em', textTransform: 'uppercase' }}
         >
 
         </Divider>
@@ -428,7 +428,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
    <React.Fragment>
      <div style={{padding: '2em  2em  2em 2em'}}>
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
-      iGroup-Assignment
+      iGroup-Assignment Hackathon
      </Label></div>
    <Card style={{ margin:'auto', width:'80%', maxWidth:'1800px'}}>
    <div style={{ padding: '2em  2em  2em 2em'}}>
@@ -457,10 +457,10 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <List.Content>
       </List.Content>
     </List.Item><br></br>
-  <strong>Pitch:</strong>
+    <u> <strong>Pitch:</strong></u>
       <p style={{ textIndent:'20px', fontSize: '1.33em' }}>
 
-      This project addresses student Group/Team formation for assignments at all educational level. The purpose is to ensure that groups formed are relevant to their skill sets in order to maximise team learning opportunities among team members. This is achieved in 3 simple steps:
+      This project addresses student Group/Team formation for assignments at all educational level. The purpose is to ensure that groups formed are relevant to their skill sets in order to maximise team learning opportunities among team members. Steps:
 <br/>
 1. Teachers/Lecturers define the set of skills required to complete the assignments, team formation date and releases it to the students .<br/>
 2. The students rate themselves for the required skill/s and submit their ratings.<br/>
@@ -523,7 +523,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <List.Content>
       </List.Content>
     </List.Item><br></br>
-    <strong>Pitch:</strong>
+    <u><strong>Pitch:</strong></u>
       <p style={{textIndent:'20px', fontSize: '1.33em' }}>
           This web app allows sales agents to engage customers into reviewing a product.
           It does so by sending a text message to the customer by SMS containing the link for submitting reviews.
@@ -575,7 +575,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
         <span className='date'> <strong>Role:</strong> Developer</span>
       </Card.Meta>
       <Card.Description>
-      <strong>Pitch:</strong>
+      <u><strong>Pitch:</strong></u>
       <p style={{ textIndent:'20px', fontSize: '1.33em' }}>   This game provides a playfield of 10x10 honey comb grid whereby each grid unit represents a location on the board. Each player assumes control of the pieces that have been assigned to. On each turn the player can choose between which of his pieces is to be moved and which pieces ability is to be casted. The aim of the player is to take down the enemy team using coordinated movement and ability casting among the pieces in the team. 
       Created and made use of <strong>creational, structural</strong> and <strong>behavioral patterns</strong></p>
       </Card.Description>
