@@ -183,13 +183,13 @@ class DesktopContainer extends Component {
                   <Input icon="search" placeholder="Search..." />
                 </Menu.Item>
               <Menu.Item>
-              <Link2 to={routes.REPOSITORY}> 
-        <Button color='orange' inverted><i className="git icon"></i>
-         Github Repo 
-        </Button></Link2><Link2 to={routes.LINKEDIN}> 
-        <Button color='blue' inverted><i className="linkedin icon"> </i>
+               <Menu.Item>
+        <Label as='a' size='large' href='https://drive.google.com/file/d/1dkLEfPBgmT7BuLBSI54VuOW0pz9SsIww/view' color='brown' ><i className="file alternate outline icon"></i>
+         Resume 
+        </Label>
+        <Label as='a' size='large' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
         LinkedIn
-        </Button></Link2></Menu.Item>
+        </Label></Menu.Item>
 
              {/*    <Menu.Item><Button inverted={!fixed}>
               <Link2 to={routes.SIGN_UP}>  Register</Link2>
