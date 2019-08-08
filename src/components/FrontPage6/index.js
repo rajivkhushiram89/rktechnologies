@@ -182,7 +182,6 @@ class DesktopContainer extends Component {
               <Menu.Item>
                   <Input icon="search" placeholder="Search..." />
                 </Menu.Item>
-              <Menu.Item>
                <Menu.Item>
         <Label as='a' size='large' href='https://drive.google.com/file/d/1dkLEfPBgmT7BuLBSI54VuOW0pz9SsIww/view' color='brown' ><i className="file alternate outline icon"></i>
          Resume 
