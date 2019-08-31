@@ -277,7 +277,7 @@ class MobileContainer extends Component {
                 spy={true}
                 smooth={true}
                 duration= {700}
-            > <Menu.Item>Work</Menu.Item></Link>
+            > <Menu.Item>Projects</Menu.Item></Link>
 
               <Link
                 activeclass="active"
