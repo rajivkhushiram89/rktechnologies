@@ -8,4 +8,4 @@ steps:
   args: ['run', 'build']
 # Deploy
 - name: 'gcr.io/portfolio-showcase-website/firebase'
-  args: ['deploy']
+  args: ['deploy', '--only', 'hosting']

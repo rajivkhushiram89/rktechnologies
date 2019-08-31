@@ -789,9 +789,9 @@ const TableExamplePadded = () => (
           </Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell textAlign='center'  warning>HTML/CSS/JS</Table.Cell>
+          <Table.Cell textAlign='center'  warning>JavaScript</Table.Cell>
           <Table.Cell textAlign='center'  width={10}  positive>
-          <ProgressExampleIndicating  color={'yellow'} percent='60' />
+          <ProgressExampleIndicating  color={'green'} percent='70' />
           </Table.Cell>
         </Table.Row>
         
