@@ -77,7 +77,7 @@ class HomepageHeading extends React.Component {
   <br></br>
   <Link
                 activeclass="active"
-                to="section1"
+                to="PORJECTS"
                 spy={true}
                 smooth={true}
                 duration= {700}
@@ -331,7 +331,7 @@ ResponsiveContainer.propTypes = {
 
 const FrontPage6 = () => (
   <ResponsiveContainer>
-    <Segment id="section1"  style={{ padding: '4em 0em' }} vertical>
+    {/* <Segment id="section1"  style={{ padding: '4em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row >
           <Grid.Column   width={8}>
@@ -402,7 +402,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+    </Segment> */}
 
    
     <Segment id='PORJECTS' style={{ padding: '1.5em 0em' }} vertical>
