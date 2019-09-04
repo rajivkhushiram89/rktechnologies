@@ -72,7 +72,7 @@ class TypistExample extends React.Component {
           startDelay={1000}
           onTypingDone={this.onHeaderTyped}
         >
-          <h1 style={{color:'white'}}>4 + years of web developer experience</h1>
+          <h1 style={{color:'white'}}>4 + years of web development experience</h1>
         </Typist>
         <div className="TypistExample-content">
           {this.state.renderMsg ? (
