@@ -133,6 +133,7 @@ class HomepageHeading extends Component {
           visible={visible}
         >
          <Particles>  <Header
+            
             as="h1"
             content="Hi, I'm Raj."
             inverted
@@ -191,6 +192,9 @@ class HomepageHeading extends Component {
         <br></br>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
+       
 
       </Container>
     );
@@ -277,13 +281,8 @@ class DesktopContainer extends Component {
                     animation="fade down"
                     duration={1500}
                   >
-                     <Menu.Item><Link
-                activeclass="active"
-                to="PORJECTS"
-                spy={true}
-                smooth={true}
-                duration= {700}
-            >Projects</Link></Menu.Item>
+                     <Menu.Item href="#PORJECTS">
+            Projects</Menu.Item>
                   </Transition>
                   <Transition
                     visible={calculations.topPassed}
@@ -302,10 +301,10 @@ class DesktopContainer extends Component {
                   <Input icon="search" placeholder="Search..." />
                 </Menu.Item> */}
                <Menu.Item>
-        <Label as='a' size='large' href='https://drive.google.com/file/d/1dkLEfPBgmT7BuLBSI54VuOW0pz9SsIww/view?usp=sharing' color='brown' ><i className="file alternate outline icon"></i>
+        <Label as='a' size='huge' href='https://drive.google.com/file/d/1dkLEfPBgmT7BuLBSI54VuOW0pz9SsIww/view?usp=sharing' color='brown' ><i className="file alternate outline icon"></i>
          Resume 
         </Label>
-        <Label as='a' size='large' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
+        <Label as='a' size='huge' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
         LinkedIn
         </Label></Menu.Item>
 
@@ -317,6 +316,7 @@ class DesktopContainer extends Component {
                 </Container>
               </Menu>
               <HomepageHeading />
+              <hr></hr>
               {children}
             </Segment>
           </Visibility>
@@ -385,7 +385,7 @@ const HomePageLayout = () => <ResponsiveContainer>
     placeholder={logo}
     source='youtube'
   /></div>
-    <Card.Content style={{maxWidth:'800px', margin:'auto'}}>
+    <Card.Content style={{maxWidth:'800px', margin:'auto', textAlign:'left'}}>
       <Card.Header>  </Card.Header>
       <Card.Meta>
         <span className='date'> <strong>Role:</strong>Developer</span>
@@ -408,12 +408,12 @@ const HomePageLayout = () => <ResponsiveContainer>
       </Card.Description>
       <Card.Description>
     <hr/>
-    <div style={{textAlign:"center"}}>
-    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/reactrk' color='brown' >
+    <div style={{textAlign:"right"}}>
+    <Label as='a' size='huge' href='https://github.com/Rajiv-Khushiram/reactrk' color='brown' >
     Github
         </Label>
    
-    <Label as='a' size='large' href='https://reactrkfirebasegcp.firebaseapp.com' color='blue' >
+    <Label as='a' size='huge' href='https://reactrkfirebasegcp.firebaseapp.com' color='blue' >
     Live
         </Label>
     </div>
@@ -447,7 +447,7 @@ const HomePageLayout = () => <ResponsiveContainer>
     placeholder={reviewslogo}
     source='youtube'
   /></div>
-    <Card.Content style={{maxWidth:'800px', margin:'auto'}}>
+    <Card.Content style={{maxWidth:'800px', margin:'auto', textAlign:'left'}}>
       <Card.Header>  </Card.Header>
       <Card.Meta>
         <span className='date'> <strong>Role:</strong> Project Manager</span>
@@ -466,12 +466,12 @@ const HomePageLayout = () => <ResponsiveContainer>
       </Card.Description>
       <Card.Description>
       <hr/>
-      <div style={{textAlign:"center"}}>
-    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='brown' >
+      <div style={{textAlign:"right"}}>
+    <Label as='a' size='huge' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='brown' >
     Github
         </Label>
    
-    <Label as='a' size='large' href='https://rajivkhushiram-reviews-project.firebaseapp.com' color='blue' >
+    <Label as='a' size='huge' href='https://rajivkhushiram-reviews-project.firebaseapp.com' color='blue' >
     Live
         </Label>
     </div>
@@ -499,7 +499,7 @@ const HomePageLayout = () => <ResponsiveContainer>
      </Label></div>      
   <Card style={{ margin:'auto', width:'80%', maxWidth:'800px'}}>
               <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg' wrapped ui={false} />
-    <Card.Content style={{maxWidth:'800px', margin:'auto'}}>
+    <Card.Content style={{maxWidth:'800px', margin:'auto',  textAlign:'left'}}>
   
       <Card.Meta>
         <span className='date'> <strong>Role:</strong> Developer</span>
@@ -515,8 +515,8 @@ const HomePageLayout = () => <ResponsiveContainer>
       </Card.Description>
       <Card.Description>
       <hr/>
-      <div style={{textAlign:"center"}}>
-    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='brown' >
+      <div style={{textAlign:"right"}}>
+    <Label as='a' size='huge' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='brown' >
     Github
         </Label>
    
