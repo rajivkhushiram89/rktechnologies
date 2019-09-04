@@ -65,14 +65,15 @@ class TypistExample extends React.Component {
   render() {
     const docs = '//github.com/jstejada/react-typist';
     return (
-      <div className="TypistExample">
+    <div className="TypistExample">
+        
         <Typist
           className="TypistExample-header"
           avgTypingDelay={40}
           startDelay={1000}
           onTypingDone={this.onHeaderTyped}
         >
-          <h1 style={{color:'white'}}>4 + years of web development experience</h1>
+           <Particles><h1 style={{color:'white'}}>4 + years of web development experience</h1></Particles>
         </Typist>
         <div className="TypistExample-content">
           {this.state.renderMsg ? (
@@ -80,10 +81,10 @@ class TypistExample extends React.Component {
               className="TypistExample-message"
               cursor={{ hideWhenDone: false }}
             >
-               <span style={{color:'white', fontSize:'30px'}}>A T Shaped Programmer</span>
+              <Particles>  <span style={{color:'white', fontSize:'30px'}}>A T Shaped Programmer</span>
               <Typist.Delay ms={500} />
               <Typist.Backspace count={11} delay={1000} />
-              <span style={{color:'white', fontSize:'30px' }}> Developer</span><Typist.Delay ms={500} />
+              <span style={{color:'white', fontSize:'30px' }}> Developer</span><Typist.Delay ms={500} /></Particles>
               
               {''}
             </Typist>
@@ -117,31 +118,32 @@ class HomepageHeading extends Component {
     const { visible } = this.state;
 
     return (
-      <Container text>
+     <Container text>
         <br></br>
          <Transition
           animation={"horizontal flip"}
           duration={1000}
           visible={visible}
         >
-      <center> <img src={fotorajiv} className="ui medium avatar bordered rounded image"></img></center>  
+      <center> <img src={fotorajiv} className="ui small avatar bordered rounded image"></img></center>  
          </Transition>
         <Transition
           animation={"horizontal flip"}
           duration={1000}
           visible={visible}
         >
-          <Header
+         <Particles>  <Header
             as="h1"
             content="Hi, I'm Raj."
             inverted
             style={{
+              width:"100%",
               fontSize: mobile ? "2em" : "4em",
               fontWeight: "normal",
               marginBottom: 0,
               marginTop: mobile ? "1.5em" : "0.5em"
             }}
-          />
+          /></Particles>
 
          
         </Transition>
@@ -189,11 +191,7 @@ class HomepageHeading extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+
       </Container>
     );
   }
@@ -318,7 +316,7 @@ class DesktopContainer extends Component {
                   </Transition>
                 </Container>
               </Menu>
-             <Particles> <HomepageHeading /></Particles>
+              <HomepageHeading />
               {children}
             </Segment>
           </Visibility>
@@ -366,7 +364,7 @@ ResponsiveContainer.propTypes = {
 
 const HomePageLayout = () => <ResponsiveContainer>
  
- <React.Fragment>
+<Delayed waitBeforeShow={1200}> <React.Fragment>
      <div id="PORJECTS" style={{padding: '2em  2em  2em 2em'}}>
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment Hackathon
@@ -565,7 +563,7 @@ const HomePageLayout = () => <ResponsiveContainer>
           </Grid.Row>
         </Grid>
       </Container>
-    </Segment></Particles>
+    </Segment></Particles></Delayed>
 </ResponsiveContainer>;
 
 export default HomePageLayout;
