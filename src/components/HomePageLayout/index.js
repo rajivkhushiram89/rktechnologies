@@ -80,10 +80,10 @@ class TypistExample extends React.Component {
               className="TypistExample-message"
               cursor={{ hideWhenDone: false }}
             >
-               <span style={{color:'white', fontWeight:'30px'}}>A T Shaped Programmer</span>
+               <span style={{color:'white', fontSize:'30px'}}>A T Shaped Programmer</span>
               <Typist.Delay ms={500} />
               <Typist.Backspace count={11} delay={1000} />
-              <span style={{color:'white'}}> Developer</span><Typist.Delay ms={500} />
+              <span style={{color:'white', fontSize:'30px' }}> Developer</span><Typist.Delay ms={500} />
               
               {''}
             </Typist>
@@ -119,7 +119,13 @@ class HomepageHeading extends Component {
     return (
       <Container text>
         <br></br>
-        <br></br>
+         <Transition
+          animation={"horizontal flip"}
+          duration={1000}
+          visible={visible}
+        >
+      <center> <img src={fotorajiv} className="ui medium avatar bordered rounded image"></img></center>  
+         </Transition>
         <Transition
           animation={"horizontal flip"}
           duration={1000}
@@ -133,13 +139,13 @@ class HomepageHeading extends Component {
               fontSize: mobile ? "2em" : "4em",
               fontWeight: "normal",
               marginBottom: 0,
-              marginTop: mobile ? "1.5em" : "2em"
+              marginTop: mobile ? "1.5em" : "0.5em"
             }}
           />
 
-
+         
         </Transition>
-
+       
 
 
         {/* <Transition
