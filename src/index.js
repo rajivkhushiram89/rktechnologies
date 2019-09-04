@@ -3,13 +3,9 @@ import ReactDOM from 'react-dom'
 import App from '../src/components/App'
 import LoadingScreen from './components/LoadingScreen/index'
 import registerServiceWorker from './registerServiceWorker'
-import 'semantic-ui-css/semantic.min.css'
-import './index.scss'
 
-const styleLink = document.createElement('link')
-styleLink.rel = 'stylesheet'
-styleLink.href = 'https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css'
-document.head.appendChild(styleLink)
+
+
 
 class Demo extends React.Component {
   constructor (props) {

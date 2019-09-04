@@ -48,7 +48,7 @@ export default {
       },
       move: {
         enable: true,
-        speed: 40,
+        speed: 10,
         direction: 'left',
         random: true,
         straight: true,

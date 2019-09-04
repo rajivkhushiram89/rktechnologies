@@ -1,0 +1,19 @@
+html, #root{
+    height:100%;
+}
+
+#startinTransition {
+    width: 100%;
+    height: 0px;
+    background-color:white;
+    position: relative;
+    -webkit-animation-name: startingTransExample; /* Safari 4.0 - 8.0 */
+    animation-name: startingTransExample;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes startingTransExample {
+    from   { height:0px;}
+    to  { background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg); height: 100%}
+  }

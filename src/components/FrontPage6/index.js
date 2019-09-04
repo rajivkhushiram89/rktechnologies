@@ -469,10 +469,10 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       <Card.Description>
     <hr/>
     <div>
-        <h3>Github:  <a href="https://github.com/Rajiv-Khushiram/reactrk">https://github.com/Rajiv-Khushiram/reactrk</a> </h3>
+        <h3> <a href="https://github.com/Rajiv-Khushiram/reactrk">Github </a> </h3>
     </div>
     <div>
-    <a href="https://reactrkfirebasegcp.firebaseapp.com"> <h3>Demo >> </h3></a> 
+    <a href="https://reactrkfirebasegcp.firebaseapp.com"> <h3>Live </h3></a> 
 
     </div>
         </Card.Description>
@@ -530,8 +530,8 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       </Card.Description>
       <Card.Description>
       <hr/>
-        <h3>Demo: <a href="https://rajivkhushiram-reviews-project.firebaseapp.com">https://rajivkhushiram-reviews-project.firebaseapp.com</a> </h3>
-        <h3>Github:  <a href="https://github.com/Rajiv-Khushiram/Reviews-App-For-Business">https://github.com/Rajiv-Khushiram/Reviews-App-For-Business</a> </h3>
+      <h3>  <a href="https://github.com/Rajiv-Khushiram/Reviews-App-For-Business">Github</a> </h3>
+        <h3><a href="https://rajivkhushiram-reviews-project.firebaseapp.com">Live</a> </h3>
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
@@ -572,7 +572,7 @@ Supported the development of an IOS app capable of supporting PDF-Annotations. <
       </Card.Description>
       <Card.Description>
       <hr/>
-        <h3>Github:  <a href="https://github.com/Rajiv-Khushiram/Avengers_End_Game">https://github.com/Rajiv-Khushiram/Avengers_End_Game</a> </h3>
+        <h3><a href="https://github.com/Rajiv-Khushiram/Avengers_End_Game">Github</a> </h3>
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
@@ -655,7 +655,8 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
    {/*-----------Projects----------------------*/}
       </Container>
     </Segment>
-    <Particles>
+   
+    {/* 
     <Segment id='dreamthecode' style={{ padding: '0em' }} vertical>
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
@@ -740,8 +741,8 @@ Otherwise: Inform the doctor that they are free until the next appointment </p>
           </Grid.Row>
         </Grid>
       </Container>
-    </Segment>
-    </Particles>
+    </Segment> */}
+    
    
     
   </ResponsiveContainer>

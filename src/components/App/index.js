@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import '../../index.scss'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
 import ReadingsPage from '../Readings'
 import SignUpPage from '../SignUp'
 import SignInPage from '../SignIn'
@@ -10,8 +8,8 @@ import AccountPage from '../Account'
 import withAuthentication from '../Session/withAuthentication'
 import { firebase } from '../../firebase'
 import * as routes from '../../constants/routes'
-
-import FrontPage6 from '../FrontPage6'
+import 'semantic-ui-css/semantic.min.css'
+import HomePageLayout from '../HomePageLayout'
 
 
 class App extends Component {
@@ -25,9 +23,9 @@ class App extends Component {
       <Router>
         <React.Fragment>
           <Route
-            exact path={routes.FRONTPAGE2}
+            exact path={routes.FRONTPAGE}
             component={() =>
-              <FrontPage6
+              <HomePageLayout
                 {...this.state}
               />
             }
