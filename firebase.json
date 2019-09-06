@@ -9,18 +9,15 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [ {
+      "source": "/r/:id*",  // captures the entire URL segment beginning at "post"
+      "destination": "https://asia-northeast1-portfolio-showcase-website.cloudfunctions.net/relay/:id", // includes the entire URL segment identified and captured by the "source" value
+      "type": 301
+    }],
     "rewrites": [
       {
         "source": "/",
         "destination": "/index.html"
-      },
-      {
-        "source": "/r/*",
-        "function": "relay"
-      },
-      {
-        "source": "/r2",
-        "function": "relay2"
       }
     ],
   
