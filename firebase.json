@@ -17,6 +17,10 @@
       {
         "source": "/r/*",
         "function": "relay"
+      },
+      {
+        "source": "/r2",
+        "function": "relay2"
       }
     ],
   
