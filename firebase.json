@@ -18,6 +18,10 @@
       {
         "source": "/",
         "destination": "/index.html"
+      },
+      {
+        "source": "/wawa",
+        "destination": "/404.html"
       }
     ],
   
