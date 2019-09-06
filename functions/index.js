@@ -37,7 +37,7 @@ api.use(
   );
 
 
-api.get("/:id", function(req, res) {
+api.get("/r/:id", function(req, res) {
   var url_id = req.params.id;
   res.status(200).send(url_id);
 });
