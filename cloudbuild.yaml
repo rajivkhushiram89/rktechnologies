@@ -11,9 +11,10 @@ steps:
   name: 'gcr.io/cloud-builders/npm'
   args: ['install']
   dir: 'functions'
-# Functionss
-- name: 'gcr.io/portfolio-showcase-website/firebase'
-  args: ['deploy', '--only', 'functions']
+
+- id: "deploy firebase"
+  name: 'gcr.io/$PROJECT_ID/firebase'
+  args: ['deploy', '--only', 'functions', '--project=portfolio-showcase-website']
 # Deploy
-- name: 'gcr.io/portfolio-showcase-website/firebase'
+- name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy', '--only', 'hosting']
