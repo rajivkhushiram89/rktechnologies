@@ -12,9 +12,6 @@ steps:
   args: ['install']
   dir: 'functions'
 
-- id: "deploy firebase"
-  name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy', '--only', 'functions', '--project=portfolio-showcase-website']
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy', '--only', 'hosting']
+  args: ['deploy']
