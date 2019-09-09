@@ -16,27 +16,29 @@
     }],
     "rewrites": [
       {
-        "source": "/",
-        "destination": "/index.html"
-      },
+        "source": "/r/**",
+        "function": "api"
+      }
+      ,
       {
         "source": "/wawa",
         "destination": "/404.html"
       },
       {
-        "source": "/r/**",
-        "function": "api"
+        "source": "**",
+        "destination": "/index.html"
       }
-    ],
+      
+    ]
   
-    "firestore": {
-      "rules": "firestore.rules",
-      "indexes": "firestore.indexes.json"
-    },
-    "emulators": {
-      "firestore": {
-        "port": "5002"
-      }
-    }
-  }
+  //   ,"firestore": {
+  //     "rules": "firestore.rules",
+  //     "indexes": "firestore.indexes.json"
+  //   },
+  //   "emulators": {
+  //     "firestore": {
+  //       "port": "5002"
+  //     }
+  //   }
+  // }
 }
