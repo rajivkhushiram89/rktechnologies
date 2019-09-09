@@ -48,7 +48,7 @@ api2.get("/", function(req, res) {
   });
 
 
-exports.relay = functions.https.onRequest(api)
+exports.api = functions.https.onRequest(api)
 exports.relay2 = functions.https.onRequest(api2)
 
 // // Create and Deploy Your First Cloud Functions
