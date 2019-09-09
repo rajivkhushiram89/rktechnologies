@@ -48,8 +48,8 @@ api2.get("/", function(req, res) {
   });
 
 
-exports.relay = functions.region("asia-northeast1").https.onRequest(api)
-exports.relay2 = functions.region("asia-northeast1").https.onRequest(api2)
+exports.relay = functions.https.onRequest(api)
+exports.relay2 = functions.https.onRequest(api2)
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions

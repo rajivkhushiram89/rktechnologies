@@ -10,6 +10,7 @@ import { firebase } from '../../firebase'
 import * as routes from '../../constants/routes'
 import 'semantic-ui-css/semantic.min.css'
 import HomePageLayout from '../HomePageLayout'
+import HomePageLayout2  from '../HomePageLayout2'
 
 
 class App extends Component {
