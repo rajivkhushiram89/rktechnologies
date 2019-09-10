@@ -9,11 +9,6 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "redirects": [ {
-      "source": "/r/:id*",  // captures the entire URL segment beginning at "post"
-      "destination": "https://asia-northeast1-portfolio-showcase-website.cloudfunctions.net/relay/:id", // includes the entire URL segment identified and captured by the "source" value
-      "type": 301
-    }],
     "rewrites": [
       {
         "source": "/r/**",
@@ -31,14 +26,14 @@
       
     ]
   }
-  
-    ,"firestore": {
-      "rules": "firestore.rules",
-      "indexes": "firestore.indexes.json"
-    },
-    "emulators": {
-      "firestore": {
-        "port": "5002"
-      }
+    
+  ,"firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "emulators": {
+    "firestore": {
+      "port": "5002"
     }
+  }
   }
