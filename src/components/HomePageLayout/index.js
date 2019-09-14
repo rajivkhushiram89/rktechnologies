@@ -301,10 +301,10 @@ class DesktopContainer extends Component {
                   <Input icon="search" placeholder="Search..." />
                 </Menu.Item> */}
                <Menu.Item>
-        <Label as='a' size='huge' href='https://drive.google.com/file/d/1dkLEfPBgmT7BuLBSI54VuOW0pz9SsIww/view?usp=sharing' color='brown' ><i className="file alternate outline icon"></i>
+        <Label as='a' size='large' href='https://drive.google.com/file/d/1dkLEfPBgmT7BuLBSI54VuOW0pz9SsIww/view?usp=sharing' color='brown' ><i className="file alternate outline icon"></i>
          Resume 
         </Label>
-        <Label as='a' size='huge' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
+        <Label as='a' size='large' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
         LinkedIn
         </Label></Menu.Item>
 
@@ -409,11 +409,11 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
     <hr/>
     <div style={{textAlign:"right"}}>
-    <Label as='a' size='huge' href='https://github.com/Rajiv-Khushiram/reactrk' color='brown' >
+    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/reactrk' color='brown' >
     Github
         </Label>
    
-    <Label as='a' size='huge' href='https://reactrkfirebasegcp.firebaseapp.com' color='blue' >
+    <Label as='a' size='large' href='https://reactrkfirebasegcp.firebaseapp.com' color='blue' >
     Live
         </Label>
     </div>
@@ -467,11 +467,11 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
       <hr/>
       <div style={{textAlign:"right"}}>
-    <Label as='a' size='huge' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='brown' >
+    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='brown' >
     Github
         </Label>
    
-    <Label as='a' size='huge' href='https://rajivkhushiram-reviews-project.firebaseapp.com' color='blue' >
+    <Label as='a' size='large' href='https://rajivkhushiram-reviews-project.firebaseapp.com' color='blue' >
     Live
         </Label>
     </div>
@@ -516,7 +516,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
       <hr/>
       <div style={{textAlign:"right"}}>
-    <Label as='a' size='huge' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='brown' >
+    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='brown' >
     Github
         </Label>
    
