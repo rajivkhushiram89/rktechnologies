@@ -212,7 +212,10 @@ ResponsiveContainer.propTypes = {
 
 const HomePageLayout2 = () => (
   <ResponsiveContainer>
-   
+   <div style={{height:"100vh"}}>
+
+
+   </div>
   </ResponsiveContainer>
 )
 
