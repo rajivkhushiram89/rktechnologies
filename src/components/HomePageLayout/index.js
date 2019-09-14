@@ -478,10 +478,10 @@ const HomePageLayout = () => <ResponsiveContainer>
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
+      {/* <a>
         <Icon name='eye' />
         13 Views
-      </a>
+      </a> */}
     </Card.Content>
   </Card>
   </React.Fragment>
@@ -525,10 +525,10 @@ const HomePageLayout = () => <ResponsiveContainer>
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
+      {/* <a>
         <Icon name='eye' />
         10 Views
-      </a>
+      </a> */}
     </Card.Content>
   </Card><br></br><br></br></React.Fragment>
   <Particles>  <Segment inverted vertical style={{ padding: '3em 0em' }}>
