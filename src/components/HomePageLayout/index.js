@@ -177,7 +177,7 @@ class HomepageHeading extends Component {
             <div>
             <Link
                 activeclass="active"
-                to="PORJECTS"
+                to="PROJECTS"
                 spy={true}
                 smooth={true}
                 duration= {700}
@@ -281,7 +281,7 @@ class DesktopContainer extends Component {
                     animation="fade down"
                     duration={1500}
                   >
-                     <Menu.Item href="#PORJECTS">
+                     <Menu.Item href="#PROJECTS">
             Projects</Menu.Item>
                   </Transition>
                   <Transition
@@ -289,7 +289,7 @@ class DesktopContainer extends Component {
                     animation="fade down"
                     duration={1500}
                   >
-                   <Menu.Item as="a">Contact</Menu.Item>
+                   {/* <Menu.Item as="a">Contact</Menu.Item> */}
                   </Transition>
                   <Transition
                     visible={calculations.topPassed}
@@ -365,7 +365,7 @@ ResponsiveContainer.propTypes = {
 const HomePageLayout = () => <ResponsiveContainer>
  
 <Delayed waitBeforeShow={1200}> <React.Fragment>
-     <div id="PORJECTS" style={{padding: '2em  2em  2em 2em'}}>
+     <div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment Hackathon
      </Label></div>
