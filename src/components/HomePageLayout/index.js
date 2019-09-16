@@ -284,13 +284,13 @@ class DesktopContainer extends Component {
                      <Menu.Item href="#PROJECTS">
             Projects</Menu.Item>
                   </Transition>
-                  <Transition
+                  {/* <Transition
                     visible={calculations.topPassed}
                     animation="fade down"
                     duration={1500}
                   >
-                   {/* <Menu.Item as="a">Contact</Menu.Item> */}
-                  </Transition>
+                   <Menu.Item as="a"></Menu.Item>
+                  </Transition> */}
                   <Transition
                     visible={calculations.topPassed}
                     animation="scale"
@@ -365,7 +365,7 @@ ResponsiveContainer.propTypes = {
 const HomePageLayout = () => <ResponsiveContainer>
  
 <Delayed waitBeforeShow={1200}> <React.Fragment>
-     <div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
+     <div id="PORJECTS" style={{padding: '2em  2em  2em 2em'}}>
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment Hackathon
      </Label></div>
