@@ -308,13 +308,13 @@ class DesktopContainer extends Component {
                   <Input icon="search" placeholder="Search..." />
                 </Menu.Item> */}
                <Menu.Item>
-        <Label as='a' size='large' href='https://drive.google.com/open?id=1nNCsi9VEjvJ-JDMr0ZgwqAy5tVi3EaLE' color='brown' ><i className="file alternate outline icon"></i>
+        <Label as='a' target="_blank" size='large' href='https://drive.google.com/open?id=1nNCsi9VEjvJ-JDMr0ZgwqAy5tVi3EaLE' color='brown' ><i className="file alternate outline icon"></i>
          Resume 
         </Label>
-        <Label as='a' size='large' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
+        <Label as='a' target="_blank" size='large' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
         LinkedIn
         </Label>
-        <Label as='a'  size='large' href='https://github.com/Rajiv-Khushiram' color='orange' ><i className="github icon"> </i>
+        <Label as='a' target="_blank"  size='large' href='https://github.com/Rajiv-Khushiram' color='orange' ><i className="github icon"> </i>
         Github
         </Label></Menu.Item>
 
@@ -376,7 +376,7 @@ const HomePageLayout = () => <ResponsiveContainer>
  
 <Delayed waitBeforeShow={1200}> <React.Fragment>
      <div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
-   <Label as='a'  disabled   size='huge' color='brown' ribbon>
+   <Label  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment Hackathon
      </Label></div>
    <Card style={{ margin:'auto', width:'80%', maxWidth:'800px'}}>
@@ -419,11 +419,11 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
     <hr/>
     <div style={{textAlign:"right"}}>
-    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/reactrk' color='brown' >
+    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/reactrk' color='brown' >
     Github
         </Label>
    
-    <Label as='a' size='large' href='https://reactrkfirebasegcp.firebaseapp.com' color='blue' >
+    <Label as='a' target="_blank" size='large' href='https://reactrkfirebasegcp.firebaseapp.com' color='blue' >
     Live
         </Label>
     </div>
@@ -438,7 +438,7 @@ const HomePageLayout = () => <ResponsiveContainer>
   <br></br>
    <React.Fragment>
      <div style={{padding: '2em  2em  2em 2em'}}>
-   <Label as='a'  disabled   size='huge' color='brown' ribbon>
+   <Label   disabled   size='huge' color='brown' ribbon>
       Reviews App Project
      </Label></div>
    <Card style={{margin:'auto', width:'90%', maxWidth:'800px'}}>
@@ -477,11 +477,11 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
       <hr/>
       <div style={{textAlign:"right"}}>
-    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='brown' >
+    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='brown' >
     Github
         </Label>
    
-    <Label as='a' size='large' href='https://rajivkhushiram-reviews-project.firebaseapp.com' color='blue' >
+    <Label as='a' target="_blank" size='large' href='https://rajivkhushiram-reviews-project.firebaseapp.com' color='blue' >
     Live
         </Label>
     </div>
@@ -526,7 +526,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
       <hr/>
       <div style={{textAlign:"right"}}>
-    <Label as='a' size='large' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='brown' >
+    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='brown' >
     Github
         </Label>
    
