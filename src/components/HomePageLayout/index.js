@@ -463,7 +463,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       </Card.Meta>
       <Card.Description>
       <List.Item as='a' style={{color:'orange'}}>
-      <Icon name='right triangle' /> <strong style={{color:'white', paddingRight:'5px'}}>Key Learnings:</strong>  React-Redux-Firebase, Severless architecture, Agile methodologies, Firebase API, CI/CD (Cloud build)
+      <Icon name='right triangle' /> <strong style={{color:'white', paddingRight:'5px'}}>Key Learnings:</strong> Camera API Integration,  React-Redux-Firebase, Severless architecture, Agile methodologies, Firebase API, CI/CD (Cloud build)
       <List.Content>
       </List.Content>
     </List.Item><br></br>
@@ -471,6 +471,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       <p style={{textIndent:'20px', fontSize: '1.33em' }}>
           This web app allows sales agents to engage customers into reviewing a product.
           It does so by sending a text message to the customer by SMS containing the link for submitting reviews.
+          Serverless functions and APIs integrations allow car dealers to track whenever their users have clicked the link send to them via SMS.
         </p>
       </Card.Description>
       <Card.Description>
