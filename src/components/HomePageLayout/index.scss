@@ -1,6 +1,37 @@
 html, #root{
     height:100%;
 }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-width: 320px;
+//  background: #241f1f;
+}
+
+.ui.container {
+    width: 100%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+.ui.card>.content, .ui.cards>.card>.content {
+background:#241f1f;
+color:white;
+}
+.ui.card>.content p:last-child, .ui.cards>.card>.content p:last-child {
+  margin-bottom: 0;
+  color: white;
+}
+ui.card .meta *, .ui.cards>.card .meta * {
+  margin-right: .3em;
+  color: white;
+}
+
+u {
+  text-decoration: underline;
+  color:white;
+}
 
 #startinTransition {
     width: 100%;
@@ -20,6 +51,6 @@ html, #root{
 
   #homela{
     font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-    max-width: 1200px !important;
+    max-width: 100%;
     line-height: 1.5;
 }

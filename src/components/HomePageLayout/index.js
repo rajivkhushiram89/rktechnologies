@@ -118,7 +118,7 @@ class HomepageHeading extends Component {
     const { visible } = this.state;
 
     return (
-     <Container text id="homela">
+     <Container  id="homela">
         <br></br>
          <Transition
           animation={"horizontal flip"}
@@ -256,11 +256,11 @@ class DesktopContainer extends Component {
             
             <Segment
               textAlign="center"
-              style={{backgroundImage:"url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg)", minHeight: '100%', padding: "0.5em 0em" }}
+              style={{backgroundImage:"url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg)", height: '100vh', padding: "0.5em 0em" }}
               vertical
             >
-              <Menu  style={{background:"transparent"}} fixed={fixed ? "top" : null} inverted={true} size="large">
-                <Container>
+              <Menu  style={{background:"transparent", padding:'20px 40px 0px 70px'}} fixed={fixed ? "top" : null} inverted={true} size="large">
+                <Container style = {{width:'100%'}}>
                   <Transition
                     visible={calculations.topPassed}
                     animation="fade down"
@@ -326,9 +326,8 @@ class DesktopContainer extends Component {
                 </Container>
               </Menu>
               <HomepageHeading />
-              <hr></hr>
-              {children}
             </Segment>
+            {children}
           </Visibility>
 
           
@@ -374,13 +373,13 @@ ResponsiveContainer.propTypes = {
 
 const HomePageLayout = () => <ResponsiveContainer>
  
-<Delayed waitBeforeShow={1200}> <React.Fragment>
-     <div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
-   <Label  disabled   size='huge' color='brown' ribbon>
+<Delayed waitBeforeShow={1200}>
+    <div style={{backgroundImage: 'linear-gradient(#241f1f, #1b1c1d)'}}><div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
+  <center> <Label  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment Hackathon
-     </Label></div>
+     </Label></center></div>
    <Card style={{ margin:'auto', width:'80%', maxWidth:'800px'}}>
-   <div style={{ padding: '2em  2em  2em 2em'}}>
+   <div style={{ padding: '2em  2em  2em 2em', background: '#241f1f'}}>
    <Embed style={{  maxHeight:'200px !important'}}
     autoplay={false}
     color='white'
@@ -398,11 +397,11 @@ const HomePageLayout = () => <ResponsiveContainer>
     <Card.Content style={{maxWidth:'800px', margin:'auto', textAlign:'left'}}>
       <Card.Header>  </Card.Header>
       <Card.Meta>
-        <span className='date'> <strong>Role:</strong>Developer</span>
+        <span className='date'  style={{color:'white'}}> <strong style={{ paddingRight:'5px'}}>Role:</strong>Developer</span>
       </Card.Meta>
       <Card.Description>
-      <List.Item as='a'>
-      <Icon name='right triangle' /> <strong>Key Learnings:</strong> NodeJS + ReactJS + MongoDb + FirebaseHosting +Semantic UI 
+      <List.Item as='a' style={{color:'orange'}}>
+      <Icon name='right triangle' /> <strong  style={{color:'white', paddingRight:'5px'}}>Key Learnings:</strong> NodeJS + ReactJS + MongoDb + FirebaseHosting +Semantic UI 
       <List.Content>
       </List.Content>
     </List.Item><br></br>
@@ -430,17 +429,17 @@ const HomePageLayout = () => <ResponsiveContainer>
         </Card.Description>
     </Card.Content>
   </Card>
-  </React.Fragment>
+
   <br></br>
   <br></br>
 
-  <hr></hr>
+   <hr></hr>
   <br></br>
-   <React.Fragment>
-     <div style={{padding: '2em  2em  2em 2em'}}>
-   <Label   disabled   size='huge' color='brown' ribbon>
+  
+    <div style={{padding: '2em  2em  2em 2em'}}>
+  <center> <Label   disabled   size='huge' color='brown' ribbon>
       Reviews App Project
-     </Label></div>
+     </Label></center></div>
    <Card style={{margin:'auto', width:'90%', maxWidth:'800px'}}>
    <div style={{ padding: '2em  2em  2em 2em'}}>
    <Embed style={{ maxHeight:'200px !important'}}
@@ -460,11 +459,11 @@ const HomePageLayout = () => <ResponsiveContainer>
     <Card.Content style={{maxWidth:'800px', margin:'auto', textAlign:'left'}}>
       <Card.Header>  </Card.Header>
       <Card.Meta>
-        <span className='date'> <strong>Role:</strong> Project Manager</span>
+        <span className='date' style={{color:'white'}} > <strong style={{paddingRight:'5px'}}>Role:</strong> Project Manager</span>
       </Card.Meta>
       <Card.Description>
-      <List.Item as='a'>
-      <Icon name='right triangle' /> <strong>Key Learnings:</strong>  React-Redux-Firebase, Severless architecture, Agile methodologies, Firebase API, CI/CD (Cloud build), Slack, Trello
+      <List.Item as='a' style={{color:'orange'}}>
+      <Icon name='right triangle' /> <strong style={{color:'white', paddingRight:'5px'}}>Key Learnings:</strong>  React-Redux-Firebase, Severless architecture, Agile methodologies, Firebase API, CI/CD (Cloud build)
       <List.Content>
       </List.Content>
     </List.Item><br></br>
@@ -494,7 +493,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       </a> */}
     </Card.Content>
   </Card>
-  </React.Fragment>
+
   <br></br>
   <br></br>
 
@@ -502,11 +501,10 @@ const HomePageLayout = () => <ResponsiveContainer>
   <br></br>
   <br></br>
 
-        <React.Fragment>
      <div style={{padding: '2em  2em  2em 2em'}}>
-   <Label as='a'  disabled   size='huge' color='brown' ribbon>
+   <center><Label as='a'  disabled   size='huge' color='brown' ribbon>
    OO Design Patterns:   
-     </Label></div>      
+     </Label></center></div>      
   <Card style={{ margin:'auto', width:'80%', maxWidth:'800px'}}>
               <Image src='http://d13z1xw8270sfc.cloudfront.net/origin/523870/1532954117402_avengersflagbunting.jpg' wrapped ui={false} />
     <Card.Content style={{maxWidth:'800px', margin:'auto',  textAlign:'left'}}>
@@ -540,8 +538,8 @@ const HomePageLayout = () => <ResponsiveContainer>
         10 Views
       </a> */}
     </Card.Content>
-  </Card><br></br><br></br></React.Fragment>
-  <Particles>  <Segment inverted vertical style={{ padding: '3em 0em' }}>
+  </Card><br></br><br></br></div>
+  <Particles>  <Segment inverted vertical style={{ padding: '3em 3em' }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
