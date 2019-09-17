@@ -181,7 +181,7 @@ class HomepageHeading extends Component {
                 spy={true}
                 smooth={true}
                 duration= {700}
-            ><Button color='brown' inverted animated='vertical'>
+            ><Button  color='brown' inverted animated='vertical'>
             <Button.Content visible><h3>Summary</h3> <Icon name='arrow alternate circle right' /></Button.Content>
             <Button.Content  hidden>Click To Start<Icon name='arrow down' /></Button.Content>
           </Button></Link>
@@ -281,8 +281,15 @@ class DesktopContainer extends Component {
                     animation="fade down"
                     duration={1500}
                   >
+                    <Link
+                activeclass="active"
+                to="PROJECTS"
+                spy={true}
+                smooth={true}
+                duration= {700}
+            >
                      <Menu.Item href="#PROJECTS">
-            Projects</Menu.Item>
+            Projects</Menu.Item></Link>
                   </Transition>
                   {/* <Transition
                     visible={calculations.topPassed}
@@ -306,6 +313,9 @@ class DesktopContainer extends Component {
         </Label>
         <Label as='a' size='large' href='https://www.linkedin.com/in/rajiv-khushiram/' color='blue' ><i className="linkedin icon"> </i>
         LinkedIn
+        </Label>
+        <Label as='a'  size='large' href='https://github.com/Rajiv-Khushiram' color='orange' ><i className="github icon"> </i>
+        Github
         </Label></Menu.Item>
 
              {/*    <Menu.Item><Button inverted={!fixed}>
@@ -365,7 +375,7 @@ ResponsiveContainer.propTypes = {
 const HomePageLayout = () => <ResponsiveContainer>
  
 <Delayed waitBeforeShow={1200}> <React.Fragment>
-     <div id="PORJECTS" style={{padding: '2em  2em  2em 2em'}}>
+     <div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
    <Label as='a'  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment Hackathon
      </Label></div>
