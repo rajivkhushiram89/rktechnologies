@@ -419,7 +419,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
     <hr/>
     <div style={{textAlign:"right"}}>
-    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/reactrk' color='brown' >
+    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/reactrk' color='orange' >
     Github
         </Label>
    
@@ -477,7 +477,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
       <hr/>
       <div style={{textAlign:"right"}}>
-    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='brown' >
+    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/Reviews-App-For-Business' color='orange' >
     Github
         </Label>
    
@@ -526,7 +526,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       <Card.Description>
       <hr/>
       <div style={{textAlign:"right"}}>
-    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='brown' >
+    <Label as='a' target="_blank" size='large' href='https://github.com/Rajiv-Khushiram/Avengers_End_Game' color='orange' >
     Github
         </Label>
    
