@@ -374,7 +374,7 @@ ResponsiveContainer.propTypes = {
 const HomePageLayout = () => <ResponsiveContainer>
  
 <Delayed waitBeforeShow={1200}>
-    <div style={{backgroundImage: 'linear-gradient(#241f1f, #1b1c1d)'}}><div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
+<Particles> <div style={{backgroundImage: 'linear-gradient(#241f1f, #1b1c1d)'}}><div id="PROJECTS" style={{padding: '2em  2em  2em 2em'}}>
   <center> <Label  disabled   size='huge' color='brown' ribbon>
       iGroup-Assignment Hackathon
      </Label></center></div>
@@ -538,7 +538,7 @@ const HomePageLayout = () => <ResponsiveContainer>
         10 Views
       </a> */}
     </Card.Content>
-  </Card><br></br><br></br></div>
+  </Card><br></br><br></br></div></Particles>
   <Particles>  <Segment inverted vertical style={{ padding: '3em 3em' }}>
       <Container>
         <Grid divided inverted stackable>
