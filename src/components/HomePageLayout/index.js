@@ -441,7 +441,7 @@ const HomePageLayout = () => <ResponsiveContainer>
       Reviews App Project
      </Label></center></div>
    <Card style={{margin:'auto', width:'90%', maxWidth:'800px'}}>
-   <div style={{ padding: '2em  2em  2em 2em'}}>
+   <div style={{ padding: '2em  2em  2em 2em', background:'#201e1e'}}>
    <Embed style={{ maxHeight:'200px !important'}}
     autoplay={false}
     color='white'
@@ -450,7 +450,7 @@ const HomePageLayout = () => <ResponsiveContainer>
     iframe={{
       style: {
         padding: 10,
-
+        background:'#201e1e'
       },
     }}
     placeholder={reviewslogo}
