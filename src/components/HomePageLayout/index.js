@@ -73,7 +73,7 @@ class TypistExample extends React.Component {
           startDelay={1000}
           onTypingDone={this.onHeaderTyped}
         >
-           <Particles><h1 style={{color:'white'}}>4 + years of web development experience</h1></Particles>
+           <h1 style={{color:'white'}}>4 + years of web development experience</h1>
         </Typist>
         <div className="TypistExample-content">
           {this.state.renderMsg ? (
@@ -81,10 +81,10 @@ class TypistExample extends React.Component {
               className="TypistExample-message"
               cursor={{ hideWhenDone: false }}
             >
-              <Particles>  <span style={{color:'white', fontSize:'30px'}}>A T Shaped Programmer</span>
+               <span style={{color:'white', fontSize:'30px'}}>A T Shaped Programmer</span>
               <Typist.Delay ms={500} />
               <Typist.Backspace count={11} delay={1000} />
-              <span style={{color:'white', fontSize:'30px' }}> Developer</span><Typist.Delay ms={500} /></Particles>
+              <span style={{color:'white', fontSize:'30px' }}> Developer</span><Typist.Delay ms={500} />
               
               {''}
             </Typist>
@@ -172,7 +172,7 @@ class HomepageHeading extends Component {
         <br></br>
 
         <center>
-          <Transition nimation={"fade"} duration={1000} visible={visible}>
+          <Transition animation={"fade"} duration={1000} visible={visible}>
           
             <div>
             <Link
@@ -237,10 +237,9 @@ class DesktopContainer extends Component {
     const { calculations } = this.state;
 
     return (
-      <React.Fragment>
+     
         
       <div  id="startinTransition" >
-     <Delayed waitBeforeShow={1200}><Ref innerRef={this.contextRef}>
      <Responsive
           getWidth={getWidth}
           minWidth={Responsive.onlyTablet.minWidth}
@@ -326,15 +325,14 @@ class DesktopContainer extends Component {
                 </Container>
               </Menu>
               <HomepageHeading />
+              {children}
             </Segment>
-            {children}
+           
           </Visibility>
 
           
         </Responsive>
-      </Ref></Delayed>
-      </div>
-      </React.Fragment>
+        </div>
     );
   }
 }

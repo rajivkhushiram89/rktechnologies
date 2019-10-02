@@ -1,11 +1,12 @@
 html, #root{
-    height:100%;
+    width:100%;
 }
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: auto;
   min-width: 320px;
+  overflow-y:scroll !important;
 //  background: #241f1f;
 }
 
@@ -38,24 +39,24 @@ u {
   color:white;
 }
 
-#startinTransition {
-    width: 100%;
-    height: 0px;
-    background-color:white;
-    position: relative;
-    -webkit-animation-name: startingTransExample; /* Safari 4.0 - 8.0 */
-    animation-name: startingTransExample;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
+// #startinTransition {
+//     width: 100%;
+//     height: 0px;
+//     background-color:white;
+//     position: relative;
+//     -webkit-animation-name: startingTransExample; /* Safari 4.0 - 8.0 */
+//     animation-name: startingTransExample;
+//     animation-duration: 1s;
+//     animation-fill-mode: forwards;
+//   }
 
-  @keyframes startingTransExample {
-    from   { height:0px;}
-    to  { background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg); height: 100%}
-  }
+//   @keyframes startingTransExample {
+//     from   { height:0px;}
+//     to  { background-image: url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg); height: 100%}
+//   }
 
-  #homela{
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-    max-width: 100%;
-    line-height: 1.5;
-}
+//   #homela{
+//     font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+//     max-width: 100%;
+//     line-height: 1.5;
+// }

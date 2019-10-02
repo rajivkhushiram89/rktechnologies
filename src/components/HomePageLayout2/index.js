@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Button,
   Container,
@@ -15,6 +16,12 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
+import ReactParticles from 'react-particles-js';
+import particlesConfig from '../FrontPage6/particles-config';
+import MenuButton from './MenuButton';
+import * as routes from '../../constants/routes'
+import './index.scss'
+
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -25,14 +32,37 @@ const getWidth = () => {
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
 }
 
+
+function Particles({ children }) {
+  return (
+    <div style={{ position: 'relative' }}>
+      <ReactParticles
+        params={particlesConfig}
+        style={{
+          position: 'absolute',
+          zIndex: 1,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          top: 0
+        }}
+      />
+      {children && <div style={{ position: 'relative' }}>{children}</div>}
+    </div>
+  );
+}
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+
+
+
 const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
+      className='is-loading'
       content='Imagine-a-Company'
       inverted
       style={{
@@ -70,8 +100,20 @@ HomepageHeading.propTypes = {
 class DesktopContainer extends Component {
   state = {}
 
+  
+  componentDidMount () {
+    console.log('test')
+    setTimeout(function() {
+     // var element = document.getElementById("main"); element.classList.remove("is-loading");
+    //}, 100)
+    })
+  }
+
+  
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
+
+
 
   render() {
     const { children } = this.props
@@ -89,7 +131,7 @@ class DesktopContainer extends Component {
             textAlign='center'
             style={{ minHeight: '100vh', padding: '1em 0em' }}
             vertical
-          >
+          > 
             <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
@@ -134,6 +176,7 @@ class MobileContainer extends Component {
   handleSidebarHide = () => this.setState({ sidebarOpened: false })
 
   handleToggle = () => this.setState({ sidebarOpened: true })
+
 
   render() {
     const { children } = this.props
@@ -199,6 +242,8 @@ MobileContainer.propTypes = {
   children: PropTypes.node,
 }
 
+
+
 const ResponsiveContainer = ({ children }) => (
   <div>
     <DesktopContainer>{children}</DesktopContainer>
@@ -210,13 +255,35 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const HomePageLayout2 = () => (
-  <ResponsiveContainer>
-   <div style={{height:"100vh"}}>
+class HomePageLayout2 extends React.Component {
+  componentDidMount() {
+   // document.getElementById("loader").setAttribute("style", "display: none;");
+    //  document.getElementsByClassName("main")
 
+    // http://localhost:3000/
+    //console.log(loader)
+  }
 
-   </div>
-  </ResponsiveContainer>
-)
+  doSomething = () => {
+  
+
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="element">
+          <br></br>
+        <div className='navigationbar'>
+          {/* <h2> Rajiv Khushiram</h2> */}
+        <a target="_blank" href='https://drive.google.com/open?id=1nNCsi9VEjvJ-JDMr0ZgwqAy5tVi3EaLE'><MenuButton name="Resume"   /></a>
+        <MenuButton className="menuButton" name="Projects" />
+        <Link to={routes.CONTACT}><MenuButton name="Contact" /></Link>
+        </div>
+        </div>
+      </React.Fragment>
+    );
+  }
+}
 
 export default HomePageLayout2
