@@ -65,7 +65,7 @@ class TypistExample extends React.Component {
   render() {
     const docs = '//github.com/jstejada/react-typist';
     return (
-    <div className="TypistExample">
+    <div style={{paddingBottom:"80px"}} className="TypistExample">
         
         <Typist
           className="TypistExample-header"
@@ -175,7 +175,7 @@ class HomepageHeading extends Component {
           <Transition animation={"fade"} duration={1000} visible={visible}>
           
             <div>
-            <Link
+            {/* <Link
                 activeclass="active"
                 to="PROJECTS"
                 spy={true}
@@ -184,7 +184,7 @@ class HomepageHeading extends Component {
             ><Button  color='brown' inverted animated='vertical'>
             <Button.Content visible><h3>Summary</h3> <Icon name='arrow alternate circle right' /></Button.Content>
             <Button.Content  hidden>Click To Start<Icon name='arrow down' /></Button.Content>
-          </Button></Link>
+          </Button></Link> */}
             </div>
           </Transition>
          
@@ -254,6 +254,7 @@ class DesktopContainer extends Component {
           >
             
             <Segment
+              
               textAlign="center"
               style={{backgroundImage:"url(https://www.intechnic.com/hs-fs/hubfs/intechnic_2017/assets/images/landing/footer/map-xl.jpg?width=1680&height=824&name=map-xl.jpg)", height: '100vh', padding: "0.5em 0em" }}
               vertical
