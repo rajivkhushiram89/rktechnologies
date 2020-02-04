@@ -1,7 +1,5 @@
-# rktechnologies
-
 ## Purpose
-A CRA app built for my very own Portfolio . 
+A CRA app to showcase REACT development learnings. 
 The goal throughout is to efficiently managing and calling states withou redux
 Enhance front end skills
 
